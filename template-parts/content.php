@@ -18,6 +18,19 @@
 			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 		endif;
 
+		if ( is_home() && is_front_page() ) {
+			?>
+		<div class="container">
+			<div class="row w-slider">
+				<?php get_template_part('template-parts/slider/theme', 'slider' ); ?>
+			</div>
+		</div>
+		<?php
+		}
+		else {
+			echo "Hello";
+		}
+		?>
 		if ( 'post' === get_post_type() ) : ?>
 		<div class="entry-meta">
 			<?php charlie_foxtrot_posted_on(); ?>

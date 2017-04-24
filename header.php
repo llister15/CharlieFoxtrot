@@ -32,8 +32,8 @@
 				<div class="col-xs-3 center">
 					<?php the_custom_logo();
 					if (!has_custom_logo()) {
-						?><a href="<?php esc_url(home_url('/')); ?>">
-						<img src="<?php echo get_template_directory_uri() . '/assets/images/black-sight-logo.png'; ?>" /></a>
+						?><a href="<?php echo esc_url(home_url('/')); ?>">
+						<img src="<?php echo get_template_directory_uri() . '/assets/images/default-logo.png'; ?>" /></a>
 						<?php 
 					} ?>
 				</div>

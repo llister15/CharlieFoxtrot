@@ -131,6 +131,58 @@ function wonka_target_setup() {
 		'after_title'   => '</h2>',
 	) );
 
+	// Register Dealer Widgets
+	register_sidebar( array(
+		'name'          => esc_html__( 'Dealer1', 'charlie-foxtrot' ),
+		'id'            => 'dealer1',
+		'description'   => esc_html__( 'Dealer1', 'charlie-foxtrot' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+
+		register_sidebar( array(
+		'name'          => esc_html__( 'Dealer2', 'charlie-foxtrot' ),
+		'id'            => 'dealer2',
+		'description'   => esc_html__( 'Dealer2', 'charlie-foxtrot' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+
+	register_sidebar( array(
+		'name'          => esc_html__( 'Dealer3', 'charlie-foxtrot' ),
+		'id'            => 'dealer3',
+		'description'   => esc_html__( 'Dealer3', 'charlie-foxtrot' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+
+	register_sidebar( array(
+		'name'          => esc_html__( 'Dealer4', 'charlie-foxtrot' ),
+		'id'            => 'dealer4',
+		'description'   => esc_html__( 'Dealer4', 'charlie-foxtrot' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+
+	register_sidebar( array(
+		'name'          => esc_html__( 'Dealer5', 'charlie-foxtrot' ),
+		'id'            => 'dealer5',
+		'description'   => esc_html__( 'Dealer5', 'charlie-foxtrot' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+
+
 	// Register Footer Widgets.
 	register_sidebar( array(
 		'name' => 'Footer Menu 1',
@@ -188,7 +240,7 @@ function wonka_target_setup() {
 	    <div class="input-group w-search-form">
 	    <input type="text" class="form-control" placeholder="Search" value="' . get_search_query() . '" name="s" id="s" />
 	    <span class="input-group-btn">
-	          <button class="btn w-search-button" type="button"><span class="glyphicon glyphicon-search" aria-hidden="true">
+	          <button class="btn w-search-button" type="submit"><span class="glyphicon glyphicon-search" aria-hidden="true">
 	          </span></button>
 	        </span>
 	    </div>
@@ -215,4 +267,3 @@ function my_theme_wrapper_end() {
 }
 add_action('woocommerce_before_main_content', 'my_theme_wrapper_start', 10);
 add_action('woocommerce_after_main_content', 'my_theme_wrapper_end', 10);
-?>

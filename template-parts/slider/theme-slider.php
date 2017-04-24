@@ -11,16 +11,16 @@
 
 <div class="col-xs-12 text-center">
 <?php 
-$value = get_theme_mod('theme_slider_check', 'checked');
-  if ($value !== 'checked') {
+$value = get_theme_mod('theme_slider_check');
+  if ($value !== true) {
     $value2 = get_theme_mod('static_header');
-    if ($value2 !== null) {
+    if ($value2 !== true) {
       ?>
-        test
+      <img src="#">
       <?php
     } else {
       ?>
-      <img src="<?php echo wp_get_attachment_url( $value2 ); ?>" alt="AR500">
+      <img src="<?php echo wp_get_attachment_url( $value2 ); ?>">
       <?php
     }
   } else {
@@ -53,13 +53,13 @@ $value = get_theme_mod('theme_slider_check', 'checked');
       if ($i !== 0) {
         ?>
         <div class="item">
-         <img src="<?php echo wp_get_attachment_url( $slider_mod ); ?>" alt="AR500">
+         <img src="<?php echo wp_get_attachment_url( $slider_mod ); ?>">
         </div>
       <?php
       } else {
       ?>
         <div class="item active">
-          <img src="<?php echo wp_get_attachment_url( $slider_mod ); ?>" alt="AR500">
+          <img src="<?php echo wp_get_attachment_url( $slider_mod ); ?>">
         </div>
       <?php
       }
