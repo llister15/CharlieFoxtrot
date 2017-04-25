@@ -1,0 +1,18 @@
+/*  _featured-post.scss  */
+.w-featured-post {
+  background: $whats-new-section;
+  height: 100%;
+}
+
+.w-featured-post > div {
+
+}
+
+.w-featured-post > div:last-child {
+  border-right: none;
+}
+
+.w-featured-post > div > div {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}

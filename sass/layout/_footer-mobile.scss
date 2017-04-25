@@ -1,0 +1,62 @@
+// _footer-mobile
+
+footer {
+  position: absolute;
+  clear: both;
+  width: 100%;
+}
+
+footer > div {
+  background: $footer-color;
+}
+
+footer > div > div {
+  /* height: 275px; */
+  /* border-right: 2px solid #fff; */
+}
+
+footer > div > div:last-child {
+  border-right: none;
+}
+
+footer > div > div > aside > h3 {
+  color: #fff;
+  font-family: Roboto Black;
+  text-transform: uppercase;
+  font-size: 14pt;
+}
+
+footer > div > div > aside > div > div > ul {
+  list-style: none;
+}
+
+footer > div > div > aside > div > div > ul > li > a {
+  color: #fff;
+  text-transform: uppercase;
+  line-height: 3rem;
+  font-size: 12pt;
+  font-family: Roboto Light;
+}
+
+footer > div > div > aside > div > div > ul > li > a:hover, footer > div > div > aside > div > div > ul > li > a:focus {
+  opacity: .8;
+  text-decoration: none;
+}
+
+.w-copyright-bar {
+  background: $copyright-bar;
+  color: $copyright-text;
+  height: 55px;
+  vertical-align: middle;
+  padding: 10px;
+}
+
+.w-copyright-bar > a {
+  color: #fff;
+}
+
+.w-copyright-bar > a:hover, .w-copyright-bar > a:focus, .w-copyright-bar > a:active {
+  color: #333;
+  text-decoration: none;
+  opacity: .8;
+}
