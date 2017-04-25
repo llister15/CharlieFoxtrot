@@ -4,7 +4,7 @@
 
 Class WS_Walker_Nav_Primary extends Walker_Nav_menu {
 
- public function start_lvl( &$output, $depth ) {
+ public function start_lvl( &$output, $depth = 0, $args = array() ) {
     //ul
     $indent = str_repeat("\t", $depth);
     $submenu = ($depth > 0) ? ' sub-menu' : '';

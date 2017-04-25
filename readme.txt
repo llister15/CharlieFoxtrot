@@ -1,7 +1,8 @@
 === Charlie Foxtrot ===
 
 Contributors: automattic
-Tags: translation-ready, custom-background, theme-options, custom-menu, post-formats, threaded-comments
+Tags: translation-ready, custom-background, theme-options, custom-menu, post-formats, threaded-comments, custom, html5, css3, sass, scss, jquery, javascript, grid system, one-column, two-columns, right-sidebar, flexible-header, accessibility-ready, custom-colors, custom-header, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
+
 
 Requires at least: 4.0
 Tested up to: 4.7
@@ -9,11 +10,11 @@ Stable tag: 1.0.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
 
-A starter theme called Charlie Foxtrot, or underscores.
+A tactical theme called Charlie Foxtrot.
 
 == Description ==
 
-Hi. I'm a starter theme called Charlie Foxtrot, or underscores, if you like. I'm a theme meant for hacking so don't use me as a Parent Theme. Instead try turning me into the next, most awesome, WordPress theme out there. That's what I'm here for.
+Hi. I'm a tactical theme called Charlie Foxtrot, if you like. I'm a theme meant for a tactical estore.
 
 == Installation ==
 
@@ -34,5 +35,4 @@ Charlie Foxtrot includes support for Infinite Scroll in Jetpack.
 
 == Credits ==
 
-* Based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
-* normalize.css http://necolas.github.io/normalize.css/, (C) 2012-2016 Nicolas Gallagher and Jonathan Neal, [MIT](http://opensource.org/licenses/MIT)
+
