@@ -267,3 +267,6 @@ function my_theme_wrapper_end() {
 }
 add_action('woocommerce_before_main_content', 'my_theme_wrapper_start', 10);
 add_action('woocommerce_after_main_content', 'my_theme_wrapper_end', 10);
+
+// Includes Walker Class
+require get_parent_theme_file_path('/inc/wonka-walker.php');
