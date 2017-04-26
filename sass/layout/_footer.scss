@@ -49,6 +49,9 @@ footer > div > div > aside > div > div > ul > li > a:hover, footer > div > div >
   height: 55px;
   vertical-align: middle;
   padding: 10px;
+    @media (min-width: $iphone-4-min) and ( max-width: $iphone-4-max) and ( -webkit-device-pixel-ratio: 2 ) {
+      height: 75px;
+    }
 }
 
 .w-copyright-bar > a {

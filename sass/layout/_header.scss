@@ -1,0 +1,97 @@
+// _header-moblie
+.custom-logo,
+.w-head-space,
+.w-head-space > div,
+.w-search-form,
+.w-search-form > div,
+div.w-search-form input.form-control,
+.w-search-button,
+.w-search-button > span,
+.w-brand-logo > a > img,
+.w-nav-bar,
+.w-nav-color,
+.navbar,
+.navbar-toggle .icon-bar,
+.navbar-default .navbar-brand,
+.navbar-default .w-primary-menu,
+.navbar-default .w-primary-menu > li,
+.navbar-default .w-primary-menu > li > a,
+.w-sub-menu > li > a,
+.w-sub-menu > li,
+.navbar-default .navbar-nav .open .dropdown-menu>li>a {
+    position: relative;
+    transition: all .2s ease-in-out;
+}
+
+/*
+Header
+*/
+#w-header {
+  background: $header-color;
+}
+
+.custom-logo {
+  position: absolute;
+  z-index: 100;
+  left: 50px;
+}
+
+.w-head-space {
+  margin: 0 75px;
+}
+
+.w-head-space > div {
+  margin-top: 10px;
+}
+
+.w-search-form {
+  position: relative;
+  top: 27px;
+}
+
+.w-search-form > div {
+  margin-right: 30px;
+  z-index: 78;
+  position: relative;
+}
+
+div.w-search-form input.form-control:first-child {
+  border-radius: 20px 20px 0 0;
+}
+
+.w-search-button {
+  background: transparent;
+}
+
+.w-search-button > span {
+  color: #fff;
+  font-size: 18px;
+}
+
+.w-sub-menu > li:first-child > a:before {
+    font-family: 'wonka-icons';
+    content: '\001c';
+    display:  inline-block;
+    padding: 0 8px;
+}
+
+.w-sub-menu > li {
+    list-style: none;
+    display: inline-block;
+    padding:  0 15px;
+    border-right:  1px solid #fff;
+}
+
+.w-sub-menu > li > a {
+  color: #fff;
+}
+
+.w-sub-menu > li > a:hover, .w-sub-menu > li > a:focus {
+  opacity: .6;
+  color: #fff;
+  text-decoration: none;
+}
+
+.w-sub-menu > li:last-child {
+    border: none;
+}
