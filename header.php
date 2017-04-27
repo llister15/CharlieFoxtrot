@@ -26,25 +26,25 @@
 </head>
 
 <body <?php body_class(); ?>>
-  <header id="w-header">
-    <div class="container-fluid">
+<div id="w-wrapper">
+  <header id="w-header" class="container-fluid">
       <div class="row w-head-space">
-        <div class="col-xs-3 center">
+        <div class="hidden-xs hidden-sm col-md-3 center">
           <?php the_custom_logo();
-            if (!has_custom_logo()) {
-          ?><a href="<?php echo esc_url(home_url('/')); ?>">
+          if (!has_custom_logo()) {
+            ?><a href="<?php echo esc_url(home_url('/')); ?>">
             <img src="<?php echo get_template_directory_uri() . '/assets/images/default-logo.png'; ?>" /></a>
-          <?php 
+            <?php 
           } ?>
         </div>
-      <?php wp_nav_menu( array( 
-      'menu_class' => 'w-sub-menu', 
-      'container_class' => 'col-xs-3 col-md-offset-6',
-      'theme_location' => 'sub', 
-      'fallback_cb' => false,
-      ) ); ?>
-    </div>
-    <?php get_template_part('template-parts/header/search', 'form'); ?>
+        <?php wp_nav_menu( array( 
+          'menu_class' => 'w-sub-menu pull-right', 
+          'container_class' => 'hidden-xs hidden-sm col-xs-4 pull-right',
+          'theme_location' => 'sub', 
+          'fallback_cb' => false,
+          ) ); ?>
+      </div> <!-- end w-head-space -->
+        <?php get_template_part('template-parts/header/search', 'form'); ?>
 
-    <?php get_template_part('template-parts/navigation/nav', 'main' ); ?>
-  </header>
+        <?php get_template_part('template-parts/navigation/nav', 'main' ); ?>
+  </header> <!-- end header -->

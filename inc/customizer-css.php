@@ -12,7 +12,7 @@ function charlie_foxtrot_customizer_css() {
 ?>
     <style type="text/css">
       #customize-control-theme_slide_count > label > select {
-        width: 15%;
+        width: 20%;
       }
     </style>
 

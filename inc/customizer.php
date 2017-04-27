@@ -134,7 +134,7 @@ add_action( 'customize_register', 'charlie_foxtrot_customize_register' );
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  */
 function charlie_foxtrot_customize_preview_js() {
-	wp_enqueue_script( 'charlie_foxtrot_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20151215', true );
+	wp_enqueue_script( 'charlie_foxtrot_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), getdate(timestamp[year], timestamp[mday], timestamp[mon]), true );
 }
 add_action( 'customize_preview_init', 'charlie_foxtrot_customize_preview_js' );
 

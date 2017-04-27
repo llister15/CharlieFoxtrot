@@ -1,0 +1,138 @@
+/* _wonka-navbar-mobile
+Media Queries
+@media (min-width: $iphone-4-min) and ( max-width: $iphone-4-max) and ( -webkit-device-pixel-ratio: 2 )
+@media (min-width: $screen-sm-min)
+@media (min-width: $screen-md-min)
+@media (min-width: $screen-lg-min)
+ */
+
+// Transitions
+.w-nav-bar,
+.w-nav-color,
+.navbar,
+.navbar-toggle .icon-bar,
+.navbar-default .navbar-brand,
+.navbar-default .w-primary-menu,
+.navbar-default .w-primary-menu > li,
+.navbar-default .w-primary-menu > li > a,
+.navbar-default .navbar-nav .open .dropdown-menu>li>a {
+    position: relative;
+    transition: all .2s ease-in-out;
+}
+
+.w-nav-bar {
+  box-shadow: 0px 2px 6px 2px #000;
+  position: relative;
+  background: #000;
+  z-index: 75;
+}
+
+.w-nav-bar .navbar {
+  margin-bottom: 0;
+}
+
+.w-nav-color {
+  background: $navbar-color;
+}
+
+.navbar {
+  border: none;
+}
+
+.navbar-default .navbar-toggle {
+
+}
+
+.navbar-toggle .icon-bar:nth-of-type(2) {
+    top: 1px;
+}
+
+.navbar-toggle .icon-bar:nth-of-type(3) {
+    top: 2px;
+}
+
+.navbar-toggle.active .icon-bar:nth-of-type(1) {
+    top: 6px;
+    transform: rotate(45deg);
+}
+
+.navbar-toggle.active .icon-bar:nth-of-type(2) {
+    background-color: transparent;
+}
+
+.navbar-toggle.active .icon-bar:nth-of-type(3) {
+    top: -6px;
+    transform: rotate(-45deg);
+}
+
+.navbar-default .w-blog-brand {
+  top: 15px;
+  float: none;
+}
+
+.navbar-default .w-back-button {
+  font-family: Roboto Light;
+}
+
+.navbar-default .w-back-button .glyphicon {
+  top: 2px;
+  line-height: 15px;
+}
+
+.navbar-default .navbar-brand {
+  color: $link-color;
+  font-size: $brand-font-size-xs;
+    @media (min-width: $iphone-4-min) and ( max-width: $iphone-4-max) and ( -webkit-device-pixel-ratio: 2 ) {
+      font-size: $iphone-4-font-size;
+    }
+    @media (min-width: $screen-sm-min) {
+      font-size: $brand-font-size-sm;
+    }
+    @media (min-width: $screen-md-min) {
+      font-size: $brand-font-size-md;
+    }
+}
+
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+  opacity: .6;
+  color: $link-color;
+  text-decoration: none; 
+}
+
+.navbar-default .w-primary-menu {
+  vertical-align: middle;
+}
+
+.navbar-default .w-primary-menu > li {
+    list-style: none;
+    border-right:  none;
+}
+
+.navbar-default .w-primary-menu > li:first-child {
+    border-left: none;
+}
+
+.navbar-default .w-primary-menu > li > a {
+  color: $link-color;
+  text-transform: uppercase;
+  font-size: 12pt;
+  font-family: Roboto medium;
+}
+
+.navbar-default .w-primary-menu > li > a:hover, .navbar-default .w-primary-menu > li > a:focus {
+  opacity: .6;
+  color: $link-color;
+  text-decoration: none;
+}
+
+.navbar-default .navbar-nav .open .dropdown-menu>li>a {
+  color: $link-color;
+  text-transform: uppercase;
+  font-size: 10pt;
+}
+
+.navbar-default .navbar-nav .open .dropdown-menu>li>a:hover, .navbar-default .navbar-nav .open .dropdown-menu>li>a:focus {
+  color: $link-color;
+  opacity: .6;
+  text-decoration: none;
+}

@@ -38,7 +38,10 @@
     <?php get_template_part('template-parts/footer/copyright', 'info' ); ?>
   </div>
 </footer>
+<<<<<<< HEAD
+=======
+</div> <!-- end w-wrapper -->
+>>>>>>> MrLister
 <?php wp_footer(); ?>
-</div>
 </body>
 </html>

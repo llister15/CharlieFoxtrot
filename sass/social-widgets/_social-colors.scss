@@ -76,3 +76,35 @@ $soundcloud: #ff3a00;
     vertical-align: text-bottom;
     color: #cbc;
   }
+  
+.w-social-wigets:before {
+  content: "";
+  display: block;
+  position: relative;
+  height: 6px;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 2px 8px 1px #000;
+  z-index: 6;
+}
+
+.w-social-wigets {
+ background: $dealers-section;
+ height: 200px;
+ box-sizing: border-box;
+}
+
+.w-social-wigets:after {
+  content: "";
+  display: block;
+  position: relative;
+  height: 6px;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 2px 8px 1px #000;
+  z-index: 6;
+}
+
+.w-social-wigets > div > div {
+  height: 194px;
+}

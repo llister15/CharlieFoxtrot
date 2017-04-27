@@ -13,6 +13,13 @@ Tags: custom, html5, css3, sass, scss, jquery, javascript, grid system, one-colu
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 
+/* 
+Media Queries 
+@media (min-width: $iphone-4-min) and ( max-width: $iphone-4-max) and ( -webkit-device-pixel-ratio: 2 )
+@media (min-width: $screen-sm-min)
+@media (min-width: $screen-md-min)
+@media (min-width: $screen-lg-min)
+*/
 /*------------------------------------*\
     MAIN
 \*------------------------------------*/
@@ -30,11 +37,6 @@ html, body {
 body {
   font-family: Roboto medium; }
 
-* {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box; }
-
 article,
 aside,
 footer,
@@ -47,12 +49,31 @@ section {
   position: relative;
   height: 100%; }
 
+/*  _header-moblie
+@media (min-width: $iphone-4-min) and ( max-width: $iphone-4-max) and ( -webkit-device-pixel-ratio: 2 )
+@media (min-width: $screen-sm-min)
+@media (min-width: $screen-md-min)
+@media (min-width: $screen-lg-min)
+ */
+.custom-logo,
+.w-head-space,
+.w-head-space > div,
+.w-search-form,
+.w-search-form > div,
+div.w-search-form input.form-control,
+.w-search-button,
+.w-search-button > span,
+.w-brand-logo > a > img,
+.w-sub-menu > li > a,
+.w-sub-menu > li {
+  position: relative;
+  transition: all .2s ease-in-out; }
+
 /*
 Header
 */
 #w-header {
-  background: linear-gradient(-214deg, rgba(37, 60, 94, 0.8) 0%, #253c5e 100%);
-  height: 175px; }
+  background: linear-gradient(-214deg, rgba(37, 60, 94, 0.8) 0%, #253c5e 100%); }
 
 .custom-logo {
   position: absolute;
@@ -60,15 +81,14 @@ Header
   left: 50px; }
 
 .w-head-space {
-  margin: 0 75px;
-  height: 125px; }
+  margin: 0 75px; }
 
 .w-head-space > div {
   margin-top: 10px; }
 
 .w-search-form {
   position: relative;
-  top: 28px; }
+  top: 27px; }
 
 .w-search-form > div {
   margin-right: 30px;
@@ -84,61 +104,6 @@ div.w-search-form input.form-control:first-child {
 .w-search-button > span {
   color: #fff;
   font-size: 18px; }
-
-.w-nav-bar {
-  height: 50px;
-  box-shadow: 0px 4px 8px 2px #000;
-  position: relative;
-  background: #000;
-  z-index: 75; }
-
-.w-nav-color {
-  background: linear-gradient(-214deg, rgba(80, 81, 72, 0.8) 0%, #505148 100%); }
-
-.navbar {
-  border: none; }
-
-.navbar-toggle .icon-bar:nth-of-type(2) {
-  top: 1px; }
-
-.navbar-toggle .icon-bar:nth-of-type(3) {
-  top: 2px; }
-
-.navbar-toggle .icon-bar {
-  position: relative;
-  transition: all .2s ease-in-out; }
-
-.navbar-toggle.active .icon-bar:nth-of-type(1) {
-  top: 6px;
-  transform: rotate(45deg); }
-
-.navbar-toggle.active .icon-bar:nth-of-type(2) {
-  background-color: transparent; }
-
-.navbar-toggle.active .icon-bar:nth-of-type(3) {
-  top: -6px;
-  transform: rotate(-45deg); }
-
-.w-primary-menu {
-  vertical-align: middle; }
-
-.w-primary-menu > li {
-  list-style: none;
-  height: 50px;
-  border-right: 1px solid #fff; }
-
-.w-primary-menu > li:first-child {
-  border-left: 1px solid #fff; }
-
-.w-primary-menu > li > a {
-  color: #fff;
-  text-transform: uppercase;
-  font-size: 20px;
-  font-family: Roboto medium; }
-
-.w-primary-menu > li > a:hover, .w-primary-menu > li > a:focus {
-  opacity: .2;
-  text-decoration: none; }
 
 .w-sub-menu > li:first-child > a:before {
   font-family: 'wonka-icons';
@@ -156,17 +121,270 @@ div.w-search-form input.form-control:first-child {
   color: #fff; }
 
 .w-sub-menu > li > a:hover, .w-sub-menu > li > a:focus {
-  opacity: .2;
+  opacity: .6;
+  color: #fff;
   text-decoration: none; }
 
 .w-sub-menu > li:last-child {
   border: none; }
+
+/* _wonka-navbar-mobile
+Media Queries
+@media (min-width: $iphone-4-min) and ( max-width: $iphone-4-max) and ( -webkit-device-pixel-ratio: 2 )
+@media (min-width: $screen-sm-min)
+@media (min-width: $screen-md-min)
+@media (min-width: $screen-lg-min)
+ */
+.w-nav-bar,
+.w-nav-color,
+.navbar,
+.navbar-toggle .icon-bar,
+.navbar-default .navbar-brand,
+.navbar-default .w-primary-menu,
+.navbar-default .w-primary-menu > li,
+.navbar-default .w-primary-menu > li > a,
+.navbar-default .navbar-nav .open .dropdown-menu > li > a {
+  position: relative;
+  transition: all .2s ease-in-out; }
+
+.w-nav-bar {
+  box-shadow: 0px 2px 6px 2px #000;
+  position: relative;
+  background: #000;
+  z-index: 75; }
+
+.w-nav-bar .navbar {
+  margin-bottom: 0; }
+
+.w-nav-color {
+  background: linear-gradient(-214deg, rgba(80, 81, 72, 0.8) 0%, #505148 100%); }
+
+.navbar {
+  border: none; }
+
+.navbar-toggle .icon-bar:nth-of-type(2) {
+  top: 1px; }
+
+.navbar-toggle .icon-bar:nth-of-type(3) {
+  top: 2px; }
+
+.navbar-toggle.active .icon-bar:nth-of-type(1) {
+  top: 6px;
+  transform: rotate(45deg); }
+
+.navbar-toggle.active .icon-bar:nth-of-type(2) {
+  background-color: transparent; }
+
+.navbar-toggle.active .icon-bar:nth-of-type(3) {
+  top: -6px;
+  transform: rotate(-45deg); }
+
+.navbar-default .w-blog-brand {
+  top: 15px;
+  float: none; }
+
+.navbar-default .w-back-button {
+  font-family: Roboto Light; }
+
+.navbar-default .w-back-button .glyphicon {
+  top: 2px;
+  line-height: 15px; }
+
+.navbar-default .navbar-brand {
+  color: #fff;
+  font-size: 11pt; }
+  @media (min-width: 320px) and (max-width: 480px) and (-webkit-device-pixel-ratio: 2) {
+    .navbar-default .navbar-brand {
+      font-size: 10pt; } }
+  @media (min-width: 768px) {
+    .navbar-default .navbar-brand {
+      font-size: 16pt; } }
+  @media (min-width: 992px) {
+    .navbar-default .navbar-brand {
+      font-size: 20pt; } }
+
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+  opacity: .6;
+  color: #fff;
+  text-decoration: none; }
+
+.navbar-default .w-primary-menu {
+  vertical-align: middle; }
+
+.navbar-default .w-primary-menu > li {
+  list-style: none;
+  border-right: none; }
+
+.navbar-default .w-primary-menu > li:first-child {
+  border-left: none; }
+
+.navbar-default .w-primary-menu > li > a {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 12pt;
+  font-family: Roboto medium; }
+
+.navbar-default .w-primary-menu > li > a:hover, .navbar-default .w-primary-menu > li > a:focus {
+  opacity: .6;
+  color: #fff;
+  text-decoration: none; }
+
+.navbar-default .navbar-nav .open .dropdown-menu > li > a {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 10pt; }
+
+.navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+  color: #fff;
+  opacity: .6;
+  text-decoration: none; }
+
+/*  _theme-slider-mobile
+Media Queries
+@media (min-width: $iphone-4-min) and ( max-width: $iphone-4-max) and ( -webkit-device-pixel-ratio: 2 )
+@media (min-width: $screen-sm-min)
+@media (min-width: $screen-md-min)
+@media (min-width: $screen-lg-min)
+*/
+.w-slider,
+.w-slider > div,
+#myCarousel > .carousel-control,
+#myCarousel > .carousel-control > .glyphicon,
+#myCarousel > .left > .glyphicon,
+#myCarousel > .right > .glyphicon,
+#myCarousel > .carousel-indicators,
+#myCarousel > .carousel-indicators li,
+#myCarousel > .carousel-indicators .active {
+  transition: all .2s ease-in-out; }
 
 .w-slider {
   max-height: 763px; }
 
 .w-slider > div {
   padding: 0; }
+
+#myCarousel > .carousel-control {
+  top: 80%;
+  height: 20%;
+  width: 40%; }
+  @media (min-width: 320px) and (max-width: 480px) and (-webkit-device-pixel-ratio: 2) {
+    #myCarousel > .carousel-control {
+      top: 77%;
+      height: 22%; } }
+  @media (min-width: 480px) and (max-width: 767px) {
+    #myCarousel > .carousel-control {
+      top: 85%;
+      height: 15%; } }
+  @media (min-width: 768px) {
+    #myCarousel > .carousel-control {
+      top: 90%;
+      height: 10%; } }
+  @media (min-width: 992px) {
+    #myCarousel > .carousel-control {
+      top: 90%;
+      height: 10%; } }
+
+#myCarousel > .carousel-control > .glyphicon {
+  font-size: 11pt; }
+  @media (min-width: 480px) and (max-width: 767px) and (-webkit-device-pixel-ratio: 1) {
+    #myCarousel > .carousel-control > .glyphicon {
+      font-size: 16pt; } }
+  @media (min-width: 768px) {
+    #myCarousel > .carousel-control > .glyphicon {
+      font-size: 16pt; } }
+  @media (min-width: 992px) {
+    #myCarousel > .carousel-control > .glyphicon {
+      font-size: 20pt; } }
+  @media (min-width: 1200px) {
+    #myCarousel > .carousel-control > .glyphicon {
+      font-size: 30pt; } }
+
+#myCarousel > .left > .glyphicon {
+  top: 0;
+  left: 40%; }
+  @media (min-width: 480px) and (max-width: 767px) and (-webkit-device-pixel-ratio: 1) {
+    #myCarousel > .left > .glyphicon {
+      top: 20%;
+      left: 40%; } }
+  @media (min-width: 768px) {
+    #myCarousel > .left > .glyphicon {
+      top: 15%;
+      left: 40%; } }
+  @media (min-width: 992px) {
+    #myCarousel > .left > .glyphicon {
+      top: 15%;
+      left: 45%; } }
+  @media (min-width: 1200px) {
+    #myCarousel > .left > .glyphicon {
+      top: 20%;
+      left: 45%; } }
+
+#myCarousel > .right > .glyphicon {
+  top: 0;
+  right: 40%; }
+  @media (min-width: 480px) and (max-width: 767px) and (-webkit-device-pixel-ratio: 1) {
+    #myCarousel > .right > .glyphicon {
+      top: 20%;
+      right: 40%; } }
+  @media (min-width: 768px) {
+    #myCarousel > .right > .glyphicon {
+      top: 15%;
+      right: 40%; } }
+  @media (min-width: 992px) {
+    #myCarousel > .right > .glyphicon {
+      top: 15%;
+      right: 45%; } }
+  @media (min-width: 1200px) {
+    #myCarousel > .right > .glyphicon {
+      top: 20%;
+      right: 45%; } }
+
+#myCarousel > .carousel-indicators {
+  width: 20%;
+  margin-left: -10%;
+  bottom: -3%; }
+  @media (min-width: 320px) and (max-width: 480px) and (-webkit-device-pixel-ratio: 2) {
+    #myCarousel > .carousel-indicators {
+      bottom: -6px; } }
+  @media (min-width: 480px) and (max-width: 767px) and (-webkit-device-pixel-ratio: 1) {
+    #myCarousel > .carousel-indicators {
+      bottom: 1%; } }
+  @media (min-width: 768px) {
+    #myCarousel > .carousel-indicators {
+      bottom: 0%; } }
+  @media (min-width: 992px) {
+    #myCarousel > .carousel-indicators {
+      bottom: 1%; } }
+  @media (min-width: 1200px) {
+    #myCarousel > .carousel-indicators {
+      bottom: 2%; } }
+
+#myCarousel > .carousel-indicators li {
+  width: 6px;
+  height: 6px;
+  border-radius: 6px; }
+  @media (min-width: 480px) and (max-width: 767px) and (-webkit-device-pixel-ratio: 1) {
+    #myCarousel > .carousel-indicators li {
+      width: 8px;
+      height: 8px;
+      border-radius: 8px; } }
+  @media (min-width: 992px) {
+    #myCarousel > .carousel-indicators li {
+      width: 10px;
+      height: 10px;
+      border-radius: 10px; } }
+
+#myCarousel > .carousel-indicators .active {
+  width: 8px;
+  height: 8px; }
+  @media (min-width: 480px) and (max-width: 767px) and (-webkit-device-pixel-ratio: 1) {
+    #myCarousel > .carousel-indicators .active {
+      width: 10px;
+      height: 10px; } }
+  @media (min-width: 992px) {
+    #myCarousel > .carousel-indicators .active {
+      width: 12px;
+      height: 12px; } }
 
 .card {
   width: 100%;
@@ -207,7 +425,7 @@ div.w-search-form input.form-control:first-child {
   vertical-align: text-bottom;
   color: #cbc; }
 
-.w-dealer-logos:before {
+.w-social-wigets:before {
   content: "";
   display: block;
   position: relative;
@@ -217,12 +435,12 @@ div.w-search-form input.form-control:first-child {
   box-shadow: 0 2px 8px 1px #000;
   z-index: 6; }
 
-.w-dealer-logos {
+.w-social-wigets {
   background: #0b1316;
   height: 200px;
   box-sizing: border-box; }
 
-.w-dealer-logos:after {
+.w-social-wigets:after {
   content: "";
   display: block;
   position: relative;
@@ -232,29 +450,34 @@ div.w-search-form input.form-control:first-child {
   box-shadow: 0 2px 8px 1px #000;
   z-index: 6; }
 
-.w-dealer-logos > div > div {
+.w-social-wigets > div > div {
   height: 194px; }
 
-.w-dealer-logos > div > div > div {
-  background: rgba(55, 55, 55, 0.7);
-  height: 194px;
-  padding: 36% 0; }
-
-.w-quick-select {
+/*  _featured-post.scss  
+Media Queries
+@media (min-width: $iphone-4-min) and ( max-width: $iphone-4-max) and ( -webkit-device-pixel-ratio: 2 )
+@media (min-width: $screen-sm-min)
+@media (min-width: $screen-md-min)
+@media (min-width: $screen-lg-min)
+*/
+.w-featured-post {
   background: #5dbeff;
   height: 100%; }
 
-.w-quick-select > div {
-  /* border-right: 1px solid #fff; */
-  height: 395px; }
-
-.w-quick-select > div:last-child {
+.w-featured-post > div:last-child {
   border-right: none; }
 
-.w-quick-select > div > div {
+.w-featured-post > div > div {
   margin-top: 25px;
-  height: 350px; }
+  margin-bottom: 25px; }
 
+/*  _footer-mobile
+Media Queries
+@media (min-width: $iphone-4-min) and ( max-width: $iphone-4-max) and ( -webkit-device-pixel-ratio: 2 )
+@media (min-width: $screen-sm-min)
+@media (min-width: $screen-md-min)
+@media (min-width: $screen-lg-min)
+ */
 footer {
   position: absolute;
   clear: both;
@@ -296,6 +519,15 @@ footer > div > div > aside > div > div > ul > li > a:hover, footer > div > div >
   height: 55px;
   vertical-align: middle;
   padding: 10px; }
+  @media (min-width: 320px) and (max-width: 480px) and (-webkit-device-pixel-ratio: 2) {
+    .w-copyright-bar {
+      height: 75px; } }
+  @media (min-width: 480px) and (max-width: 767px) and (-webkit-device-pixel-ratio: 1) {
+    .w-copyright-bar {
+      height: 40px; } }
+  @media (min-width: 768px) {
+    .w-copyright-bar {
+      height: 40px; } }
 
 .w-copyright-bar > a {
   color: #fff; }

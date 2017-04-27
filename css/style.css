@@ -1,0 +1,306 @@
+/*
+    Theme Name: Wonka Target
+    Theme URI: https://wonkasoft.com/themes/wonka-target/
+    Author: Wonkasoft Team (@wonkasoft)
+    Author URI: https://wonkasoft.com
+    Description: In 2017, our team wanted to build a new responsive site with a sleek, modern design. Our Tactical Theme has a full-width, and a container grid template. This theme is fully compatible with WooCommerce for your tactical store. Creating a Tactical website with WordPress has never been easier.
+    Version: 1.0.0
+    License: GNU General Public License v2 or later
+    License URI: http://www.gnu.org/licenses/gpl-2.0.html
+    Text Domain: wonka-target
+    Tags: custom, html5, css3, sass, scss, jquery, javascript, grid system, one-column, two-columns, right-sidebar, flexible-header, accessibility-ready, custom-colors, custom-header, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
+    This theme, like WordPress, is licensed under the GPL.
+    Use it to make something cool, have fun, and share what you've learned with others.
+*/
+/*------------------------------------*\
+    MAIN
+\*------------------------------------*/
+@font-face {
+  font-family: 'wonka-icons';
+  src: url("./assets/fonts/wonka-icons.otf"); }
+a {
+  transition: all .3s ease-in-out; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%; }
+
+body {
+  font-family: Roboto medium; }
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+article,
+aside,
+footer,
+header,
+nav,
+section {
+  display: block; }
+
+#w-wrapper {
+  position: relative;
+  height: 100%; }
+
+/*
+Header
+*/
+#w-header {
+  background: linear-gradient(-214deg, rgba(37, 60, 94, 0.8) 0%, #253c5e 100%);
+  height: 175px; }
+
+.custom-logo {
+  position: absolute;
+  z-index: 100;
+  left: 50px; }
+
+.w-head-space {
+  margin: 0 75px;
+  height: 125px; }
+
+.w-head-space > div {
+  margin-top: 10px; }
+
+.w-search-form {
+  position: relative;
+  top: 28px; }
+
+.w-search-form > div {
+  margin-right: 30px;
+  z-index: 78;
+  position: relative; }
+
+div.w-search-form input.form-control:first-child {
+  border-radius: 20px 20px 0 0; }
+
+.w-search-button {
+  background: transparent; }
+
+.w-search-button > span {
+  color: #fff;
+  font-size: 18px; }
+
+.w-nav-bar {
+  height: 50px;
+  box-shadow: 0px 4px 8px 2px #000;
+  position: relative;
+  background: #000;
+  z-index: 75; }
+
+.w-nav-color {
+  background: linear-gradient(-214deg, rgba(80, 81, 72, 0.8) 0%, #505148 100%); }
+
+.navbar {
+  border: none; }
+
+.navbar-toggle .icon-bar:nth-of-type(2) {
+  top: 1px; }
+
+.navbar-toggle .icon-bar:nth-of-type(3) {
+  top: 2px; }
+
+.navbar-toggle .icon-bar {
+  position: relative;
+  transition: all .2s ease-in-out; }
+
+.navbar-toggle.active .icon-bar:nth-of-type(1) {
+  top: 6px;
+  transform: rotate(45deg); }
+
+.navbar-toggle.active .icon-bar:nth-of-type(2) {
+  background-color: transparent; }
+
+.navbar-toggle.active .icon-bar:nth-of-type(3) {
+  top: -6px;
+  transform: rotate(-45deg); }
+
+.w-primary-menu {
+  vertical-align: middle; }
+
+.w-primary-menu > li {
+  list-style: none;
+  height: 50px;
+  border-right: 1px solid #fff; }
+
+.w-primary-menu > li:first-child {
+  border-left: 1px solid #fff; }
+
+.w-primary-menu > li > a {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-family: Roboto medium; }
+
+.w-primary-menu > li > a:hover, .w-primary-menu > li > a:focus {
+  opacity: .2;
+  text-decoration: none; }
+
+.w-sub-menu > li:first-child > a:before {
+  font-family: 'wonka-icons';
+  content: '\001c';
+  display: inline-block;
+  padding: 0 8px; }
+
+.w-sub-menu > li {
+  list-style: none;
+  display: inline-block;
+  padding: 0 15px;
+  border-right: 1px solid #fff; }
+
+.w-sub-menu > li > a {
+  color: #fff; }
+
+.w-sub-menu > li > a:hover, .w-sub-menu > li > a:focus {
+  opacity: .2;
+  text-decoration: none; }
+
+.w-sub-menu > li:last-child {
+  border: none; }
+
+.w-slider {
+  max-height: 763px; }
+
+.w-slider > div {
+  padding: 0; }
+
+.card {
+  width: 250px;
+  box-shadow: 0px 2px 6px 4px #ccc; }
+
+.card-up {
+  padding: 50px; }
+
+.facebook {
+  background: #3b5998; }
+
+.twitter {
+  background: #00aced; }
+
+.instagram {
+  background: #bc2a8d; }
+
+.avatar {
+  position: relative;
+  top: -50px;
+  background: #fff;
+  border-radius: 50%;
+  width: 110px;
+  height: 110px;
+  padding-top: 5px;
+  margin: auto; }
+
+.card-block {
+  margin-top: -50px;
+  padding: 0 15px 15px; }
+
+.card-title {
+  vertical-align: middle; }
+
+.card-title > i {
+  font-size: 22pt;
+  vertical-align: text-bottom;
+  color: #cbc; }
+
+.w-dealer-logos:before {
+  content: "";
+  display: block;
+  position: relative;
+  height: 6px;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 2px 8px 1px #000;
+  z-index: 6; }
+
+.w-dealer-logos {
+  background: #0b1316;
+  height: 200px;
+  box-sizing: border-box; }
+
+.w-dealer-logos:after {
+  content: "";
+  display: block;
+  position: relative;
+  height: 6px;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 2px 8px 1px #000;
+  z-index: 6; }
+
+.w-dealer-logos > div > div {
+  height: 194px; }
+
+.w-dealer-logos > div > div > div {
+  background: rgba(55, 55, 55, 0.7);
+  height: 194px;
+  padding: 36% 0; }
+
+.w-quick-select {
+  background: #5dbeff;
+  height: 100%; }
+
+.w-quick-select > div {
+  /* border-right: 1px solid #fff; */
+  height: 395px; }
+
+.w-quick-select > div:last-child {
+  border-right: none; }
+
+.w-quick-select > div > div {
+  margin-top: 25px;
+  height: 350px; }
+
+footer {
+  position: absolute;
+  clear: both;
+  width: 100%; }
+
+footer > div {
+  background: #000; }
+
+footer > div > div {
+  /* height: 275px; */
+  /* border-right: 2px solid #fff; */ }
+
+footer > div > div:last-child {
+  border-right: none; }
+
+footer > div > div > aside > h3 {
+  color: #fff;
+  font-family: Roboto Black;
+  text-transform: uppercase;
+  font-size: 14pt; }
+
+footer > div > div > aside > div > div > ul {
+  list-style: none; }
+
+footer > div > div > aside > div > div > ul > li > a {
+  color: #fff;
+  text-transform: uppercase;
+  line-height: 3rem;
+  font-size: 12pt;
+  font-family: Roboto Light; }
+
+footer > div > div > aside > div > div > ul > li > a:hover, footer > div > div > aside > div > div > ul > li > a:focus {
+  opacity: .8;
+  text-decoration: none; }
+
+.w-copyright-bar {
+  background: #f01;
+  color: #fff;
+  height: 55px;
+  vertical-align: middle;
+  padding: 10px; }
+
+.w-copyright-bar > a {
+  color: #fff; }
+
+.w-copyright-bar > a:hover, .w-copyright-bar > a:focus, .w-copyright-bar > a:active {
+  color: #333;
+  text-decoration: none;
+  opacity: .8; }
+
+/*# sourceMappingURL=style.css.map */

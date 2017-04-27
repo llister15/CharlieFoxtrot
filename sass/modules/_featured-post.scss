@@ -1,0 +1,25 @@
+/*  _featured-post.scss  
+Media Queries
+@media (min-width: $iphone-4-min) and ( max-width: $iphone-4-max) and ( -webkit-device-pixel-ratio: 2 )
+@media (min-width: $screen-sm-min)
+@media (min-width: $screen-md-min)
+@media (min-width: $screen-lg-min)
+*/
+
+.w-featured-post {
+  background: $whats-new-section;
+  height: 100%;
+}
+
+.w-featured-post > div {
+
+}
+
+.w-featured-post > div:last-child {
+  border-right: none;
+}
+
+.w-featured-post > div > div {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}

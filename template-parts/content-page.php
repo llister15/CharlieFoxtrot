@@ -11,64 +11,6 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	
-	<?php
-	if ( !is_home() && !is_front_page()) {
-
-		}
-		else { ?>
-		<div class="container-fluid">
-			<div class="row w-slider">
-				<?php get_template_part('template-parts/slider/theme', 'slider' ); ?>
-			</div>
-		</div>
-		
-		<div class="row w-dealer-logos">
-		<div class="col-xs-12 text-center">
-			<div class="col-xs-2 col-md-offset-1">
-					<?php
-			      if(is_active_sidebar('social-1')){
-			       dynamic_sidebar('social-1');
-			      }
-		      ?>	
-			</div>
-			<div class="col-xs-2">
-					<?php
-			      if(is_active_sidebar('social-2')){
-			       dynamic_sidebar('social-2');
-			      }
-		      ?>	
-			</div>
-			<div class="col-xs-2">
-					<?php
-			      if(is_active_sidebar('social-3')){
-			       dynamic_sidebar('social-3');
-			      }
-		      ?>	
-			</div>
-			<div class="col-xs-2">
-					<?php
-			      if(is_active_sidebar('social-4')){
-			       dynamic_sidebar('social-4');
-			      }
-		      ?>	
-			</div>
-			<div class="col-xs-2">
-					<?php
-			      if(is_active_sidebar('social-5')){
-			       dynamic_sidebar('social-5');
-			      }
-		      ?>	
-			</div>
-		</div>
-	</div>
-<div class="row w-quick-select">
-	<?php get_template_part('template-parts/featured/featured', 'items' ); ?>
-</div>
-</main>
-
-		<?php
-		}
-	?>
 	<div class="entry-content">
 		<?php
 			the_content();
