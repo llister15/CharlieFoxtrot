@@ -1,4 +1,10 @@
-// _footer-mobile
+/*  _footer-mobile
+Media Queries
+@media (min-width: $iphone-4-min) and ( max-width: $iphone-4-max) and ( -webkit-device-pixel-ratio: 2 )
+@media (min-width: $screen-sm-min)
+@media (min-width: $screen-md-min)
+@media (min-width: $screen-lg-min)
+ */
 
 footer {
   position: absolute;
@@ -51,6 +57,12 @@ footer > div > div > aside > div > div > ul > li > a:hover, footer > div > div >
   padding: 10px;
     @media (min-width: $iphone-4-min) and ( max-width: $iphone-4-max) and ( -webkit-device-pixel-ratio: 2 ) {
       height: 75px;
+    }
+    @media (min-width: $iphone-4-max) and ( max-width: $screen-xs-max) and ( -webkit-device-pixel-ratio: 1 ) {
+      height: 40px;
+    }
+    @media (min-width: $screen-sm-min) {
+      height: 40px;
     }
 }
 

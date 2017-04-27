@@ -59,11 +59,11 @@ function charlie_foxtrot_customize_register( $wp_customize ) {
     'default'        => '',
     ));
     
-    $wp_customize->add_control(new WP_Customize_Media_Control($wp_customize, 'theme_slider_'.$i, array(
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'theme_slider_'.$i, array(
     'label'      => __('Slider Image '. $i, 'wonka-target'),
     'section'    => 'slider_options',
     'settings'   => 'theme_slider_'.$i,
-    'mime_type' => 'image',
+    'type' => 'image',
     ) ));
   }
 

@@ -13,6 +13,14 @@
     Use it to make something cool, have fun, and share what you've learned with others.
 */
 
+/* 
+Media Queries 
+@media (min-width: $iphone-4-min) and ( max-width: $iphone-4-max) and ( -webkit-device-pixel-ratio: 2 )
+@media (min-width: $screen-sm-min)
+@media (min-width: $screen-md-min)
+@media (min-width: $screen-lg-min)
+*/
+
 /*------------------------------------*\
     MAIN
 \*------------------------------------*/
@@ -23,10 +31,16 @@ $screen-md-min: 992px;
 $screen-sm-max: ($screen-md-min - 1);
 $screen-lg-min: 1200px;
 $screen-md-max: ($screen-lg-min - 1);
-
+// For iphone 4
 $iphone-4-min: 320px;
 $iphone-4-max: 480px;
 
+// Font sizes
+$iphone-4-font-size: 10pt;
+$brand-font-size-xs: 11pt;
+$brand-font-size-sm: 16pt;
+$brand-font-size-md: 20pt;
+$brand-font-size-lg: 30pt;
 
 // Theme Colors
 $header-color: linear-gradient(-214deg, rgba(37, 60, 94, .8) 0%, rgba(37, 60, 94, 1) 100%);
@@ -37,6 +51,7 @@ $dealer-placeholders: rgba(55,55,55, .7);
 $footer-color: #000;
 $copyright-bar: #f01;
 $copyright-text: #fff;
+$link-color: #fff;
 
 @font-face {
     font-family:  'wonka-icons';

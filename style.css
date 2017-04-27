@@ -12,6 +12,13 @@
     This theme, like WordPress, is licensed under the GPL.
     Use it to make something cool, have fun, and share what you've learned with others.
 */
+/* 
+Media Queries 
+@media (min-width: $iphone-4-min) and ( max-width: $iphone-4-max) and ( -webkit-device-pixel-ratio: 2 )
+@media (min-width: $screen-sm-min)
+@media (min-width: $screen-md-min)
+@media (min-width: $screen-lg-min)
+*/
 /*------------------------------------*\
     MAIN
 \*------------------------------------*/
@@ -41,6 +48,12 @@ section {
   position: relative;
   height: 100%; }
 
+/*  _header-moblie
+@media (min-width: $iphone-4-min) and ( max-width: $iphone-4-max) and ( -webkit-device-pixel-ratio: 2 )
+@media (min-width: $screen-sm-min)
+@media (min-width: $screen-md-min)
+@media (min-width: $screen-lg-min)
+ */
 .custom-logo,
 .w-head-space,
 .w-head-space > div,
@@ -50,17 +63,8 @@ div.w-search-form input.form-control,
 .w-search-button,
 .w-search-button > span,
 .w-brand-logo > a > img,
-.w-nav-bar,
-.w-nav-color,
-.navbar,
-.navbar-toggle .icon-bar,
-.navbar-default .navbar-brand,
-.navbar-default .w-primary-menu,
-.navbar-default .w-primary-menu > li,
-.navbar-default .w-primary-menu > li > a,
 .w-sub-menu > li > a,
-.w-sub-menu > li,
-.navbar-default .navbar-nav .open .dropdown-menu > li > a {
+.w-sub-menu > li {
   position: relative;
   transition: all .2s ease-in-out; }
 
@@ -124,9 +128,24 @@ div.w-search-form input.form-control:first-child {
   border: none; }
 
 /* _wonka-navbar-mobile
-Media Queries 
+Media Queries
 @media (min-width: $iphone-4-min) and ( max-width: $iphone-4-max) and ( -webkit-device-pixel-ratio: 2 )
+@media (min-width: $screen-sm-min)
+@media (min-width: $screen-md-min)
+@media (min-width: $screen-lg-min)
  */
+.w-nav-bar,
+.w-nav-color,
+.navbar,
+.navbar-toggle .icon-bar,
+.navbar-default .navbar-brand,
+.navbar-default .w-primary-menu,
+.navbar-default .w-primary-menu > li,
+.navbar-default .w-primary-menu > li > a,
+.navbar-default .navbar-nav .open .dropdown-menu > li > a {
+  position: relative;
+  transition: all .2s ease-in-out; }
+
 .w-nav-bar {
   box-shadow: 0px 2px 6px 2px #000;
   position: relative;
@@ -176,6 +195,12 @@ Media Queries
   @media (min-width: 320px) and (max-width: 480px) and (-webkit-device-pixel-ratio: 2) {
     .navbar-default .navbar-brand {
       font-size: 10pt; } }
+  @media (min-width: 768px) {
+    .navbar-default .navbar-brand {
+      font-size: 16pt; } }
+  @media (min-width: 992px) {
+    .navbar-default .navbar-brand {
+      font-size: 20pt; } }
 
 .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
   opacity: .6;
@@ -214,10 +239,23 @@ Media Queries
   text-decoration: none; }
 
 /*  _theme-slider-mobile
-Media Queries 
+Media Queries
 @media (min-width: $iphone-4-min) and ( max-width: $iphone-4-max) and ( -webkit-device-pixel-ratio: 2 )
-
+@media (min-width: $screen-sm-min)
+@media (min-width: $screen-md-min)
+@media (min-width: $screen-lg-min)
 */
+.w-slider,
+.w-slider > div,
+#myCarousel > .carousel-control,
+#myCarousel > .carousel-control > .glyphicon,
+#myCarousel > .left > .glyphicon,
+#myCarousel > .right > .glyphicon,
+#myCarousel > .carousel-indicators,
+#myCarousel > .carousel-indicators li,
+#myCarousel > .carousel-indicators .active {
+  transition: all .2s ease-in-out; }
+
 .w-slider {
   max-height: 763px; }
 
@@ -225,39 +263,127 @@ Media Queries
   padding: 0; }
 
 #myCarousel > .carousel-control {
-  top: 113px;
-  height: 30px;
-  width: 135px; }
+  top: 80%;
+  height: 20%;
+  width: 40%; }
   @media (min-width: 320px) and (max-width: 480px) and (-webkit-device-pixel-ratio: 2) {
     #myCarousel > .carousel-control {
-      top: 100px;
-      height: 27px; } }
+      top: 77%;
+      height: 22%; } }
+  @media (min-width: 480px) and (max-width: 767px) {
+    #myCarousel > .carousel-control {
+      top: 85%;
+      height: 15%; } }
+  @media (min-width: 768px) {
+    #myCarousel > .carousel-control {
+      top: 90%;
+      height: 10%; } }
+  @media (min-width: 992px) {
+    #myCarousel > .carousel-control {
+      top: 90%;
+      height: 10%; } }
 
 #myCarousel > .carousel-control > .glyphicon {
   font-size: 11pt; }
+  @media (min-width: 480px) and (max-width: 767px) and (-webkit-device-pixel-ratio: 1) {
+    #myCarousel > .carousel-control > .glyphicon {
+      font-size: 16pt; } }
+  @media (min-width: 768px) {
+    #myCarousel > .carousel-control > .glyphicon {
+      font-size: 16pt; } }
+  @media (min-width: 992px) {
+    #myCarousel > .carousel-control > .glyphicon {
+      font-size: 20pt; } }
+  @media (min-width: 1200px) {
+    #myCarousel > .carousel-control > .glyphicon {
+      font-size: 30pt; } }
 
 #myCarousel > .left > .glyphicon {
-  left: 58px; }
+  top: 0;
+  left: 40%; }
+  @media (min-width: 480px) and (max-width: 767px) and (-webkit-device-pixel-ratio: 1) {
+    #myCarousel > .left > .glyphicon {
+      top: 20%;
+      left: 40%; } }
+  @media (min-width: 768px) {
+    #myCarousel > .left > .glyphicon {
+      top: 15%;
+      left: 40%; } }
+  @media (min-width: 992px) {
+    #myCarousel > .left > .glyphicon {
+      top: 15%;
+      left: 45%; } }
+  @media (min-width: 1200px) {
+    #myCarousel > .left > .glyphicon {
+      top: 20%;
+      left: 45%; } }
 
 #myCarousel > .right > .glyphicon {
-  right: 58px; }
+  top: 0;
+  right: 40%; }
+  @media (min-width: 480px) and (max-width: 767px) and (-webkit-device-pixel-ratio: 1) {
+    #myCarousel > .right > .glyphicon {
+      top: 20%;
+      right: 40%; } }
+  @media (min-width: 768px) {
+    #myCarousel > .right > .glyphicon {
+      top: 15%;
+      right: 40%; } }
+  @media (min-width: 992px) {
+    #myCarousel > .right > .glyphicon {
+      top: 15%;
+      right: 45%; } }
+  @media (min-width: 1200px) {
+    #myCarousel > .right > .glyphicon {
+      top: 20%;
+      right: 45%; } }
 
 #myCarousel > .carousel-indicators {
   width: 20%;
   margin-left: -10%;
-  bottom: -4px; }
+  bottom: -3%; }
   @media (min-width: 320px) and (max-width: 480px) and (-webkit-device-pixel-ratio: 2) {
     #myCarousel > .carousel-indicators {
       bottom: -6px; } }
+  @media (min-width: 480px) and (max-width: 767px) and (-webkit-device-pixel-ratio: 1) {
+    #myCarousel > .carousel-indicators {
+      bottom: 1%; } }
+  @media (min-width: 768px) {
+    #myCarousel > .carousel-indicators {
+      bottom: 0%; } }
+  @media (min-width: 992px) {
+    #myCarousel > .carousel-indicators {
+      bottom: 1%; } }
+  @media (min-width: 1200px) {
+    #myCarousel > .carousel-indicators {
+      bottom: 2%; } }
 
 #myCarousel > .carousel-indicators li {
   width: 6px;
   height: 6px;
   border-radius: 6px; }
+  @media (min-width: 480px) and (max-width: 767px) and (-webkit-device-pixel-ratio: 1) {
+    #myCarousel > .carousel-indicators li {
+      width: 8px;
+      height: 8px;
+      border-radius: 8px; } }
+  @media (min-width: 992px) {
+    #myCarousel > .carousel-indicators li {
+      width: 10px;
+      height: 10px;
+      border-radius: 10px; } }
 
 #myCarousel > .carousel-indicators .active {
   width: 8px;
   height: 8px; }
+  @media (min-width: 480px) and (max-width: 767px) and (-webkit-device-pixel-ratio: 1) {
+    #myCarousel > .carousel-indicators .active {
+      width: 10px;
+      height: 10px; } }
+  @media (min-width: 992px) {
+    #myCarousel > .carousel-indicators .active {
+      width: 12px;
+      height: 12px; } }
 
 .card {
   width: 250px;
@@ -325,7 +451,13 @@ Media Queries
 .w-social-wigets > div > div {
   height: 194px; }
 
-/*  _featured-post.scss  */
+/*  _featured-post.scss  
+Media Queries
+@media (min-width: $iphone-4-min) and ( max-width: $iphone-4-max) and ( -webkit-device-pixel-ratio: 2 )
+@media (min-width: $screen-sm-min)
+@media (min-width: $screen-md-min)
+@media (min-width: $screen-lg-min)
+*/
 .w-featured-post {
   background: #5dbeff;
   height: 100%; }
@@ -337,6 +469,13 @@ Media Queries
   margin-top: 25px;
   margin-bottom: 25px; }
 
+/*  _footer-mobile
+Media Queries
+@media (min-width: $iphone-4-min) and ( max-width: $iphone-4-max) and ( -webkit-device-pixel-ratio: 2 )
+@media (min-width: $screen-sm-min)
+@media (min-width: $screen-md-min)
+@media (min-width: $screen-lg-min)
+ */
 footer {
   position: absolute;
   clear: both;
@@ -381,6 +520,12 @@ footer > div > div > aside > div > div > ul > li > a:hover, footer > div > div >
   @media (min-width: 320px) and (max-width: 480px) and (-webkit-device-pixel-ratio: 2) {
     .w-copyright-bar {
       height: 75px; } }
+  @media (min-width: 480px) and (max-width: 767px) and (-webkit-device-pixel-ratio: 1) {
+    .w-copyright-bar {
+      height: 40px; } }
+  @media (min-width: 768px) {
+    .w-copyright-bar {
+      height: 40px; } }
 
 .w-copyright-bar > a {
   color: #fff; }

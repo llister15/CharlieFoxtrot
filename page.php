@@ -43,6 +43,9 @@ else { ?>
     <?php get_template_part('template-parts/slider/theme', 'slider' ); ?>
   </div>
 
+<?php if (!is_active_sidebar('dealer1')) {
+  
+} else { ?>
   <div class="row w-social-wigets">
     <div class="col-xs-12 text-center">
       <div class="col-xs-2 col-md-offset-1">
@@ -82,6 +85,9 @@ else { ?>
       </div>
     </div>
   </div>
+  <?php
+   } //  End IF for dealer section
+  ?>
 
   <div class="row w-featured-post">
     <div class="col-xs-12 col-md-6 text-center">

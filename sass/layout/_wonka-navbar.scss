@@ -1,13 +1,24 @@
 /* _wonka-navbar-mobile
-Media Queries 
+Media Queries
 @media (min-width: $iphone-4-min) and ( max-width: $iphone-4-max) and ( -webkit-device-pixel-ratio: 2 )
+@media (min-width: $screen-sm-min)
+@media (min-width: $screen-md-min)
+@media (min-width: $screen-lg-min)
  */
 
-$link-color: #fff;
-
-// Font sizes
-$brand-font-size: 11pt;
-$iphone-4-font-size: 10pt;
+// Transitions
+.w-nav-bar,
+.w-nav-color,
+.navbar,
+.navbar-toggle .icon-bar,
+.navbar-default .navbar-brand,
+.navbar-default .w-primary-menu,
+.navbar-default .w-primary-menu > li,
+.navbar-default .w-primary-menu > li > a,
+.navbar-default .navbar-nav .open .dropdown-menu>li>a {
+    position: relative;
+    transition: all .2s ease-in-out;
+}
 
 .w-nav-bar {
   box-shadow: 0px 2px 6px 2px #000;
@@ -70,9 +81,15 @@ $iphone-4-font-size: 10pt;
 
 .navbar-default .navbar-brand {
   color: $link-color;
-  font-size: $brand-font-size;
+  font-size: $brand-font-size-xs;
     @media (min-width: $iphone-4-min) and ( max-width: $iphone-4-max) and ( -webkit-device-pixel-ratio: 2 ) {
       font-size: $iphone-4-font-size;
+    }
+    @media (min-width: $screen-sm-min) {
+      font-size: $brand-font-size-sm;
+    }
+    @media (min-width: $screen-md-min) {
+      font-size: $brand-font-size-md;
     }
 }
 

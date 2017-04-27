@@ -1,4 +1,10 @@
-// _header-moblie
+/*  _header-moblie
+@media (min-width: $iphone-4-min) and ( max-width: $iphone-4-max) and ( -webkit-device-pixel-ratio: 2 )
+@media (min-width: $screen-sm-min)
+@media (min-width: $screen-md-min)
+@media (min-width: $screen-lg-min)
+ */
+
 .custom-logo,
 .w-head-space,
 .w-head-space > div,
@@ -8,17 +14,8 @@ div.w-search-form input.form-control,
 .w-search-button,
 .w-search-button > span,
 .w-brand-logo > a > img,
-.w-nav-bar,
-.w-nav-color,
-.navbar,
-.navbar-toggle .icon-bar,
-.navbar-default .navbar-brand,
-.navbar-default .w-primary-menu,
-.navbar-default .w-primary-menu > li,
-.navbar-default .w-primary-menu > li > a,
 .w-sub-menu > li > a,
-.w-sub-menu > li,
-.navbar-default .navbar-nav .open .dropdown-menu>li>a {
+.w-sub-menu > li {
     position: relative;
     transition: all .2s ease-in-out;
 }
