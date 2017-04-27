@@ -25,65 +25,45 @@
 		<div class="row w-dealer-logos">
 		<div class="col-xs-12 text-center">
 			<div class="col-xs-2 col-md-offset-1">
-				<div>
 					<?php
-			      if(is_active_sidebar('dealer1')){
-			       dynamic_sidebar('dealer1');
+			      if(is_active_sidebar('social-1')){
+			       dynamic_sidebar('social-1');
 			      }
 		      ?>	
-      </div>
 			</div>
 			<div class="col-xs-2">
-				<div>
 					<?php
-			      if(is_active_sidebar('dealer2')){
-			       dynamic_sidebar('dealer2');
+			      if(is_active_sidebar('social-2')){
+			       dynamic_sidebar('social-2');
 			      }
 		      ?>	
-				</div>
 			</div>
 			<div class="col-xs-2">
-				<div>
 					<?php
-			      if(is_active_sidebar('dealer3')){
-			       dynamic_sidebar('dealer3');
+			      if(is_active_sidebar('social-3')){
+			       dynamic_sidebar('social-3');
 			      }
 		      ?>	
-				</div>
 			</div>
 			<div class="col-xs-2">
-				<div>
 					<?php
-			      if(is_active_sidebar('dealer4')){
-			       dynamic_sidebar('dealer4');
+			      if(is_active_sidebar('social-4')){
+			       dynamic_sidebar('social-4');
 			      }
 		      ?>	
-				</div>
 			</div>
 			<div class="col-xs-2">
-				<div>
 					<?php
-			      if(is_active_sidebar('dealer5')){
-			       dynamic_sidebar('dealer5');
+			      if(is_active_sidebar('social-5')){
+			       dynamic_sidebar('social-5');
 			      }
 		      ?>	
-				</div>
 			</div>
 		</div>
 	</div>
-
-	<div class="row w-quick-select">
-		<div class="col-xs-6 text-center">
-			<div class="col-xs-8 col-md-offset-2">
-				<img src="//wonkasoft.com/ar500-targets/wp-content/uploads/2017/04/Monthly-Specials-1.jpg">
-			</div>
-		</div>
-		<div class="col-xs-6 text-center">
-			<div class="col-xs-8 col-md-offset-2">
-				<img src="//wonkasoft.com/ar500-targets/wp-content/uploads/2017/04/New-Arrivals-1.jpg">
-			</div>
-		</div>
-	</div>  
+<div class="row w-quick-select">
+	<?php get_template_part('template-parts/featured/featured', 'items' ); ?>
+</div>
 </main>
 
 		<?php

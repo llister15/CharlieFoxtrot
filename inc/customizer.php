@@ -16,7 +16,7 @@ function charlie_foxtrot_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
   //Slider Options   
   $wp_customize->add_section(  'slider_options' , array(
-  'title'      => __( 'Slider Options', 'wonka-target' ),
+  'title'      => __( 'Slider Options', 'charlie-foxtrot' ),
   'description' => 'Slider Options: <br/>Slide count can be up to 5 slides. <br/><i>Recommended size <strong>1920x770</strong></i>',
   'priority' => 101,
   ) );
@@ -27,7 +27,7 @@ function charlie_foxtrot_customize_register( $wp_customize ) {
     ));
 
   $wp_customize->add_control('theme_slider_check', array(
-    'label' => __('Enable Slider', 'wonka-target'),
+    'label' => __('Enable Slider', 'charlie-foxtrot'),
     'type' => 'checkbox',
     'section' => 'slider_options',
     'settings' => 'theme_slider_check',
@@ -39,7 +39,7 @@ function charlie_foxtrot_customize_register( $wp_customize ) {
     ));
 
   $wp_customize->add_control('theme_slide_count', array(
-    'label' => __('Slide Count:', 'wonka-target'),
+    'label' => __('Slide Count:', 'charlie-foxtrot'),
    'type' => 'select',
    'choices' => array(
     '1' => '1',
@@ -59,13 +59,73 @@ function charlie_foxtrot_customize_register( $wp_customize ) {
     'default'        => '',
     ));
     
-    $wp_customize->add_control(new WP_Customize_Media_Control($wp_customize, 'theme_slider_'.$i, array(
-    'label'      => __('Slider Image '. $i, 'wonka-target'),
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'theme_slider_'.$i, array(
+    'label'      => __('Slider Image '. $i, 'charlie-foxtrot'),
     'section'    => 'slider_options',
     'settings'   => 'theme_slider_'.$i,
-    'mime_type' => 'image',
+    'type' => 'image',
     ) ));
   }
+
+  //Feature Item Section   
+  $wp_customize->add_section(  'feature_items' , array(
+  'title'      => __( 'Featured Section', 'charlie-foxtrot' ),
+  'description' => 'Feature Section: <br/>This section has two images for selection. <br/><i>Recommended size <strong>1920x770</strong></i>',
+  'priority' => 102,
+  ) );
+
+
+  //Feature Item settings 1
+  $wp_customize->add_setting('feature_item_1', array(
+    'default' => '',
+    ));
+
+  // Feature Item controls 1 
+  $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'feature_item_1', array(
+    'label'      => __('Feature Image 1 left side', 'charlie-foxtrot'),
+    'section'    => 'feature_items',
+    'settings'   => 'feature_item_1',
+    'type' => 'image',
+    ) ));
+
+    //Feature Item settings 1 url
+  $wp_customize->add_setting('feature_item_1_link', array(
+    'default' => '',
+    ));
+
+  // Feature Item controls 1 url
+  $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'feature_item_1_link', array(
+    'label'      => __('Feature Image 1 Link', 'charlie-foxtrot'),
+    'section'    => 'feature_items',
+    'settings'   => 'feature_item_1_link',
+    'type' => 'dropdown-pages',
+    ) ));
+
+    //Feature Item settings 2
+  $wp_customize->add_setting('feature_item_2', array(
+    'default' => '',
+    ));
+
+  // Feature Item controls 2
+  $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'feature_item_2', array(
+    'label'      => __('Feature Image2', 'charlie-foxtrot'),
+    'section'    => 'feature_items',
+    'settings'   => 'feature_item_2',
+    'type' => 'image',
+    ) ));
+
+    //Feature Item settings 2 url
+  $wp_customize->add_setting('feature_item_2_link', array(
+    'default' => '',
+    ));
+
+  // Feature Item controls 2 url
+  $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'feature_item_2_link', array(
+    'label'      => __('Feature Image 2 Link', 'charlie-foxtrot'),
+    'section'    => 'feature_items',
+    'settings'   => 'feature_item_2_link',
+    'type' => 'dropdown-pages',
+    ) ));
 
 }
 add_action( 'customize_register', 'charlie_foxtrot_customize_register' );

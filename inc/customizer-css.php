@@ -1,14 +1,14 @@
 <?php
 /*
-* Wonka Target Customizer CSS
+* Charlie Foxtrot Customizer CSS
 *
 * @package WordPress
-* @subpackage Wonka_Target
+* @subpackage Charlie_Foxtrot
 * @since 1.0
 * @version 1.0
 */
 //Added CSS for customizer.
-function wonka_target_customizer_css() {
+function charlie_foxtrot_customizer_css() {
 ?>
     <style type="text/css">
       #customize-control-theme_slide_count > label > select {
@@ -18,5 +18,5 @@ function wonka_target_customizer_css() {
 
 <?php
 }
-add_action('customize_controls_print_styles', 'wonka_target_customizer_css');
+add_action('customize_controls_print_styles', 'charlie_foxtrot_customizer_css');
 ?>
