@@ -49,35 +49,35 @@ else { ?>
 } else { ?>
   <div class="row w-social-wigets">
     <div class="col-xs-12 text-center">
-      <div class="col-xs-2 col-md-offset-1">
+      <div class="col-xs-12 col-md-2 col-md-offset-1">
         <?php
         if(is_active_sidebar('social_1')){
           dynamic_sidebar('social_1');
         }
         ?>	
       </div>
-      <div class="col-xs-2">
+      <div class="col-xs-12 col-md-2">
         <?php
         if(is_active_sidebar('social_2')){
           dynamic_sidebar('social_2');
         }
         ?>
       </div>
-      <div class="col-xs-2">
+      <div class="col-xs-12 col-md-2">
         <?php
         if(is_active_sidebar('social_3')){
           dynamic_sidebar('social_3');
         }
         ?>
       </div>
-      <div class="col-xs-2">
+      <div class="col-xs-12 col-md-2">
         <?php
         if(is_active_sidebar('social_4')){
           dynamic_sidebar('social_4');
         }
         ?>
       </div>
-      <div class="col-xs-2">
+      <div class="col-xs-12 col-md-2">
         <?php
         if(is_active_sidebar('social_5')){
           dynamic_sidebar('social_5');

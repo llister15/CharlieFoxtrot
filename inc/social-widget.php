@@ -41,8 +41,8 @@ class social_widget extends WP_Widget {
                 echo '<img class="custom_media_image" src="' . $instance['profile_picture'] . '" /><br />';
             endif;
   ?>
-  <input type="text" class="widefat custom_media_url" name="<?php echo $this->get_field_name('profile_picture'); ?>" id="<?php echo $this->get_field_id('profile_picture'); ?>" value="<?php echo $instance['profile_picture']; ?>"><br />
-  <input type="button" class="button button-primary custom_media_button" id="custom_media_button" name="<?php echo $this->get_field_name('profile_picture'); ?>" value="Upload Image" /><br /><br />
+  <input type="text" class="widefat custom_media_url <?php echo $this->id; ?>" name="<?php echo $this->get_field_name('profile_picture'); ?>" id="<?php echo $this->id;?>" value="<?php echo $instance['profile_picture']; ?>"><br />
+  <input type="button" class="button button-primary custom_media_button <?php echo $this->id;?>" id="custom_media_button_<?php echo $this->id; ?>" name="<?php echo $this->get_field_name('profile_picture'); ?>" value="Upload Image" /><br /><br />
    
   
   <label for="<?php echo $this->get_field_id('customer_name'); ?>"><?php _e('User Name:'); ?></label> 
@@ -87,21 +87,29 @@ class social_widget extends WP_Widget {
     echo $args['before_widget'];
     ?>
       <!--Card-->
-      <div class="card testimonial-card">
+      <div class="card">
         <!--Background color-->
         <div class="card-up <?php echo $social_referral; ?>">
         </div>
-
+        <?php 
+          if ($profile_picture == null) {
+            ?>
+            <div class="no-avatar"></div>
+            <?php
+          } else {
+        ?>
         <!--Avatar-->
         <div class="avatar"><img src="<?php echo $profile_picture; ?>" class="center-block img-circle img-responsive">
         </div>
-
+        <?php
+      } 
+      ?>
         <div class="card-block">
           <!--Name-->
           <h4 class="card-title"><i class="ws ws-<?php echo $social_referral;?>";" aria-hidden="true"></i> <?php echo $customer_name;?></h4>
           <hr>
           <!--Quotation-->
-          <p><i class="quote-left"></i> <?php echo $customer_comment;?></p>
+          <p><i class="ws ws-quotes"></i> <?php echo $customer_comment;?></p>
         </div>
       </div>
     <!--/.Card-->

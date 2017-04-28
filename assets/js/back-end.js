@@ -7,12 +7,12 @@ jQuery( document ).ready(function ($) {
         var self = $(button_id);
         var send_attachment_bkp = wp.media.editor.send.attachment;
         var button = $(button_id);
-        var id = button.attr('id').replace('_button', '');
+        var id = button.attr('id').replace('custom_media_button_', '');
         _custom_media = true;
         wp.media.editor.send.attachment = function(props, attachment){
             if ( _custom_media  ) {
                 $('.custom_media_id').val(attachment.id);
-                $('.custom_media_url').val(attachment.url);
+                $('.custom_media_url.'+ id).val(attachment.url);
                 $('.custom_media_image').attr('src',attachment.url).css('display','block');
             } else {
                 return _orig_send_attachment.apply( button_id, [props, attachment] );

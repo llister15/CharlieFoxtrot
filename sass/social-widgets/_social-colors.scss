@@ -22,14 +22,17 @@ $yahoo: #7B0099;
 $blogger: #fb8f3d;
 $soundcloud: #ff3a00;
 
+
+  .widget.social-widget {
+    position:relative;
+    height:275px;
+  }
+
   .card {
+    position:relative;
     width: 100%;
     height:100%;
     background:#fff;
-  }
-  
-  .testimonial-card {
-
   }
 
   .card-up {
@@ -38,12 +41,10 @@ $soundcloud: #ff3a00;
 
   .facebook {
     background: $facebook;
-
   }
 
   .twitter {
     background: $twitter;
-
   }
 
   .instagram {
@@ -56,19 +57,38 @@ $soundcloud: #ff3a00;
     top: -50px;
     background: #fff;
     border-radius: 50%;
-    width: 110px;
-    height: 110px;
+    max-width: 110px;
+    max-height: 110px;
     padding-top: 5px;
     margin: auto;
   }
 
+  .no-avatar {
+  
+  }
+
   .card-block {
+    position:absolute;
+    height:145px;
+    bottom:0;
     margin-top: -50px;
-    padding: 0 15px 15px;
+    padding: 0;
+  }
+
+  .card-block>p {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    line-height: 2rem; 
+    font-size:9pt;
+    padding:5px;
+    
   }
 
   .card-title {
     vertical-align: middle;
+    font-size:16pt;
   }
 
   .card-title>i {
