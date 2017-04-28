@@ -38,12 +38,13 @@ endwhile; // End of the loop.
 <?php
 }
 else { ?>
+<div id="home-content">
 <div class="container-fluid">
   <div class="row w-slider">
     <?php get_template_part('template-parts/slider/theme', 'slider' ); ?>
   </div>
 
-<?php if (!is_active_sidebar('dealer1')) {
+<?php if (!is_active_sidebar('social-1')) {
   
 } else { ?>
   <div class="row w-social-wigets">
@@ -88,14 +89,22 @@ else { ?>
   <?php
    } //  End IF for dealer section
   ?>
-
+<?php 
+$feature1 = get_theme_mod('feature_item_1');
+if (empty('feature_item_1')) {
+  
+} else { ?>
   <div class="row w-featured-post">
     <?php get_template_part('template-parts/featured/featured', 'items' ); ?>
   </div>  
-</div>
 
 <?php
-}
+   } //  End IF for feature section
+  ?>
+</div> <!-- end main content container -->
+</div> <!-- end home-content -->
+<?php
+} // End IF is_home
 ?>
 
 <?php

@@ -54,8 +54,11 @@ $copyright-text: #fff;
 $link-color: #fff;
 
 @font-face {
-    font-family:  'wonka-icons';
+    font-family:  'Wonka Icons';
     src: url('./assets/fonts/wonka-icons.otf');
+    src: url('./assets/fonts/wonka-icons.woff') format('woff'),
+    url('./assets/fonts/wonka-icons.ttf') format('truetype'),
+    url('./assets/fonts/wonka-icons.svg#wonka_icons') format('svg')
 }
 
 a {
@@ -63,13 +66,15 @@ a {
 }
 
 html, body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
+  margin: 0;
+  padding: 0;
+  height: 100%;
 }
 
 body {
   font-family: Roboto medium;
+  position: relative;
+  display: block;
 }
 
 article,
@@ -82,8 +87,20 @@ section {
 }
 
 #w-wrapper {
+  min-height: 100%;
   position: relative;
-  height: 100%;
+}
+
+.ws {
+  position:relative;
+  top:1px;
+  display:inline-block;
+  font-family:'Wonka Icons';
+  font-style:normal;
+  font-weight:normal;
+  line-height:1;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
 }
 
 // Import Header for Mobile 
@@ -94,6 +111,9 @@ section {
 
 // Import Theme Slider for Mobile 
 @import './layout/theme-slider';
+
+// Import Theme Slider for Mobile 
+@import './layout/home-content';
 
 // Import Social / Dealer Widget SCSS 
 @import './social-widgets/social-colors';

@@ -24,8 +24,9 @@ Media Queries
     MAIN
 \*------------------------------------*/
 @font-face {
-  font-family: 'wonka-icons';
-  src: url("./assets/fonts/wonka-icons.otf"); }
+  font-family: 'Wonka Icons';
+  src: url("./assets/fonts/wonka-icons.otf");
+  src: url("./assets/fonts/wonka-icons.woff") format("woff"), url("./assets/fonts/wonka-icons.ttf") format("truetype"), url("./assets/fonts/wonka-icons.svg#wonka_icons") format("svg"); }
 a {
   transition: all .3s ease-in-out; }
 
@@ -35,7 +36,9 @@ html, body {
   height: 100%; }
 
 body {
-  font-family: Roboto medium; }
+  font-family: Roboto medium;
+  position: relative;
+  display: block; }
 
 article,
 aside,
@@ -46,8 +49,19 @@ section {
   display: block; }
 
 #w-wrapper {
+  min-height: 100%;
+  position: relative; }
+
+.ws {
   position: relative;
-  height: 100%; }
+  top: 1px;
+  display: inline-block;
+  font-family: 'Wonka Icons';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
 
 /*  _header-moblie
 @media (min-width: $iphone-4-min) and ( max-width: $iphone-4-max) and ( -webkit-device-pixel-ratio: 2 )
@@ -106,7 +120,7 @@ div.w-search-form input.form-control:first-child {
   font-size: 18px; }
 
 .w-sub-menu > li:first-child > a:before {
-  font-family: 'wonka-icons';
+  font-family: 'Wonka Icons';
   content: '\001c';
   display: inline-block;
   padding: 0 8px; }
@@ -266,7 +280,8 @@ Media Queries
 #myCarousel > .carousel-control {
   top: 80%;
   height: 20%;
-  width: 40%; }
+  width: 40%;
+  background: transparent; }
   @media (min-width: 320px) and (max-width: 480px) and (-webkit-device-pixel-ratio: 2) {
     #myCarousel > .carousel-control {
       top: 77%;
@@ -386,6 +401,26 @@ Media Queries
       width: 12px;
       height: 12px; } }
 
+/* 
+* _home-content
+*
+ */
+#home-content,
+.content-area {
+  transition: all .2s ease-in-out; }
+
+#home-content {
+  position: relative;
+  display: block;
+  min-height: 100%;
+  padding-bottom: 10px; }
+
+.content-area {
+  display: block;
+  position: relative;
+  min-height: 100%;
+  padding-bottom: 10px; }
+
 .card {
   width: 100%;
   height: 100%;
@@ -437,7 +472,6 @@ Media Queries
 
 .w-social-wigets {
   background: #0b1316;
-  height: 200px;
   box-sizing: border-box; }
 
 .w-social-wigets:after {
@@ -449,9 +483,6 @@ Media Queries
   background: #fff;
   box-shadow: 0 2px 8px 1px #000;
   z-index: 6; }
-
-.w-social-wigets > div > div {
-  height: 194px; }
 
 /*  _featured-post.scss  
 Media Queries
@@ -481,7 +512,8 @@ Media Queries
 footer {
   position: absolute;
   clear: both;
-  width: 100%; }
+  width: 100%;
+  bottom: 0; }
 
 footer > div {
   background: #000; }

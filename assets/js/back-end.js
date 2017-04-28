@@ -17,7 +17,7 @@ jQuery( document ).ready(function ($) {
             } else {
                 return _orig_send_attachment.apply( button_id, [props, attachment] );
             }
-        }
+        };
         wp.media.editor.open(button);
         return false;
     });

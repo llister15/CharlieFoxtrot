@@ -1,0 +1,23 @@
+/* 
+* _home-content
+*
+ */
+
+ #home-content,
+ .content-area {
+  transition: all .2s ease-in-out;
+ }
+
+#home-content {
+  position: relative;
+  display: block;
+  min-height: 100%;
+  padding-bottom: 10px;
+ }
+
+.content-area {
+  display: block;
+  position: relative;
+  min-height: 100%;
+  padding-bottom: 10px;
+ }
