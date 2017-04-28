@@ -133,9 +133,9 @@ function charlie_foxtrot_setup() {
 
 	// Register Social Widgets
 	register_sidebar( array(
-		'name'          => esc_html__( 'Social-1', 'charlie-foxtrot' ),
-		'id'            => 'social-1',
-		'description'   => esc_html__( 'Social-1', 'charlie-foxtrot' ),
+		'name'          => 'Social 1',
+		'id'            => 'social_1',
+		'description'   => 'Social Proof',
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
@@ -143,9 +143,9 @@ function charlie_foxtrot_setup() {
 	) );
 
 		register_sidebar( array(
-		'name'          => esc_html__( 'Social-2', 'charlie-foxtrot' ),
-		'id'            => 'social-2',
-		'description'   => esc_html__( 'Social-2', 'charlie-foxtrot' ),
+		'name'          => 'Social 2',
+		'id'            => 'social_2',
+		'description'   => 'Social Proof',
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
@@ -153,9 +153,9 @@ function charlie_foxtrot_setup() {
 	) );
 
 	register_sidebar( array(
-		'name'          => esc_html__( 'Social-3', 'charlie-foxtrot' ),
-		'id'            => 'social-3',
-		'description'   => esc_html__( 'Social-3', 'charlie-foxtrot' ),
+		'name'          => 'Social 3',
+		'id'            => 'social_3',
+		'description'   => 'Social Proof',
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
@@ -163,9 +163,9 @@ function charlie_foxtrot_setup() {
 	) );
 
 	register_sidebar( array(
-		'name'          => esc_html__( 'Social-4', 'charlie-foxtrot' ),
-		'id'            => 'social-4',
-		'description'   => esc_html__( 'Social-4', 'charlie-foxtrot' ),
+		'name'          => 'Social 4', 
+		'id'            => 'social_4',
+		'description'   => 'Social Proof',
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
@@ -173,9 +173,9 @@ function charlie_foxtrot_setup() {
 	) );
 
 	register_sidebar( array(
-		'name'          => esc_html__( 'Social-5', 'charlie-foxtrot' ),
-		'id'            => 'social-5',
-		'description'   => esc_html__( 'Social-5', 'charlie-foxtrot' ),
+		'name'          => 'Social 5',
+		'id'            => 'social_5',
+		'description'   => 'Social Proof',
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',

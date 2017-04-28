@@ -41,8 +41,8 @@ class social_widget extends WP_Widget {
                 echo '<img class="custom_media_image" src="' . $instance['profile_picture'] . '" /><br />';
             endif;
   ?>
-  <input type="text" class="widefat custom_media_url" name="<?php echo $this->get_field_name('profile_picture'); ?>" id="<?php echo $this->get_field_id('profile_picture'); ?>" value="<?php echo $instance['profile_picture']; ?>">
-  <input type="button" class="custom_media_button" id="custom_media_button" name="<?php echo $this->get_field_name('profile_picture'); ?>" value="Upload Image" /><br />
+  <input type="text" class="widefat custom_media_url" name="<?php echo $this->get_field_name('profile_picture'); ?>" id="<?php echo $this->get_field_id('profile_picture'); ?>" value="<?php echo $instance['profile_picture']; ?>"><br />
+  <input type="button" class="button button-primary custom_media_button" id="custom_media_button" name="<?php echo $this->get_field_name('profile_picture'); ?>" value="Upload Image" /><br /><br />
    
   
   <label for="<?php echo $this->get_field_id('customer_name'); ?>"><?php _e('User Name:'); ?></label> 
@@ -52,8 +52,12 @@ class social_widget extends WP_Widget {
   <input class="widefat" id="<?php echo $this->get_field_id('customer_comment'); ?>" name="<?php echo $this->get_field_name('customer_comment'); ?>" type="text" value="<?php echo esc_attr($customer_comment); ?>" />
   
   <label for="<?php echo $this->get_field_id('social_referral'); ?>"><?php _e('Social Platform:'); ?></label> 
-  <input class="widefat" id="<?php echo $this->get_field_id('social_referral'); ?>" name="<?php echo $this->get_field_name('social_referral'); ?>" type="text" value="<?php echo esc_attr($social_referral); ?>" />
-
+  <select class="widefat" id="<?php echo $this->get_field_id('social_referral'); ?>" name="<?php echo $this->get_field_name('social_referral'); ?>">
+    <option value="facebook">Facebook</option>  
+    <option value="twitter">Twitter</option>  
+    <option value="instagram">Instagram</option>  
+  </select>
+  
     <?php
   }
 
@@ -94,10 +98,10 @@ class social_widget extends WP_Widget {
 
         <div class="card-block">
           <!--Name-->
-          <h4 class="card-title"><i class="fa fa-<?php echo $social_referral;?>";" aria-hidden="true"></i> <?php echo $customer_name;?></h4>
+          <h4 class="card-title"><i class="ws ws-<?php echo $social_referral;?>";" aria-hidden="true"></i> <?php echo $customer_name;?></h4>
           <hr>
           <!--Quotation-->
-          <p><i class="fa fa-quote-left"></i> <?php echo $customer_comment;?></p>
+          <p><i class="quote-left"></i> <?php echo $customer_comment;?></p>
         </div>
       </div>
     <!--/.Card-->

@@ -127,6 +127,27 @@ function charlie_foxtrot_customize_register( $wp_customize ) {
     'type' => 'dropdown-pages',
     ) ));
 
+
+  //Mobile Footer Menu   
+  $wp_customize->add_section(  'mobile_options' , array(
+  'title'      => __( 'Mobile Options', 'charlie-foxtrot' ),
+  'description' => 'Mobile Options: <br/>This section will only be shown on mobile devices.',
+  'priority' => 150,
+  ) );
+
+  //Mobile Footer Menu Deals url
+  $wp_customize->add_setting('mobile_options', array(
+    'default' => '',
+    ));
+
+  // Mobile Footer Menu Deals url
+  $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'mobile_options', array(
+    'label'      => __('Deals Link For Mobile', 'charlie-foxtrot'),
+    'section'    => 'mobile_options',
+    'settings'   => 'mobile_options',
+    'type' => 'dropdown-pages',
+    ) ));
+
 }
 add_action( 'customize_register', 'charlie_foxtrot_customize_register' );
 
@@ -134,7 +155,7 @@ add_action( 'customize_register', 'charlie_foxtrot_customize_register' );
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  */
 function charlie_foxtrot_customize_preview_js() {
-	wp_enqueue_script( 'charlie_foxtrot_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), getdate(timestamp[year], timestamp[mday], timestamp[mon]), true );
+	wp_enqueue_script( 'charlie_foxtrot_customizer', get_template_directory_uri() . '/assets/js/customizer.js', array( 'customize-preview' ), true );
 }
 add_action( 'customize_preview_init', 'charlie_foxtrot_customize_preview_js' );
 
