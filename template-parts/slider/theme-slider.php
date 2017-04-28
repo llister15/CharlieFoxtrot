@@ -50,17 +50,18 @@ $value = get_theme_mod('theme_slider_check');
     for ($i=0; $i < $slide_count; $i++) { 
       $slider_int = $i + 1;
       $slider_mod = get_theme_mod('theme_slider_'.$slider_int);
-      $image_alt = get_post_meta( $slider_mod, '_wp_attachment_image_alt', true );
+      $slider_mod_id = attachment_url_to_postid($slider_mod);
+      $image_alt = get_post_meta( $slider_mod_id, '_wp_attachment_image_alt', true );
       if ($i !== 0) {
         ?>
         <div class="item">
-         <img src="<?php echo wp_get_attachment_url( $slider_mod ); ?>" alt="<?php echo $image_alt;?>">
+         <img src="<?php echo $slider_mod; ?>" alt="<?php echo $image_alt;?>">
         </div>
       <?php
       } else {
       ?>
         <div class="item active">
-          <img src="<?php echo wp_get_attachment_url( $slider_mod ); ?>" alt="<?php echo $image_alt;?>">
+          <img src="<?php echo $slider_mod; ?>" alt="<?php echo $image_alt;?>">
         </div>
       <?php
       }

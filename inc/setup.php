@@ -122,9 +122,9 @@ function charlie_foxtrot_setup() {
 
 	// Register Sidebar Widgets
 	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'charlie-foxtrot' ),
+		'name'          => 'Sidebar',
 		'id'            => 'sidebar-1',
-		'description'   => esc_html__( 'Add widgets here.', 'charlie-foxtrot' ),
+		'description'   => 'Add widgets here.',
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',

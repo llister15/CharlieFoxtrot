@@ -71,59 +71,59 @@ function charlie_foxtrot_customize_register( $wp_customize ) {
   $wp_customize->add_section(  'feature_items' , array(
   'title'      => __( 'Featured Section', 'charlie-foxtrot' ),
   'description' => 'Feature Section: <br/>This section has two images for selection. <br/><i>Recommended size <strong>1920x770</strong></i>',
-  'priority' => 102,
-  ) );
+  'priority' => 105,
+  ));
 
 
   //Feature Item settings 1
-  $wp_customize->add_setting('feature_item_1', array(
+  $wp_customize->add_setting('feature_image_1', array(
     'default' => '',
     ));
 
   // Feature Item controls 1 
-  $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'feature_item_1', array(
-    'label'      => __('Feature Image 1 left side', 'charlie-foxtrot'),
+  $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'feature_image_1', array(
+    'label'      => __('Feature Image 1', 'charlie-foxtrot'),
     'section'    => 'feature_items',
-    'settings'   => 'feature_item_1',
+    'settings'   => 'feature_image_1',
     'type' => 'image',
     ) ));
 
     //Feature Item settings 1 url
-  $wp_customize->add_setting('feature_item_1_link', array(
+  $wp_customize->add_setting('feature_image_1_link', array(
     'default' => '',
     ));
 
   // Feature Item controls 1 url
-  $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'feature_item_1_link', array(
+  $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'feature_image_1_link', array(
     'label'      => __('Feature Image 1 Link', 'charlie-foxtrot'),
     'section'    => 'feature_items',
-    'settings'   => 'feature_item_1_link',
+    'settings'   => 'feature_image_1_link',
     'type' => 'dropdown-pages',
     ) ));
 
     //Feature Item settings 2
-  $wp_customize->add_setting('feature_item_2', array(
+  $wp_customize->add_setting('feature_image_2', array(
     'default' => '',
     ));
 
   // Feature Item controls 2
-  $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'feature_item_2', array(
+  $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'feature_image_2', array(
     'label'      => __('Feature Image2', 'charlie-foxtrot'),
     'section'    => 'feature_items',
-    'settings'   => 'feature_item_2',
+    'settings'   => 'feature_image_2',
     'type' => 'image',
     ) ));
 
     //Feature Item settings 2 url
-  $wp_customize->add_setting('feature_item_2_link', array(
+  $wp_customize->add_setting('feature_image_2_link', array(
     'default' => '',
     ));
 
   // Feature Item controls 2 url
-  $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'feature_item_2_link', array(
+  $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'feature_image_2_link', array(
     'label'      => __('Feature Image 2 Link', 'charlie-foxtrot'),
     'section'    => 'feature_items',
-    'settings'   => 'feature_item_2_link',
+    'settings'   => 'feature_image_2_link',
     'type' => 'dropdown-pages',
     ) ));
 
