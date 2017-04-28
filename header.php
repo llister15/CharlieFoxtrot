@@ -29,19 +29,30 @@
 <div id="w-wrapper">
   <header id="w-header" class="container-fluid">
       <div class="row w-head-space">
-        <div class="hidden-xs hidden-sm col-md-3 center">
-          <?php the_custom_logo();
+        <div class="hidden-xs hidden-sm col-md-2 center">
+          <?php 
           if (!has_custom_logo()) {
             ?><a href="<?php echo esc_url(home_url('/')); ?>">
-            <img src="<?php echo get_template_directory_uri() . '/assets/images/default-logo.png'; ?>" /></a>
+            <img class="img-responsive center-block" src="<?php echo get_template_directory_uri() . '/assets/images/default-logo.png'; ?>" /></a>
             <?php 
-          } ?>
+          } else { 
+              $custom_logo_id = get_theme_mod( 'custom_logo' );
+            ?>
+              <a href="<?php echo esc_url(home_url('/')); ?>">
+            <img class="img-responsive center-block custom-logo" src="<?php echo wp_get_attachment_url( $custom_logo_id ); ?>" /></a>
+            <?php
+          }
+
+          ?>
         </div>
+        <?php $contents = WC()->cart->get_cart_contents_count(); ?>
         <?php wp_nav_menu( array( 
           'menu_class' => 'w-sub-menu pull-right', 
-          'container_class' => 'hidden-xs hidden-sm col-xs-4 pull-right',
+          'container_class' => 'hidden-xs hidden-sm col-md-5 pull-right',
           'theme_location' => 'sub', 
           'fallback_cb' => false,
+          'before' => '<span class="badge">'. WC()->cart->get_cart_contents_count().'</span>',
+          'depth' => 1,
           ) ); ?>
       </div> <!-- end w-head-space -->
         <?php get_template_part('template-parts/header/search', 'form'); ?>

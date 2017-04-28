@@ -20,7 +20,7 @@ $value = get_theme_mod('theme_slider_check');
       <?php
     } else {
       ?>
-      <img src="<?php echo wp_get_attachment_url( $value2 ); ?>">
+      <img src="<?php echo $value2; ?>">
       <?php
     }
   } else {
@@ -56,6 +56,7 @@ $value = get_theme_mod('theme_slider_check');
         ?>
         <div class="item">
          <img src="<?php echo $slider_mod; ?>" alt="<?php echo $image_alt;?>">
+
         </div>
       <?php
       } else {
@@ -82,4 +83,3 @@ $value = get_theme_mod('theme_slider_check');
 </div>
 <?php
   }
-?>

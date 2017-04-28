@@ -10,7 +10,7 @@
  */
 
 ?>
-<footer class="container-fluid">
+<footer id="page-footer" class="container-fluid">
   <div class="row">
     <div class="col-xs-12 col-md-4">
       <?php

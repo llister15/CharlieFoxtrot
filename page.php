@@ -17,7 +17,9 @@ get_header(); ?>
 <?php
 if ( !is_home() && !is_front_page()) {
   ?>
-  <div id="primary" class="content-area">
+  <div id="main-content">
+<div class="container-fluid">
+  <div class="row main-content-row">
     <main id="main" class="site-main" role="main">
 
       <?php
@@ -34,7 +36,9 @@ endwhile; // End of the loop.
 ?>
 
 </main><!-- #main -->
-</div><!-- #primary -->
+</div>
+</div>
+</div><!-- #main content -->
 <?php
 }
 else { ?>
