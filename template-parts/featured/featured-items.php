@@ -11,8 +11,9 @@
       <?php
       $feature1 = get_theme_mod('feature_item_1');
       $feature1_url = get_permalink(get_theme_mod('feature_item_1_link'));
+      $image_alt = attachment_url_to_postid($feature1);
       ?>
-      <a href="<?php echo $feature1_url; ?>"><img class="img-responsive center-block" src="<?php echo $feature1; ?>" alt="<?php ?>"></a>
+      <a href="<?php echo $feature1_url; ?>"><img class="img-responsive center-block" src="<?php echo $feature1; ?>" alt="<?php echo $image_alt; ?>"></a>
     </div>
   </div>
   <div class="col-xs-12 col-md-6 text-center">

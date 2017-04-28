@@ -25,6 +25,16 @@ Media Queries
   position: relative;
   background: #000;
   z-index: 75;
+  top: 0;
+    @media (min-width: $iphone-4-max) and ( max-width: $screen-xs-max) and ( -webkit-device-pixel-ratio: 1 ) {
+      top: 0;
+    }
+    @media (min-width: $screen-sm-min) {
+      top: 0px;
+    }
+    @media (min-width: $screen-md-min) {
+      top: 36px;
+    }
 }
 
 .w-nav-bar .navbar {
@@ -68,6 +78,12 @@ Media Queries
 .navbar-default .w-blog-brand {
   top: 15px;
   float: none;
+    @media (min-width: $screen-md-min) {
+      left: 20px;
+    }
+    @media (min-width: $screen-lg-min) {
+      left: 50px;
+    }
 }
 
 .navbar-default .w-back-button {
@@ -89,6 +105,9 @@ Media Queries
       font-size: $brand-font-size-sm;
     }
     @media (min-width: $screen-md-min) {
+      font-size: $brand-font-size-sm;
+    }
+    @media (min-width: $screen-lg-min) {
       font-size: $brand-font-size-md;
     }
 }
@@ -99,8 +118,23 @@ Media Queries
   text-decoration: none; 
 }
 
+#primary_walker {
+  width: 65%;
+  margin: auto;
+    @media (min-width: $screen-sm-min) {
+      width: 65%;
+    }
+    @media (min-width: $screen-md-min) {
+      width: 65%;
+    }
+    @media (min-width: $screen-lg-min) {
+      width: 53%;
+    }
+}
+
 .navbar-default .w-primary-menu {
   vertical-align: middle;
+
 }
 
 .navbar-default .w-primary-menu > li {
@@ -117,6 +151,18 @@ Media Queries
   text-transform: uppercase;
   font-size: 12pt;
   font-family: Roboto medium;
+    @media (min-width: $iphone-4-min) and ( max-width: $iphone-4-max) and ( -webkit-device-pixel-ratio: 2 ) {
+      font-size: $iphone-4-font-size;
+    }
+    @media (min-width: $screen-sm-min) {
+      font-size: $brand-font-size-sm;
+    }
+    @media (min-width: $screen-md-min) {
+      font-size: $brand-font-size-sm;
+    }
+    @media (min-width: $screen-lg-min) {
+      font-size: $brand-font-size-md;
+    }
 }
 
 .navbar-default .w-primary-menu > li > a:hover, .navbar-default .w-primary-menu > li > a:focus {

@@ -26,8 +26,8 @@
   <?php wp_nav_menu( array( 
     'menu' => 'top',
     'depth' => 2,
-    'menu_class' => 'nav navbar-nav w-primary-menu', 
-    'container_class' => 'collapse navbar-collapse',
+    'menu_class' => 'nav navbar-nav w-primary-menu text-center', 
+    'container_class' => 'collapse navbar-collapse text-center',
     'container_id' => 'primary_walker',
     'theme_location' => 'top', 
     'fallback_cb' => 'WS_Walker_Nav_Primary::fallback',

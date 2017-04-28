@@ -20,7 +20,7 @@ get_header(); ?>
 		?>
 			<div class="row page-header">
 				<div class="col-xs-12">
-						<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'wonka-target' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+						<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'charlie-foxtrot' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
 				</div>
 			</div><!-- .page-header -->
 		<?php

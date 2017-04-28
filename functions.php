@@ -22,11 +22,6 @@ require get_parent_theme_file_path('/inc/extras.php');
  */
 require get_parent_theme_file_path('/inc/customizer.php');
 
-/**
- * Load Jetpack compatibility file.
- */
-require get_parent_theme_file_path('/inc/jetpack.php');
-
  /**
  * Theme Setup.
  */

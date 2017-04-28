@@ -111,7 +111,7 @@ function charlie_foxtrot_customize_register( $wp_customize ) {
     'label'      => __('Feature Image2', 'charlie-foxtrot'),
     'section'    => 'feature_items',
     'settings'   => 'feature_item_2',
-    'type' => 'image',
+    'mime_type' => 'image',
     ) ));
 
     //Feature Item settings 2 url

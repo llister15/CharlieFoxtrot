@@ -39,7 +39,7 @@ $iphone-4-max: 480px;
 $iphone-4-font-size: 10pt;
 $brand-font-size-xs: 11pt;
 $brand-font-size-sm: 16pt;
-$brand-font-size-md: 20pt;
+$brand-font-size-md: 18pt;
 $brand-font-size-lg: 30pt;
 
 // Theme Colors
@@ -73,7 +73,6 @@ html, body {
 
 body {
   font-family: Roboto medium;
-  position: relative;
   display: block;
 }
 
@@ -127,17 +126,25 @@ section {
   padding: 0 8px;
 }
 
-// Import Header for Mobile 
+.w-sub-menu > li > span {
+  display: none;
+}
+
+
+// Import Header
 @import './layout/header';
 
-// Import Header for Mobile 
+// Import Navbar
 @import './layout/wonka-navbar';
 
-// Import Theme Slider for Mobile 
+// Import Theme Slider
 @import './layout/theme-slider';
 
-// Import Theme Slider for Mobile 
-@import './layout/home-content';
+// Import Content Areas 
+@import './layout/content-areas';
+
+// Import Checkout Page
+@import './layout/checkout';
 
 // Import Social / Dealer Widget SCSS 
 @import './social-widgets/social-colors';
@@ -145,5 +152,5 @@ section {
 // Import Featured Post Modules
 @import './modules/featured-post';
 
-// Import Footer for Mobile
+// Import Footer
 @import './layout/footer';
