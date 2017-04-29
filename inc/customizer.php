@@ -53,16 +53,17 @@ function charlie_foxtrot_customize_register( $wp_customize ) {
     ));
 
   //Slider Build
-  for ($i=1; $i < get_theme_mod('theme_slide_count')+1; $i++) { 
+  for ($i=0; $i < get_theme_mod('theme_slide_count'); $i++) { 
+    $g = $i + 1;
     //Slider Controls
-    $wp_customize->add_setting('theme_slider_'.$i, array(
+    $wp_customize->add_setting('theme_slider_'.$g, array(
     'default'        => '',
     ));
     
-    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'theme_slider_'.$i, array(
-    'label'      => __('Slider Image '. $i, 'charlie-foxtrot'),
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'theme_slider_'.$g, array(
+    'label'      => __('Slider Image '. $g, 'charlie-foxtrot'),
     'section'    => 'slider_options',
-    'settings'   => 'theme_slider_'.$i,
+    'settings'   => 'theme_slider_'.$g,
     'type' => 'image',
     ) ));
   }
