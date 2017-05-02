@@ -45,13 +45,12 @@
 
           ?>
         </div>
-        <?php $contents = WC()->cart->get_cart_contents_count(); ?>
         <?php wp_nav_menu( array( 
           'menu_class' => 'w-sub-menu pull-right', 
           'container_class' => 'hidden-xs hidden-sm col-md-5 pull-right',
           'theme_location' => 'sub', 
           'fallback_cb' => false,
-          'before' => '<span class="badge">'. WC()->cart->get_cart_contents_count().'</span>',
+          'before' => (-4 === strcasecmp( $item->title, 'CART' )) ? '<span class="badge">'. WC()->cart->get_cart_contents_count() .'</span>' : var_dump(-7 === strcasecmp( $item->attr_title, 'ACCOUNT' )),
           'depth' => 1,
           ) ); ?>
       </div> <!-- end w-head-space -->

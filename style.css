@@ -342,6 +342,30 @@ Media Queries
   opacity: .6;
   text-decoration: none; }
 
+ul[role="row"] {
+  list-style: none; }
+
+ul[role="row"] > li {
+  box-shadow: 0 2px 4px 2px rgba(0, 0, 0, 0.4);
+  height: 200px;
+  padding: 8% 0 0;
+  margin: 0 40px 15px -30px; }
+
+ul[role="row"] > li:nth-child(3) {
+  margin-right: 0; }
+
+ul[role="row"] > li > a {
+  padding: 35px 28%;
+  width: 75%;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-size: 18pt;
+  font-family: Roboto Regular; }
+
+ul[role="row"] > li:hover > a:hover, ul[role="row"] > li > a:focus {
+  text-decoration: none;
+  color: #cdc; }
+
 /*  _theme-slider-mobile
 Media Queries
 @media (min-width: $iphone-4-min) and ( max-width: $iphone-4-max) and ( -webkit-device-pixel-ratio: 2 )
@@ -527,6 +551,13 @@ Media Queries
 
 #products > div {
   padding-top: 20px; }
+
+/* _products-page.scss
+*
+*/
+.woocommerce ul.products li.product, .woocommerce-page ul.products li.product {
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.5); }
 
 /* _checkout
 *
