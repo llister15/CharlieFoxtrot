@@ -317,13 +317,28 @@ Media Queries
   color: #fff;
   text-decoration: none; }
 
+.navbar-default .navbar-nav .open .dropdown-menu:before {
+  content: "";
+  height: 0;
+  width: 0;
+  border: 20px solid transparent;
+  border-bottom-color: #dabb83;
+  left: 5%;
+  bottom: 100%;
+  pointer-events: none;
+  position: absolute; }
+
+.navbar-default .navbar-nav .open .dropdown-menu {
+  top: 70px;
+  background: linear-gradient(-214deg, rgba(218, 187, 131, 0.8) 0%, #dabb83 100%); }
+
 .navbar-default .navbar-nav .open .dropdown-menu > li > a {
   color: #fff;
   text-transform: uppercase;
   font-size: 10pt; }
 
 .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
-  color: #fff;
+  color: #000;
   opacity: .6;
   text-decoration: none; }
 

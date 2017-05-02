@@ -27,5 +27,6 @@ add_action( 'wp_enqueue_scripts', 'charlie_foxtrot_enqueues' );
 function charlie_foxtrot_admin_enqueues() {
       wp_enqueue_media();
       wp_enqueue_script( 'back-end', get_template_directory_uri() .'/assets/js/back-end.js', array('jquery'), '1.0', true);
+      wp_enqueue_script( 'customizer-controls', get_template_directory_uri() .'/assets/js/customizer-controls.js', array('jquery'), '1.0', true);
 }
 add_action( 'admin_enqueue_scripts', 'charlie_foxtrot_admin_enqueues' );

@@ -171,6 +171,23 @@ Media Queries
   text-decoration: none;
 }
 
+.navbar-default .navbar-nav .open .dropdown-menu:before {
+  content: "";
+  height: 0;
+  width: 0;
+  border: 20px solid transparent;
+  border-bottom-color: #dabb83;
+  left: 5%;
+  bottom: 100%;
+  pointer-events: none;
+  position: absolute;
+}
+
+.navbar-default .navbar-nav .open .dropdown-menu {
+  top: 70px;
+  background: $mega-color;
+}
+
 .navbar-default .navbar-nav .open .dropdown-menu>li>a {
   color: $link-color;
   text-transform: uppercase;
@@ -178,7 +195,7 @@ Media Queries
 }
 
 .navbar-default .navbar-nav .open .dropdown-menu>li>a:hover, .navbar-default .navbar-nav .open .dropdown-menu>li>a:focus {
-  color: $link-color;
+  color: #000;
   opacity: .6;
   text-decoration: none;
 }

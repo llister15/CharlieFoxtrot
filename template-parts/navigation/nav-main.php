@@ -25,13 +25,13 @@
     </div>
   <?php wp_nav_menu( array( 
     'menu' => 'top',
-    'depth' => 2,
+    'depth' => 0,
     'menu_class' => 'nav navbar-nav w-primary-menu text-center', 
     'container_class' => 'collapse navbar-collapse text-center',
     'container_id' => 'primary_walker',
     'theme_location' => 'top', 
-    'fallback_cb' => 'WS_Walker_Nav_Primary::fallback',
-    'walker' => new WS_Walker_Nav_Primary(),
+    'fallback_cb' => 'WS_Walker_Nav_Mega::fallback',
+    'walker' => new WS_Walker_Nav_Mega(),
     ) ); ?>
     </div>
     </nav>

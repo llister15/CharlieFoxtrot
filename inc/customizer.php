@@ -24,6 +24,7 @@ function charlie_foxtrot_customize_register( $wp_customize ) {
   //Slider Enabled by default.
   $wp_customize->add_setting('theme_slider_check', array(
     'default' => 'checked',
+    'transport' => 'postMessage',
     ));
 
   $wp_customize->add_control('theme_slider_check', array(
@@ -31,11 +32,13 @@ function charlie_foxtrot_customize_register( $wp_customize ) {
     'type' => 'checkbox',
     'section' => 'slider_options',
     'settings' => 'theme_slider_check',
+    'transport' => 'postMessage',
    ));
 
   //Slider Count
   $wp_customize->add_setting('theme_slide_count', array(
     'default' => '1',
+    'transport' => 'postMessage',
     ));
 
   $wp_customize->add_control('theme_slide_count', array(
@@ -51,22 +54,22 @@ function charlie_foxtrot_customize_register( $wp_customize ) {
     'section' => 'slider_options',
     'settings' => 'theme_slide_count',
     ));
-
-  //Slider Build
-  for ($i=0; $i < get_theme_mod('theme_slide_count'); $i++) { 
-    $g = $i + 1;
-    //Slider Controls
-    $wp_customize->add_setting('theme_slider_'.$g, array(
-    'default'        => '',
-    ));
-    
-    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'theme_slider_'.$g, array(
-    'label'      => __('Slider Image '. $g, 'charlie-foxtrot'),
-    'section'    => 'slider_options',
-    'settings'   => 'theme_slider_'.$g,
-    'type' => 'image',
-    ) ));
-  }
+        $count = end($wp_customize->get_control('theme_slide_count')->choices);
+        //Slider Build
+        for ($i=0; $i < $count; $i++) { 
+          $g = $i + 1;
+          //Slider Controls
+          $wp_customize->add_setting('theme_slider_'.$g, array(
+          'default'        => '',
+          ));
+          
+          $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'theme_slider_'.$g, array(
+          'label'      => __('Slider Image '. $g, 'charlie-foxtrot'),
+          'section'    => 'slider_options',
+          'settings'   => 'theme_slider_'.$g,
+          'type' => 'image',
+          ) ));
+        } // end loop
 
   //Feature Item Section   
   $wp_customize->add_section(  'feature_items' , array(
@@ -79,6 +82,7 @@ function charlie_foxtrot_customize_register( $wp_customize ) {
   //Feature Item settings 1
   $wp_customize->add_setting('feature_item_1', array(
     'default' => '',
+    'transport' => 'postMessage',
     ));
 
   // Feature Item controls 1 
@@ -92,6 +96,7 @@ function charlie_foxtrot_customize_register( $wp_customize ) {
     //Feature Item settings 1 url
   $wp_customize->add_setting('feature_item_1_link', array(
     'default' => '',
+    'transport' => 'postMessage',
     ));
 
   // Feature Item controls 1 url
@@ -105,6 +110,7 @@ function charlie_foxtrot_customize_register( $wp_customize ) {
     //Feature Item settings 2
   $wp_customize->add_setting('feature_item_2', array(
     'default' => '',
+    'transport' => 'postMessage',
     ));
 
   // Feature Item controls 2
@@ -118,6 +124,7 @@ function charlie_foxtrot_customize_register( $wp_customize ) {
     //Feature Item settings 2 url
   $wp_customize->add_setting('feature_item_2_link', array(
     'default' => '',
+    'transport' => 'postMessage',
     ));
 
   // Feature Item controls 2 url
@@ -139,6 +146,7 @@ function charlie_foxtrot_customize_register( $wp_customize ) {
   //Mobile Footer Menu Deals url
   $wp_customize->add_setting('mobile_options', array(
     'default' => '',
+    'transport' => 'postMessage',
     ));
 
   // Mobile Footer Menu Deals url
@@ -156,7 +164,7 @@ add_action( 'customize_register', 'charlie_foxtrot_customize_register' );
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  */
 function charlie_foxtrot_customize_preview_js() {
-	wp_enqueue_script( 'charlie_foxtrot_customizer', get_template_directory_uri() . '/assets/js/customizer.js', array( 'customize-preview' ), true );
+	wp_enqueue_script( 'charlie_foxtrot_customizer', get_template_directory_uri() . '/assets/js/customizer.js', array( 'jquery','customize-preview' ), true );
 }
 add_action( 'customize_preview_init', 'charlie_foxtrot_customize_preview_js' );
 
