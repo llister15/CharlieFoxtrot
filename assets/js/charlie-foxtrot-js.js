@@ -14,4 +14,12 @@ $( document ).ready(function () {
       $('#products').css({'padding-bottom': $height});
       $('#main-content').css({'padding-bottom': $height});
   });
+  $('.search-toggle').click(function() {
+    if ($('.mobile-search>form>div.input-group>input.form-control').css('top') == '36px') {
+      $('.mobile-search>form>div.input-group>input.form-control').css({'top': '0px'});
+    } else {
+      $('.mobile-search>form>div.input-group>input.form-control').css({'top': '36px'});
+    }
+      $('.mobile-search>form>div>input').focus();
+  });
 });

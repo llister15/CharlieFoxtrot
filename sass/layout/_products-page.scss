@@ -2,6 +2,10 @@
 *
 */
 
+#products {
+  background: url('http://localhost/wordpress/wp-content/uploads/2017/05/AR500-BG-Patterngreat.png')center, $header-color;
+}
+
 .woocommerce ul.products li.product, .woocommerce-page ul.products li.product {
   padding: 15px;
   background: rgba(0,0,0,0.5);

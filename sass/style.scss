@@ -38,8 +38,8 @@ $iphone-4-max: 480px;
 // Font sizes
 $iphone-4-font-size: 10pt;
 $brand-font-size-xs: 11pt;
-$brand-font-size-sm: 16pt;
-$brand-font-size-md: 18pt;
+$brand-font-size-sm: 12pt;
+$brand-font-size-md: 17pt;
 $brand-font-size-lg: 30pt;
 
 // Theme Colors
@@ -62,7 +62,7 @@ $link-color: #fff;
     url('./assets/fonts/wonka-icons.svg#wonka_icons') format('svg')
 }
 
-a {
+a, .navbar-default .navbar-nav .open .dropdown-menu {
     transition:  all .3s ease-in-out;
 }
 

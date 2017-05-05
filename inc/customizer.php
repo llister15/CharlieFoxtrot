@@ -137,25 +137,24 @@ function charlie_foxtrot_customize_register( $wp_customize ) {
 
 
   //Mobile Footer Menu   
-  $wp_customize->add_section(  'mobile_options' , array(
-  'title'      => __( 'Mobile Options', 'charlie-foxtrot' ),
-  'description' => 'Mobile Options: <br/>This section will only be shown on mobile devices.',
-  'priority' => 150,
-  ) );
+ $wp_customize->add_section(  'mobile_options' , array(
+ 'title'      => __( 'Mobile Options', 'charlie-foxtrot' ),
+ 'description' => 'Mobile Options: <br/>This section will only be shown on mobile devices.',
+ 'priority' => 150,
+ ) );
 
-  //Mobile Footer Menu Deals url
-  $wp_customize->add_setting('mobile_options', array(
-    'default' => '',
-    'transport' => 'postMessage',
-    ));
+ //Mobile Footer Menu Deals url
+ $wp_customize->add_setting('mobile_option_deals_link', array(
+   'default' => '',
+   ));
 
-  // Mobile Footer Menu Deals url
-  $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'mobile_options', array(
-    'label'      => __('Deals Link For Mobile', 'charlie-foxtrot'),
-    'section'    => 'mobile_options',
-    'settings'   => 'mobile_options',
-    'type' => 'dropdown-pages',
-    ) ));
+ // Mobile Footer Menu Deals url
+ $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'mobile_option_deals_control', array(
+   'label'      => __('Deals Link For Mobile', 'charlie-foxtrot'),
+   'section'    => 'mobile_options',
+   'settings'   => 'mobile_option_deals_link',
+   'type' => 'dropdown-pages',
+   ) ));
 
 }
 add_action( 'customize_register', 'charlie_foxtrot_customize_register' );

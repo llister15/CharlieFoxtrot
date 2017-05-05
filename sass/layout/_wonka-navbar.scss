@@ -10,12 +10,15 @@ Media Queries
 .w-nav-bar,
 .w-nav-color,
 .navbar,
-.navbar-toggle .icon-bar,
-.navbar-default .navbar-brand,
 .navbar-default .w-primary-menu,
 .navbar-default .w-primary-menu > li,
 .navbar-default .w-primary-menu > li > a,
 .navbar-default .navbar-nav .open .dropdown-menu>li>a {
+    transition: all .2s ease-in-out;
+}
+
+.navbar-toggle .icon-bar,
+.navbar-default .navbar-brand {
     position: relative;
     transition: all .2s ease-in-out;
 }
@@ -43,6 +46,10 @@ Media Queries
 
 .w-nav-color {
   background: $navbar-color;
+}
+
+.navbar-nav {
+  margin: 0 -15px;
 }
 
 .navbar {
@@ -118,23 +125,10 @@ Media Queries
   text-decoration: none; 
 }
 
-#primary_walker {
-  width: 65%;
-  margin: auto;
-    @media (min-width: $screen-sm-min) {
-      width: 65%;
-    }
-    @media (min-width: $screen-md-min) {
-      width: 65%;
-    }
-    @media (min-width: $screen-lg-min) {
-      width: 53%;
-    }
-}
-
 .navbar-default .w-primary-menu {
-  vertical-align: middle;
-
+  @media (min-width: $screen-md-min) {
+    padding-left: 13%;
+  }
 }
 
 .navbar-default .w-primary-menu > li {
@@ -166,26 +160,34 @@ Media Queries
 }
 
 .navbar-default .w-primary-menu > li > a:hover, .navbar-default .w-primary-menu > li > a:focus {
-  opacity: .6;
   color: $link-color;
   text-decoration: none;
 }
 
-.navbar-default .navbar-nav .open .dropdown-menu:before {
-  content: "";
-  height: 0;
-  width: 0;
-  border: 20px solid transparent;
-  border-bottom-color: #dabb83;
-  left: 5%;
-  bottom: 100%;
-  pointer-events: none;
-  position: absolute;
+#primary_walker .dropdown-toggle[aria-expanded="true"]:after {
+    @media (min-width: $screen-md-min) {
+      content: "";
+      height: 0;
+      width: 0;
+      border: 20px solid transparent;
+      border-bottom-color: #dabb83;
+      left: 50%;
+      margin-left: -20px;
+      bottom: -40%;
+      pointer-events: none;
+      position: absolute;
+    }
 }
 
 .navbar-default .navbar-nav .open .dropdown-menu {
   top: 70px;
-  background: $mega-color;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+    @media (min-width: $screen-md-min) {
+      margin: 0 -213%;
+      float: none;
+    }
 }
 
 .navbar-default .navbar-nav .open .dropdown-menu>li>a {
@@ -200,29 +202,108 @@ Media Queries
   text-decoration: none;
 }
 
-ul[role="row"] {
+div[role="row"].row {
+  position: relative;
+  top: -5px;
+  left: 0;
+  right: 0;
+  border: 1px solid rgba(0,0,0,0.15);
+  background: $mega-color;
+  -webkit-box-shadow: 0 2px 6px 2px rgba(0,0,0,0.5);
+  box-shadow: 0 2px 6px 2px rgba(0,0,0,0.5);
+  @media (min-width: $screen-md-min) {
+    margin-right: -45%;
+  }
+}
+
+div[role="row"] >ul  {
   list-style: none;
 }
 
-ul[role="row"] > li {
+div[role="row"] > ul > li {
   box-shadow: 0 2px 4px 2px rgba(0,0,0,.4);
-  height: 200px;
-  padding: 8% 0 0;
-  margin: 0 40px 15px -30px;
+  height: 135px;
+  margin: 8px 5% 8px 0;
+  padding: 18% 0 0;
+  border-radius: 20px;
+  @media (min-width: $screen-md-min) {
+    margin-right: 10%;
+    padding: 5% 0;
+  }
 }
-ul[role="row"] > li:nth-child(3) {
+div[role="row"] > ul > li:nth-child(2n) {
   margin-right: 0;
+  @media (min-width: $screen-md-min) {
+    margin-right: 10%;
+  }
+}
+div[role="row"] > ul > li:nth-child(3n) {
+  @media (min-width: $screen-md-min) {
+    margin-right: 0;
+  }
 }
 
-ul[role="row"] > li >a {
-  padding: 35px 28%;
-  width: 75%;
+div[role="row"] > ul > li >a {
+  padding: 8% 25%;
   background: rgba(0,0,0,0.5);
   color: #fff;
-  font-size: 18pt;
   font-family: Roboto Regular;
 }
-ul[role="row"] > li:hover >a:hover, ul[role="row"] > li >a:focus {
+div[role="row"] > ul > li:hover >a:hover, ul[role="row"] > li >a:focus {
   text-decoration: none;
   color: #cdc;
+}
+
+#menu_img_3 {
+  background: url('http://localhost/wordpress/wp-content/uploads/2017/05/Round_Targets.jpg');
+  background-position: center center;
+  background-size: cover;
+}
+
+#menu_img_4 {
+  background: url('http://localhost/wordpress/wp-content/uploads/2017/05/Round_Targets.jpg');
+  background-position: center center;
+  background-size: cover;
+}
+
+#menu_img_5 {
+  background: url('http://localhost/wordpress/wp-content/uploads/2017/05/Reactive_Targets.jpg');
+  background-position: center center;
+  background-size: cover;
+}
+
+#menu_img_6 {
+  background: url('http://localhost/wordpress/wp-content/uploads/2017/05/Reactive_Targets.jpg');
+  background-position: center center;
+  background-size: cover;
+}
+
+#menu_img_7 {
+  background: url('http://localhost/wordpress/wp-content/uploads/2017/05/Reactive_Targets.jpg');
+  background-position: center center;
+  background-size: cover;
+}
+
+#menu_img_8 {
+  background: url('http://localhost/wordpress/wp-content/uploads/2017/05/Reactive_Targets.jpg');
+  background-position: center center;
+  background-size: cover;
+}
+
+#menu_img_9 {
+  background: url('http://localhost/wordpress/wp-content/uploads/2017/05/Reactive_Targets.jpg');
+  background-position: center center;
+  background-size: cover;
+}
+
+#menu_img_10 {
+  background: url('http://localhost/wordpress/wp-content/uploads/2017/05/Reactive_Targets.jpg');
+  background-position: center center;
+  background-size: cover;
+}
+
+#menu_img_11 {
+  background: url('http://localhost/wordpress/wp-content/uploads/2017/05/Reactive_Targets.jpg')center no-repeat;
+  background-position: center center;
+  background-size: cover;
 }

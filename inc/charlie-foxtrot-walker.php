@@ -73,12 +73,13 @@ Class WS_Walker_Nav_Primary extends Walker_Nav_menu {
 
 Class WS_Walker_Nav_Mega extends Walker_Nav_menu {
 
+
  public function start_lvl( &$output, $depth = 0, $args = array() ) {
     //ul
     $indent = str_repeat("\t", $depth);
-    $submenu = ($depth > 0) ? ' sub-menu' : '';
+    $submenu = ($depth > 0) ? 'sub-menu' : '';
     if ($depth >= 1) {
-        $output .= "\n$indent<ul role=\"row\" class=\"row$submenu depth_$depth\">\n";
+        $output .= "\n$indent<ul role=\"menu\" class=\"$submenu depth_$depth\">\n";
     } else {
         $output .= "\n$indent<ul role=\"mega-menu\" class=\"dropdown-menu$submenu depth_$depth\">\n";
     }
@@ -93,18 +94,16 @@ Class WS_Walker_Nav_Mega extends Walker_Nav_menu {
     $indent = ($depth) ? str_repeat("\t", $depth) : '';
 
     if ( 0 === strcasecmp( $item->attr_title, 'mega-menu' ) && 1 === $depth ) {
-        $output .= $indent . '<li role="presentation" class="container">';
+                $output .= $indent . '<div role="row" class="row">';
     } elseif ( 0 === strcasecmp( $item->title, 'mega-menu' ) && 1 === $depth ) {
-                $output .= $indent . '<li role="presentation" class="container">';
+                $output .= $indent . '<div role="row" class="row">';
     } elseif ( 2 == $depth ) {
-        $output .= $indent . '<li role="presentation" class="col-xs-6 col-md-4 text-center">';
-
+        $output .= $indent . '<li role="columns" class="col-xs-5 col-md-3 text-center" id="menu_img_' . esc_attr($item->menu_order) . '">';
     //a element @$depth >=1
     $attributes = ! empty($item->attr_title) ? ' title="' . esc_attr($item->attr_title) . '"' : '';
     $attributes .= ! empty($item->target) ? ' target="' . esc_attr($item->target) . '"' : '';
     $attributes .= ! empty($item->xfn) ? ' rel="' . esc_attr($item->xfn) . '"' : '';
     $attributes .= ! empty($item->url) ? ' href="' . esc_attr($item->url) . '"' : '';
-    $attributes .= ! empty($item->title) ? ' id="' . esc_attr($item->title) . '"' : '';
     $attributes .= ! empty($item->classes) ? ' class="' . esc_attr(array_values($item->classes)[0]) . '"' : '';
 
     $attributes .= ( $args->walker->has_children ) ? ' class="dropdown-toggle" data-toggle="dropdown"' : '';
@@ -159,12 +158,18 @@ Class WS_Walker_Nav_Mega extends Walker_Nav_menu {
     }
   }
 
-/*
-  public function end_el() {
-
+  public function end_el( &$output, $object, $depth = 0, $args = array() ) {
+    if ( 0 === strcasecmp( $object->attr_title, 'mega-menu' ) && 1 === $depth ) {
+                $output .= '</div>';
+    } elseif ( 0 === strcasecmp( $object->title, 'mega-menu' ) && 1 === $depth ) {
+                $output .= '</div>';
+    } else {
+        $output .= '</li>';
+    }
   }
 
-  public function end_lvl() {
+/*
+  public function end_lvl( &$output, $depth = 0, $args = array() ) {
 
   }
 */
