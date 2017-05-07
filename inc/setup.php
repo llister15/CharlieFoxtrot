@@ -120,15 +120,15 @@ function charlie_foxtrot_setup() {
 	// Add theme support for selective refresh for widgets.
 	add_theme_support( 'customize-selective-refresh-widgets' );
 
-	// Register Sidebar Widgets
+	// Register Top Filters Widgets
 	register_sidebar( array(
-		'name'          => 'Sidebar',
-		'id'            => 'sidebar-1',
-		'description'   => 'Add widgets here.',
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
+		'name'          => esc_html__( 'Top Filters', 'charlie-foxtrot' ),
+		'id'            => 'top-filters-1',
+		'description'   => esc_html__( 'Add upto 3 filter widgets here.', 'charlie-foxtrot' ),
+		'before_widget' => '<div id="%1$s" class="col-xs-12 col-md-4 widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<label for="product_cat" class="widget-title">',
+		'after_title'   => '</label> ',
 	) );
 
 	// Register Social Widgets
@@ -252,6 +252,9 @@ function charlie_foxtrot_setup() {
 
 	// WooCommerce Support.
 	add_theme_support( 'woocommerce' );
+
+	// Remove Woocomerece Breadcrumb
+	remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20, 0 );
 }
 add_action( 'after_setup_theme', 'charlie_foxtrot_setup' );
 

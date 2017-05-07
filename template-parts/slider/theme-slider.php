@@ -12,7 +12,7 @@
 <div class="col-xs-12 text-center">
 <?php 
 $value = get_theme_mod('theme_slider_check');
-  if ($value !== true) {
+  if (($value !== "checked") && ($value !== true)) {
     $value2 = get_theme_mod('static_header');
     if ($value2 !== true) {
       ?>
@@ -55,14 +55,13 @@ $value = get_theme_mod('theme_slider_check');
       if ($i !== 0) {
         ?>
         <div class="item">
-         <img src="<?php echo $slider_mod; ?>" alt="<?php echo $image_alt;?>">
-
+         <img class="slider-img-<?php echo $slider_int; ?>" src="<?php echo $slider_mod; ?>" alt="<?php echo $image_alt;?>">
         </div>
       <?php
       } else {
       ?>
         <div class="item active">
-          <img src="<?php echo $slider_mod; ?>" alt="<?php echo $image_alt;?>">
+          <img class="slider-img-<?php echo $slider_int; ?>" src="<?php echo $slider_mod; ?>" alt="<?php echo $image_alt;?>">
         </div>
       <?php
       }

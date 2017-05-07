@@ -38,13 +38,15 @@ $iphone-4-max: 480px;
 // Font sizes
 $iphone-4-font-size: 10pt;
 $brand-font-size-xs: 11pt;
-$brand-font-size-sm: 16pt;
-$brand-font-size-md: 18pt;
+$brand-font-size-sm: 12pt;
+$brand-font-size-md: 17pt;
 $brand-font-size-lg: 30pt;
 
 // Theme Colors
 $header-color: linear-gradient(-214deg, rgba(37, 60, 94, .8) 0%, rgba(37, 60, 94, 1) 100%);
 $navbar-color: linear-gradient(-214deg, rgba(#505148, .8) 0%, rgba(#505148, 1) 100%);
+$mega-color: linear-gradient(-214deg, rgba(#dabb83, .8) 0%, rgba(#dabb83, 1) 100%);
+$button-color: linear-gradient(-214deg, rgba(#ffb04a, .8) 0%, rgba(#e38000, 1) 100%);
 $whats-new-section: #5dbeff;
 $dealers-section: #0b1316;
 $dealer-placeholders: rgba(55,55,55, .7);
@@ -61,7 +63,7 @@ $link-color: #fff;
     url('./assets/fonts/wonka-icons.svg#wonka_icons') format('svg')
 }
 
-a {
+a, .navbar-default .navbar-nav .open .dropdown-menu {
     transition:  all .3s ease-in-out;
 }
 
@@ -130,6 +132,14 @@ section {
   display: none;
 }
 
+.woocommerce ul.products li.product .button {
+  background: $button-color;
+  font-family: Roboto Regular;
+  font-size: 18pt;
+  color: #fff;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+}
+
 
 // Import Header
 @import './layout/header';
@@ -142,6 +152,9 @@ section {
 
 // Import Content Areas 
 @import './layout/content-areas';
+
+// Import Content Areas 
+@import './layout/products-page';
 
 // Import Checkout Page
 @import './layout/checkout';

@@ -6,6 +6,15 @@ Media Queries
 @media (min-width: $screen-lg-min)
  */
 
+ .sticky,
+ .mobile-search,
+ .mobile-search > #searchform,
+ #searchform,
+ .mobile-search > form > div,
+ .mobile-search > form > div.input-group > input.form-control {
+  transition: all .3s ease-in-out;
+ }
+
 #page-footer {
   position: absolute;
   clear: both;
@@ -56,14 +65,18 @@ Media Queries
   height: 55px;
   vertical-align: middle;
   padding: 10px;
+  margin-bottom: 75px;
     @media (min-width: $iphone-4-min) and ( max-width: $iphone-4-max) and ( -webkit-device-pixel-ratio: 2 ) {
       height: 75px;
     }
     @media (min-width: $iphone-4-max) and ( max-width: $screen-xs-max) and ( -webkit-device-pixel-ratio: 1 ) {
-      height: 40px;
+      height: 55px;
     }
     @media (min-width: $screen-sm-min) {
       height: 40px;
+    }
+    @media (min-width: $screen-md-min) {
+      margin-bottom: inherit;
     }
 }
 
@@ -75,4 +88,92 @@ Media Queries
   color: #333;
   text-decoration: none;
   opacity: .8;
+}
+
+.sticky {
+  position: fixed;
+  z-index: 80;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,.8);
+}
+
+.sticky > div {
+  padding-top: 10px;
+}
+
+.sticky > div > div > a {
+  color: #fff;
+  font-family: Roboto Light;
+  display: block;
+}
+
+.sticky > div > div > a > .glyphicon, .search-toggle > .glyphicon {
+  font-size: 14pt;
+}
+
+.sticky > div > div:hover > a, .sticky > div > div:focus > a {
+  text-decoration: none;
+  color: #ada;
+}
+
+.sticky > div > div > a > p {
+  margin: 0 -15px;
+}
+
+.mobile-search {
+  position: absolute;
+  bottom: 76px;
+  margin: 0;
+  padding: 0;
+  left: 0;
+  right: 0;
+  height: 34px;
+  overflow: hidden;
+}
+
+div.mobile-search > form#searchform {
+  
+}
+
+.mobile-search > form > div {
+  display: block;
+  position: relative;
+  
+}
+
+.mobile-search > form > div.input-group > input.form-control {
+  width: 100%;
+  border-radius: 20px;
+  top: 36px;
+}
+
+.mobile-search > form > div > span {
+  display: none;
+}
+
+.search-toggle {
+  background-color: transparent;
+  color: #fff;
+  font-family: Roboto Light;
+  border: none;
+}
+
+.search-toggle:hover, .search-toggle:focus {
+  color: #ada;
+  border: none;
+  outline: none;
+}
+
+.badge.footer-badge {
+  position: absolute;
+  padding: 1px 4px;
+  top: -5px;
+  left: 50%;
+  z-index: 50;
+  border: 1px solid #000;
+  color: #000;
+  background-color: #fff;
+  font-family: Roboto Black;
 }
