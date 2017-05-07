@@ -8,7 +8,7 @@ Class WS_Walker_Nav_Primary extends Walker_Nav_menu {
     //ul
     $indent = str_repeat("\t", $depth);
     $submenu = ($depth > 0) ? ' sub-menu' : '';
-    $output .= "\n$indent<ul class=\"dropdown-menu$submenu depth_$depth\">\n";
+    $output .= "\n$indent<ul class=\"container dropdown-menu$submenu depth_$depth\">\n";
 
   }
 
@@ -81,7 +81,7 @@ Class WS_Walker_Nav_Mega extends Walker_Nav_menu {
     if ($depth >= 1) {
         $output .= "\n$indent<ul role=\"menu\" class=\"$submenu depth_$depth\">\n";
     } else {
-        $output .= "\n$indent<ul role=\"mega-menu\" class=\"dropdown-menu$submenu depth_$depth\">\n";
+        $output .= "\n$indent<div role=\"mega-menu\" class=\"container dropdown-menu$submenu depth_$depth\">\n";
     }
 
   }
@@ -98,7 +98,7 @@ Class WS_Walker_Nav_Mega extends Walker_Nav_menu {
     } elseif ( 0 === strcasecmp( $item->title, 'mega-menu' ) && 1 === $depth ) {
                 $output .= $indent . '<div role="row" class="row">';
     } elseif ( 2 == $depth ) {
-        $output .= $indent . '<li role="columns" class="col-xs-5 col-md-3 text-center" id="menu_img_' . esc_attr($item->menu_order) . '">';
+        $output .= $indent . '<li role="columns" class="col-xs-5 col-md-3 text-center" id="menu_img_' . esc_attr($item->menu_order) . '" style="background: url(' . get_theme_mod('mega_menu_img_' . esc_attr($item->menu_order)) . '); background-position: center center; background-size: cover;">';
     //a element @$depth >=1
     $attributes = ! empty($item->attr_title) ? ' title="' . esc_attr($item->attr_title) . '"' : '';
     $attributes .= ! empty($item->target) ? ' target="' . esc_attr($item->target) . '"' : '';
@@ -168,10 +168,12 @@ Class WS_Walker_Nav_Mega extends Walker_Nav_menu {
     }
   }
 
-/*
-  public function end_lvl( &$output, $depth = 0, $args = array() ) {
 
+  public function end_lvl( &$output, $depth = 0, $args = array() ) {
+    if ($depth == 1) {
+        $output .= '</div>';
+    }
   }
-*/
+
 
 }

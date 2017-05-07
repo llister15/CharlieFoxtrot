@@ -6,7 +6,38 @@
   background: url('http://localhost/wordpress/wp-content/uploads/2017/05/AR500-BG-Patterngreat.png')center, $header-color;
 }
 
+.woocommerce-products-header > div > div.row {
+  border-radius: 0 0 20px 20px;
+  background: rgba(0,0,0,0.5);
+  padding: 15px;
+}
+
+.woocommerce-products-header > div > div.row > div > label {
+  color: #fff;
+  font-size: 12pt;
+  font-family: Roboto Regular;
+}
+
+h1.woocommerce-products-header__title.page-title {
+  color: #fff;
+}
+
+.woocommerce .woocommerce-result-count, .woocommerce-page .woocommerce-result-count {
+  color: #fff;
+}
+
+.woocommerce ul.products li.product .woocommerce-loop-product__title {
+  color: #fff;
+  font-size: 22pt;
+}
+
+.woocommerce-Price-amount.amount {
+  color: #fff;
+  font-size: 26pt;
+}
+
 .woocommerce ul.products li.product, .woocommerce-page ul.products li.product {
   padding: 15px;
+  border-radius: 8px;
   background: rgba(0,0,0,0.5);
 }

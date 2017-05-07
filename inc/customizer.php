@@ -14,11 +14,104 @@ function charlie_foxtrot_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
+  
+  //Mega Menu Section   
+  $wp_customize->add_section(  'mega_menu' , array(
+  'title'      => __( 'Mega Menu', 'charlie-foxtrot' ),
+  'description' => 'Mega Menu: <br/>Mega Menu can be up to 9 images without scrolling. <br/><i>Recommended size <strong>289x182</strong></i>',
+  'priority' => 101,
+  ) );
+
+  //Mega Menu images settings
+  $wp_customize->add_setting('mega_menu_img_3', array(
+  'default'        => '',
+  ));
+  $wp_customize->add_setting('mega_menu_img_4', array(
+  'default'        => '',
+  ));
+  $wp_customize->add_setting('mega_menu_img_5', array(
+  'default'        => '',
+  ));
+  $wp_customize->add_setting('mega_menu_img_6', array(
+  'default'        => '',
+  ));
+  $wp_customize->add_setting('mega_menu_img_7', array(
+  'default'        => '',
+  ));
+  $wp_customize->add_setting('mega_menu_img_8', array(
+  'default'        => '',
+  ));
+  $wp_customize->add_setting('mega_menu_img_9', array(
+  'default'        => '',
+  ));
+  $wp_customize->add_setting('mega_menu_img_10', array(
+  'default'        => '',
+  ));
+  $wp_customize->add_setting('mega_menu_img_11', array(
+  'default'        => '',
+  ));
+
+  //Mega Menu images controls
+  $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'mega_menu_control_1', array(
+  'label'      => __('Mega Menu Img 1', 'charlie-foxtrot'),
+  'section'    => 'mega_menu',
+  'settings'   => 'mega_menu_img_3',
+  'type' => 'image',
+  ) ));
+  $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'mega_menu_control_2', array(
+  'label'      => __('Mega Menu Img 2', 'charlie-foxtrot'),
+  'section'    => 'mega_menu',
+  'settings'   => 'mega_menu_img_4',
+  'type' => 'image',
+  ) ));
+  $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'mega_menu_control_3', array(
+  'label'      => __('Mega Menu Img 3', 'charlie-foxtrot'),
+  'section'    => 'mega_menu',
+  'settings'   => 'mega_menu_img_5',
+  'type' => 'image',
+  ) ));
+  $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'mega_menu_control_4', array(
+  'label'      => __('Mega Menu Img 4', 'charlie-foxtrot'),
+  'section'    => 'mega_menu',
+  'settings'   => 'mega_menu_img_6',
+  'type' => 'image',
+  ) ));
+  $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'mega_menu_control_5', array(
+  'label'      => __('Mega Menu Img 5', 'charlie-foxtrot'),
+  'section'    => 'mega_menu',
+  'settings'   => 'mega_menu_img_7',
+  'type' => 'image',
+  ) ));
+  $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'mega_menu_control_6', array(
+  'label'      => __('Mega Menu Img 6', 'charlie-foxtrot'),
+  'section'    => 'mega_menu',
+  'settings'   => 'mega_menu_img_8',
+  'type' => 'image',
+  ) ));
+  $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'mega_menu_control_7', array(
+  'label'      => __('Mega Menu Img 7', 'charlie-foxtrot'),
+  'section'    => 'mega_menu',
+  'settings'   => 'mega_menu_img_9',
+  'type' => 'image',
+  ) ));
+  $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'mega_menu_control_8', array(
+  'label'      => __('Mega Menu Img 8', 'charlie-foxtrot'),
+  'section'    => 'mega_menu',
+  'settings'   => 'mega_menu_img_10',
+  'type' => 'image',
+  ) ));
+  $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'mega_menu_control_9', array(
+  'label'      => __('Mega Menu Img 9', 'charlie-foxtrot'),
+  'section'    => 'mega_menu',
+  'settings'   => 'mega_menu_img_11',
+  'type' => 'image',
+  ) ));
+
   //Slider Options   
   $wp_customize->add_section(  'slider_options' , array(
   'title'      => __( 'Slider Options', 'charlie-foxtrot' ),
   'description' => 'Slider Options: <br/>Slide count can be up to 5 slides. <br/><i>Recommended size <strong>1920x770</strong></i>',
-  'priority' => 101,
+  'priority' => 102,
   ) );
 
   //Slider Enabled by default.
@@ -58,11 +151,11 @@ function charlie_foxtrot_customize_register( $wp_customize ) {
         //Slider Build
         for ($i=0; $i < $count; $i++) { 
           $g = $i + 1;
-          //Slider Controls
+          //Slider Images Settings
           $wp_customize->add_setting('theme_slider_'.$g, array(
           'default'        => '',
           ));
-          
+          //Slider Images Controls
           $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'theme_slider_'.$g, array(
           'label'      => __('Slider Image '. $g, 'charlie-foxtrot'),
           'section'    => 'slider_options',
@@ -75,7 +168,7 @@ function charlie_foxtrot_customize_register( $wp_customize ) {
   $wp_customize->add_section(  'feature_items' , array(
   'title'      => __( 'Featured Section', 'charlie-foxtrot' ),
   'description' => 'Feature Section: <br/>This section has two images for selection. <br/><i>Recommended size <strong>1920x770</strong></i>',
-  'priority' => 102,
+  'priority' => 103,
   ) );
 
 

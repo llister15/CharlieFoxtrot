@@ -118,6 +118,10 @@ Media Queries
   color: #ada;
 }
 
+.sticky > div > div > a > p {
+  margin: 0 -15px;
+}
+
 .mobile-search {
   position: absolute;
   bottom: 76px;

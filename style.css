@@ -85,6 +85,13 @@ section {
 .w-sub-menu > li > span {
   display: none; }
 
+.woocommerce ul.products li.product .button {
+  background: linear-gradient(-214deg, rgba(255, 176, 74, 0.8) 0%, #e38000 100%);
+  font-family: Roboto Regular;
+  font-size: 18pt;
+  color: #fff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8); }
+
 /*  _header-moblie
 @media (min-width: $iphone-4-min) and ( max-width: $iphone-4-max) and ( -webkit-device-pixel-ratio: 2 )
 @media (min-width: $screen-sm-min)
@@ -275,8 +282,7 @@ Media Queries
       font-size: 17pt; } }
 
 .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
-  opacity: .6;
-  color: #fff;
+  color: #ada;
   text-decoration: none; }
 
 @media (min-width: 992px) {
@@ -309,7 +315,7 @@ Media Queries
       font-size: 17pt; } }
 
 .navbar-default .w-primary-menu > li > a:hover, .navbar-default .w-primary-menu > li > a:focus {
-  color: #fff;
+  color: #ada;
   text-decoration: none; }
 
 @media (min-width: 992px) {
@@ -332,7 +338,7 @@ Media Queries
   box-shadow: none; }
   @media (min-width: 992px) {
     .navbar-default .navbar-nav .open .dropdown-menu {
-      margin: 0 -213%;
+      margin: 0 -150%;
       float: none; } }
 
 .navbar-default .navbar-nav .open .dropdown-menu > li > a {
@@ -348,29 +354,25 @@ Media Queries
 div[role="row"].row {
   position: relative;
   top: -5px;
-  left: 0;
-  right: 0;
   border: 1px solid rgba(0, 0, 0, 0.15);
   background: linear-gradient(-214deg, rgba(218, 187, 131, 0.8) 0%, #dabb83 100%);
   -webkit-box-shadow: 0 2px 6px 2px rgba(0, 0, 0, 0.5);
   box-shadow: 0 2px 6px 2px rgba(0, 0, 0, 0.5); }
-  @media (min-width: 992px) {
-    div[role="row"].row {
-      margin-right: -45%; } }
 
 div[role="row"] > ul {
   list-style: none; }
 
 div[role="row"] > ul > li {
   box-shadow: 0 2px 4px 2px rgba(0, 0, 0, 0.4);
-  height: 135px;
+  min-height: 135px;
   margin: 8px 5% 8px 0;
   padding: 18% 0 0;
   border-radius: 20px; }
   @media (min-width: 992px) {
     div[role="row"] > ul > li {
       margin-right: 10%;
-      padding: 5% 0; } }
+      padding: 7% 0;
+      min-height: 150px; } }
 
 div[role="row"] > ul > li:nth-child(2n) {
   margin-right: 0; }
@@ -391,51 +393,6 @@ div[role="row"] > ul > li > a {
 div[role="row"] > ul > li:hover > a:hover, ul[role="row"] > li > a:focus {
   text-decoration: none;
   color: #cdc; }
-
-#menu_img_3 {
-  background: url("http://localhost/wordpress/wp-content/uploads/2017/05/Round_Targets.jpg");
-  background-position: center center;
-  background-size: cover; }
-
-#menu_img_4 {
-  background: url("http://localhost/wordpress/wp-content/uploads/2017/05/Round_Targets.jpg");
-  background-position: center center;
-  background-size: cover; }
-
-#menu_img_5 {
-  background: url("http://localhost/wordpress/wp-content/uploads/2017/05/Reactive_Targets.jpg");
-  background-position: center center;
-  background-size: cover; }
-
-#menu_img_6 {
-  background: url("http://localhost/wordpress/wp-content/uploads/2017/05/Reactive_Targets.jpg");
-  background-position: center center;
-  background-size: cover; }
-
-#menu_img_7 {
-  background: url("http://localhost/wordpress/wp-content/uploads/2017/05/Reactive_Targets.jpg");
-  background-position: center center;
-  background-size: cover; }
-
-#menu_img_8 {
-  background: url("http://localhost/wordpress/wp-content/uploads/2017/05/Reactive_Targets.jpg");
-  background-position: center center;
-  background-size: cover; }
-
-#menu_img_9 {
-  background: url("http://localhost/wordpress/wp-content/uploads/2017/05/Reactive_Targets.jpg");
-  background-position: center center;
-  background-size: cover; }
-
-#menu_img_10 {
-  background: url("http://localhost/wordpress/wp-content/uploads/2017/05/Reactive_Targets.jpg");
-  background-position: center center;
-  background-size: cover; }
-
-#menu_img_11 {
-  background: url("http://localhost/wordpress/wp-content/uploads/2017/05/Reactive_Targets.jpg") center no-repeat;
-  background-position: center center;
-  background-size: cover; }
 
 /*  _theme-slider-mobile
 Media Queries
@@ -629,8 +586,33 @@ Media Queries
 #products {
   background: url("http://localhost/wordpress/wp-content/uploads/2017/05/AR500-BG-Patterngreat.png") center, linear-gradient(-214deg, rgba(37, 60, 94, 0.8) 0%, #253c5e 100%); }
 
+.woocommerce-products-header > div > div.row {
+  border-radius: 0 0 20px 20px;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 15px; }
+
+.woocommerce-products-header > div > div.row > div > label {
+  color: #fff;
+  font-size: 12pt;
+  font-family: Roboto Regular; }
+
+h1.woocommerce-products-header__title.page-title {
+  color: #fff; }
+
+.woocommerce .woocommerce-result-count, .woocommerce-page .woocommerce-result-count {
+  color: #fff; }
+
+.woocommerce ul.products li.product .woocommerce-loop-product__title {
+  color: #fff;
+  font-size: 22pt; }
+
+.woocommerce-Price-amount.amount {
+  color: #fff;
+  font-size: 26pt; }
+
 .woocommerce ul.products li.product, .woocommerce-page ul.products li.product {
   padding: 15px;
+  border-radius: 8px;
   background: rgba(0, 0, 0, 0.5); }
 
 /* _checkout
@@ -841,6 +823,9 @@ Media Queries
 .sticky > div > div:hover > a, .sticky > div > div:focus > a {
   text-decoration: none;
   color: #ada; }
+
+.sticky > div > div > a > p {
+  margin: 0 -15px; }
 
 .mobile-search {
   position: absolute;

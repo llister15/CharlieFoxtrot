@@ -50,7 +50,6 @@
           'container_class' => 'hidden-xs hidden-sm col-md-5 pull-right',
           'theme_location' => 'sub', 
           'fallback_cb' => false,
-          'before' => (-4 === strcasecmp( $item->title, 'CART' )) ? '<span class="badge">'. WC()->cart->get_cart_contents_count() .'</span>' : var_dump(-7 === strcasecmp( $item->attr_title, 'ACCOUNT' )),
           'depth' => 1,
           ) ); ?>
       </div> <!-- end w-head-space -->
