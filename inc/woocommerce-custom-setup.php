@@ -14,11 +14,12 @@ remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_singl
 add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_sharing', 50 );
 add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_rating', 20 );
 add_action( 'woocommerce_single_product_summary', 'woocommerce_output_product_data_tabs', 51 );
-// add_filter( 'woocommerce_product_tabs', 'wcs_woo_remove_reviews_tab', 98 );
-    function wcs_woo_remove_reviews_tab($tabs) {
-    unset($tabs['reviews']);
-    return $tabs;
-}
+  function rename_tab($tabs) {
+       $tabs['description']['title'] = __( 'Details' );
+       return $tabs;
+     
+  }
+  add_filter( 'woocommerce_product_tabs', 'rename_tab', 98 );
    
 
 function woocommerce_template_product_description() {

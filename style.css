@@ -88,9 +88,22 @@ section {
 .woocommerce ul.products li.product .button {
   background: linear-gradient(-214deg, rgba(255, 176, 74, 0.8) 0%, #e38000 100%);
   font-family: Roboto Regular;
-  font-size: 18pt;
   color: #fff;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8); }
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8); }
+  @media (min-width: 992px) {
+    .woocommerce ul.products li.product .button {
+      font-size: 18pt;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8); } }
+
+.woocommerce #respond input#submit.alt, .woocommerce a.button.alt, .woocommerce button.button.alt, .woocommerce input.button.alt {
+  background: linear-gradient(-214deg, rgba(255, 176, 74, 0.8) 0%, #e38000 100%);
+  font-family: Roboto Regular;
+  color: #fff;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8); }
+  @media (min-width: 992px) {
+    .woocommerce #respond input#submit.alt, .woocommerce a.button.alt, .woocommerce button.button.alt, .woocommerce input.button.alt {
+      font-size: 14pt;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8); } }
 
 /*  _header-moblie
 @media (min-width: $iphone-4-min) and ( max-width: $iphone-4-max) and ( -webkit-device-pixel-ratio: 2 )
@@ -162,17 +175,27 @@ Header
 .w-sub-menu > li:first-child > a:before {
   font-family: 'Wonka Icons';
   content: '\001c';
-  display: inline-block;
-  padding: 0 8px; }
+  display: inline;
+  margin-right: 8px;
+  vertical-align: bottom; }
 
 .w-sub-menu > li {
   list-style: none;
   display: inline-block;
   padding: 0 15px;
   border-right: 1px solid #fff; }
+  @media (min-width: 992px) {
+    .w-sub-menu > li {
+      font-size: 12pt;
+      line-height: 14pt; } }
 
 .w-sub-menu > li > a {
-  color: #fff; }
+  color: #fff;
+  display: inline; }
+  @media (min-width: 992px) {
+    .w-sub-menu > li > a {
+      font-size: 12pt;
+      line-height: 14pt; } }
 
 .w-sub-menu > li > a:hover, .w-sub-menu > li > a:focus {
   opacity: .6;
@@ -586,6 +609,18 @@ Media Queries
 #products {
   background: url("http://localhost/wordpress/wp-content/uploads/2017/05/AR500-BG-Patterngreat.png") center, linear-gradient(-214deg, rgba(37, 60, 94, 0.8) 0%, #253c5e 100%); }
 
+#products > div > div {
+  padding-top: 15px;
+  color: #fff; }
+
+#products > div > div .quantity .input-text {
+  padding: 3px;
+  background: rgba(0, 0, 0, 0.5); }
+  @media (min-width: 992px) {
+    #products > div > div .quantity .input-text {
+      padding: 5px;
+      font-size: 14pt; } }
+
 .woocommerce-products-header > div > div.row {
   border-radius: 0 0 20px 20px;
   background: rgba(0, 0, 0, 0.5);
@@ -594,7 +629,29 @@ Media Queries
 .woocommerce-products-header > div > div.row > div > label {
   color: #fff;
   font-size: 12pt;
-  font-family: Roboto Regular; }
+  font-family: Roboto Regular;
+  padding: 4px; }
+
+.woocommerce-products-header > div > div.row > div > select {
+  border-radius: 6px;
+  background: transparent;
+  color: #fff;
+  padding: 4px;
+  border-width: 2px; }
+
+.woocommerce-products-header > div > div.row option {
+  color: #000; }
+
+.woocommerce .woocommerce-ordering, .woocommerce-page .woocommerce-ordering {
+  float: none;
+  display: inline; }
+
+.woocommerce .woocommerce-ordering, .woocommerce-page .woocommerce-ordering .orderby {
+  border-radius: 6px;
+  background: transparent;
+  color: #fff;
+  padding: 4px;
+  border-width: 2px; }
 
 h1.woocommerce-products-header__title.page-title {
   color: #fff; }
@@ -614,6 +671,56 @@ h1.woocommerce-products-header__title.page-title {
   padding: 15px;
   border-radius: 8px;
   background: rgba(0, 0, 0, 0.5); }
+
+section.related.products {
+  clear: both;
+  color: #fff;
+  background: linear-gradient(-214deg, rgba(218, 187, 131, 0.8) 0%, #dabb83 100%);
+  padding: 15px;
+  margin: 15px -15px; }
+
+.woocommerce div.product .woocommerce-tabs ul.tabs li {
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  font-family: Roboto Regular;
+  color: #fff;
+  margin: 0 -3px; }
+
+.woocommerce div.product .woocommerce-tabs ul.tabs li a {
+  font-weight: 400;
+  color: #aaa; }
+
+.woocommerce div.product .woocommerce-tabs ul.tabs li.active {
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  font-family: Roboto Regular; }
+
+.woocommerce div.product .woocommerce-tabs ul.tabs::before {
+  display: none; }
+
+.woocommerce div.product .woocommerce-tabs ul.tabs li::after, .woocommerce div.product .woocommerce-tabs ul.tabs li::before {
+  display: none; }
+
+.woocommerce div.product .woocommerce-tabs ul.tabs {
+  margin: 0; }
+
+.woocommerce div.product .woocommerce-tabs .panel {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 15px;
+  font-family: Roboto Regular; }
+
+.woocommerce table.shop_attributes th {
+  font-weight: 400; }
+
+#rating {
+  background: transparent;
+  padding: 2px; }
+
+#rating option {
+  color: #000; }
+
+#comment {
+  background: transparent; }
 
 /* _checkout
 *
