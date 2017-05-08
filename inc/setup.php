@@ -250,26 +250,14 @@ function charlie_foxtrot_setup() {
 	}
 	add_filter( 'get_search_form', 'charlie_foxtrot_search_form' );
 
-	// WooCommerce Support.
-	add_theme_support( 'woocommerce' );
-
-	// Remove Woocomerece Breadcrumb
-	remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20, 0 );
 }
 add_action( 'after_setup_theme', 'charlie_foxtrot_setup' );
 
 //WooCommerce Setup.
-remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10);
-remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10);
-function my_theme_wrapper_start() {
-  echo '<section id="products" class="container-fluid"><div class="row-fluid">';
-}
-
-function my_theme_wrapper_end() {
-  echo '</div></section>';
-}
-add_action('woocommerce_before_main_content', 'my_theme_wrapper_start', 10);
-add_action('woocommerce_after_main_content', 'my_theme_wrapper_end', 10);
+require get_parent_theme_file_path('/inc/woocommerce-custom-setup.php');
 
 // Includes Walker Class
 require get_parent_theme_file_path('/inc/charlie-foxtrot-walker.php');
+
+// Includes Share Buttons for products
+require get_parent_theme_file_path('/inc/woocommerce-share.php');

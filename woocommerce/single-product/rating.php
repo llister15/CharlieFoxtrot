@@ -32,7 +32,8 @@ $average      = $product->get_average_rating();
 
 if ( $rating_count > 0 ) : ?>
 
-	<div class="woocommerce-product-rating">
+<label for="average-rate" class="average-rating">Average rating</label>
+	<div name="average-rate" class="woocommerce-product-rating">
 		<div class="star-rating">
 			<span style="width:<?php echo ( ( $average / 5 ) * 100 ); ?>%">
 				<?php
