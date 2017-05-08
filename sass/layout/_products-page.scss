@@ -6,6 +6,20 @@
   background: url('http://localhost/wordpress/wp-content/uploads/2017/05/AR500-BG-Patterngreat.png')center, $header-color;
 }
 
+#products > div > div {
+  padding-top: 15px;
+  color: #fff;
+}
+
+#products > div > div .quantity .input-text {
+  padding: 3px;
+  background: $black-opacity;
+    @media (min-width: $screen-md-min) {
+      padding: 5px;
+      font-size: 14pt;
+    }
+}
+
 .woocommerce-products-header > div > div.row {
   border-radius: 0 0 20px 20px;
   background: rgba(0,0,0,0.5);
@@ -15,7 +29,33 @@
 .woocommerce-products-header > div > div.row > div > label {
   color: #fff;
   font-size: 12pt;
-  font-family: Roboto Regular;
+  font-family: $roboto-reg;
+  padding: 4px;
+}
+
+.woocommerce-products-header > div > div.row > div > select {
+  border-radius: 6px;
+  background: transparent;
+  color: #fff;
+  padding: 4px;
+  border-width: 2px;
+}
+
+.woocommerce-products-header > div > div.row option {
+  color: #000;
+}
+
+.woocommerce .woocommerce-ordering, .woocommerce-page .woocommerce-ordering {
+  float: none;
+  display: inline;
+}
+
+.woocommerce .woocommerce-ordering, .woocommerce-page .woocommerce-ordering .orderby {
+  border-radius: 6px;
+  background: transparent;
+  color: #fff;
+  padding: 4px;
+  border-width: 2px;
 }
 
 h1.woocommerce-products-header__title.page-title {
@@ -39,5 +79,67 @@ h1.woocommerce-products-header__title.page-title {
 .woocommerce ul.products li.product, .woocommerce-page ul.products li.product {
   padding: 15px;
   border-radius: 8px;
-  background: rgba(0,0,0,0.5);
+  background: $black-opacity;
+}
+
+section.related.products {
+  clear: both;
+  color: #fff;
+  background: $mega-color;
+  padding: 15px;
+  margin: 15px -15px;
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs li {
+  background: $black-opacity;
+  border: none;
+  font-family: $roboto-reg;
+  color: #fff;
+  margin: 0 -3px;
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs li a {
+  font-weight: 400;
+  color: #aaa;
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs li.active {
+  background: $black-opacity;
+  border: none;
+  font-family: $roboto-reg;
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs::before {
+  display: none;
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs li::after, .woocommerce div.product .woocommerce-tabs ul.tabs li::before {
+  display: none;
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs {
+  margin: 0;
+}
+
+.woocommerce div.product .woocommerce-tabs .panel {
+  background: $black-opacity;
+  padding: 15px;
+  font-family: $roboto-reg;
+}
+
+.woocommerce table.shop_attributes th {
+  font-weight: 400;
+}
+
+#rating {
+  background: transparent;
+  padding: 2px;
+}
+
+#rating option {
+  color: #000;
+}
+
+#comment {
+  background: transparent;
 }

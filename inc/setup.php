@@ -253,8 +253,20 @@ function charlie_foxtrot_setup() {
 	// WooCommerce Support.
 	add_theme_support( 'woocommerce' );
 
-	// Remove Woocomerece Breadcrumb
+	// Remove Woocommerce Breadcrumb
 	remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20, 0 );
+	// Remove Woocommerce Orderby
+	remove_action( 'woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30,0 );
+	// Moving Woocommerce Tabs
+	remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_product_data_tabs', 10 );
+	add_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_product_data_tabs', 21 );
+	add_action( 'woocommerce_single_product_summary', 'woocommerce_output_product_data_tabs', 51 );
+	function rename_tab($tabs) {
+		   $tabs['description']['title'] = __( 'Details' );
+		   return $tabs;
+	   
+	}
+	add_filter( 'woocommerce_product_tabs', 'rename_tab', 98 );
 }
 add_action( 'after_setup_theme', 'charlie_foxtrot_setup' );
 

@@ -78,8 +78,9 @@ Header
 .w-sub-menu > li:first-child > a:before {
     font-family: 'Wonka Icons';
     content: '\001c';
-    display:  inline-block;
-    padding: 0 8px;
+    display:  inline;
+    margin-right: 8px;
+    vertical-align: bottom;
 }
 
 .w-sub-menu > li {
@@ -87,10 +88,19 @@ Header
     display: inline-block;
     padding:  0 15px;
     border-right:  1px solid #fff;
+    @media (min-width: $screen-md-min) {
+      font-size: 12pt;
+      line-height: 14pt;
+   }
 }
 
 .w-sub-menu > li > a {
   color: #fff;
+  display: inline;
+  @media (min-width: $screen-md-min) {
+    font-size: 12pt;
+    line-height: 14pt;
+   }
 }
 
 .w-sub-menu > li > a:hover, .w-sub-menu > li > a:focus {

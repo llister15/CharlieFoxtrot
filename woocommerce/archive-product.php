@@ -41,6 +41,9 @@ get_header( 'shop' ); ?>
 		       dynamic_sidebar('top-filters-1');
 		     }
 	      ?>
+	      <div class="col-xs-12 col-md-4">
+	      		<label for="orderby">Sort by:</label><?php woocommerce_catalog_ordering(); ?>
+	      </div>
     		</div>
     	</div>
     	

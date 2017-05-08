@@ -54,6 +54,15 @@ $footer-color: #000;
 $copyright-bar: #f01;
 $copyright-text: #fff;
 $link-color: #fff;
+$black-opacity: rgba(0,0,0,0.5);
+
+// Theme Fonts
+$roboto-thin: Roboto Thin;
+$roboto-lit: Roboto Light;
+$roboto-reg: Roboto Regular;
+$roboto-med: Roboto Medium;
+$roboto-bol: Roboto Bold;
+$roboto-blk: Roboto Black;
 
 @font-face {
     font-family:  'Wonka Icons';
@@ -135,9 +144,23 @@ section {
 .woocommerce ul.products li.product .button {
   background: $button-color;
   font-family: Roboto Regular;
-  font-size: 18pt;
   color: #fff;
-  text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+  text-shadow: 0 1px 2px rgba(0,0,0,0.8);
+    @media (min-width: $screen-md-min) {
+      font-size: 18pt;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+    }
+}
+
+.woocommerce #respond input#submit.alt, .woocommerce a.button.alt, .woocommerce button.button.alt, .woocommerce input.button.alt {
+  background: $button-color;
+  font-family: Roboto Regular;
+  color: #fff;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.8);
+  @media (min-width: $screen-md-min) {
+      font-size: 14pt;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+    }
 }
 
 
