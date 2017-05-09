@@ -3,7 +3,7 @@
 */
 
 #products {
-  background: url('http://localhost/wordpress/wp-content/uploads/2017/05/AR500-BG-Patterngreat.png')center, $header-color;
+  background: url('./assets/images/bg-pattern.png')center, $header-color;
 }
 
 #products > div > div {
@@ -20,6 +20,14 @@
     }
 }
 
+#products > div > div > div .average-rating {
+  font-weight: 400;
+}
+
+#products > div > div > div .a2a_kit  {
+  padding: 15px;
+}
+
 .woocommerce-products-header > div > div.row {
   border-radius: 0 0 20px 20px;
   background: rgba(0,0,0,0.5);
@@ -31,6 +39,7 @@
   font-size: 12pt;
   font-family: $roboto-reg;
   padding: 4px;
+  font-weight: 400;
 }
 
 .woocommerce-products-header > div > div.row > div > select {
@@ -68,12 +77,17 @@ h1.woocommerce-products-header__title.page-title {
 
 .woocommerce ul.products li.product .woocommerce-loop-product__title {
   color: #fff;
-  font-size: 22pt;
+  @media (min-width: $screen-md-min) {
+    font-size: 22pt;
+  }
 }
 
 .woocommerce-Price-amount.amount {
   color: #fff;
-  font-size: 26pt;
+  font-size: 15pt;
+  @media (min-width: $screen-md-min) {
+    font-size: 26pt;
+  }
 }
 
 .woocommerce ul.products li.product, .woocommerce-page ul.products li.product {

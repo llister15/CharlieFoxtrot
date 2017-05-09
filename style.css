@@ -385,27 +385,16 @@ div[role="row"].row {
 div[role="row"] > ul {
   list-style: none; }
 
+div[role="row"] > ul > li.col-xs-6 {
+  width: 46%; }
+
 div[role="row"] > ul > li {
   box-shadow: 0 2px 4px 2px rgba(0, 0, 0, 0.4);
   min-height: 135px;
-  margin: 8px 5% 8px 0;
-  padding: 18% 0 0;
   border-radius: 20px; }
   @media (min-width: 992px) {
     div[role="row"] > ul > li {
-      margin-right: 10%;
-      padding: 7% 0;
       min-height: 150px; } }
-
-div[role="row"] > ul > li:nth-child(2n) {
-  margin-right: 0; }
-  @media (min-width: 992px) {
-    div[role="row"] > ul > li:nth-child(2n) {
-      margin-right: 10%; } }
-
-@media (min-width: 992px) {
-  div[role="row"] > ul > li:nth-child(3n) {
-    margin-right: 0; } }
 
 div[role="row"] > ul > li > a {
   padding: 8% 25%;
@@ -600,14 +589,22 @@ Media Queries
 .main-content-row {
   padding-top: 20px; }
 
-#products > div {
-  padding-top: 20px; }
+@media (min-width: 992px) {
+  #products > div {
+    padding-top: 20px; } }
+
+.woocommerce .products .star-rating {
+  margin: 0 auto .5em;
+  color: #e38000; }
+
+.woocommerce .star-rating:before {
+  color: transparent; }
 
 /* _products-page.scss
 *
 */
 #products {
-  background: url("http://localhost/wordpress/wp-content/uploads/2017/05/AR500-BG-Patterngreat.png") center, linear-gradient(-214deg, rgba(37, 60, 94, 0.8) 0%, #253c5e 100%); }
+  background: url("./assets/images/bg-pattern.png") center, linear-gradient(-214deg, rgba(37, 60, 94, 0.8) 0%, #253c5e 100%); }
 
 #products > div > div {
   padding-top: 15px;
@@ -621,6 +618,12 @@ Media Queries
       padding: 5px;
       font-size: 14pt; } }
 
+#products > div > div > div .average-rating {
+  font-weight: 400; }
+
+#products > div > div > div .a2a_kit {
+  padding: 15px; }
+
 .woocommerce-products-header > div > div.row {
   border-radius: 0 0 20px 20px;
   background: rgba(0, 0, 0, 0.5);
@@ -630,7 +633,8 @@ Media Queries
   color: #fff;
   font-size: 12pt;
   font-family: Roboto Regular;
-  padding: 4px; }
+  padding: 4px;
+  font-weight: 400; }
 
 .woocommerce-products-header > div > div.row > div > select {
   border-radius: 6px;
@@ -660,12 +664,17 @@ h1.woocommerce-products-header__title.page-title {
   color: #fff; }
 
 .woocommerce ul.products li.product .woocommerce-loop-product__title {
-  color: #fff;
-  font-size: 22pt; }
+  color: #fff; }
+  @media (min-width: 992px) {
+    .woocommerce ul.products li.product .woocommerce-loop-product__title {
+      font-size: 22pt; } }
 
 .woocommerce-Price-amount.amount {
   color: #fff;
-  font-size: 26pt; }
+  font-size: 15pt; }
+  @media (min-width: 992px) {
+    .woocommerce-Price-amount.amount {
+      font-size: 26pt; } }
 
 .woocommerce ul.products li.product, .woocommerce-page ul.products li.product {
   padding: 15px;
