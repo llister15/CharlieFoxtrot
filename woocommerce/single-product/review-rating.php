@@ -25,7 +25,7 @@ $rating = intval( get_comment_meta( $comment->comment_ID, 'rating', true ) );
 
 if ( $rating && get_option( 'woocommerce_enable_review_rating' ) === 'yes' ) { ?>
 
-	<div class="star-rating">
+	<!-- <div class="star-rating"> -->
 		<span style="width:<?php echo ( esc_attr( $rating ) / 5 ) * 100; ?>%"><?php
 			/* translators: %s: rating */
 			printf( esc_html__( '%s out of 5', 'woocommerce' ), '<strong>' . $rating . '</strong>' );

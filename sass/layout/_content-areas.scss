@@ -55,3 +55,10 @@
 .woocommerce .star-rating:before {
   color: transparent;
 }
+
+.woocommerce ul.products li.product, .woocommerce-page ul.products li.product {
+  min-height: 300px;
+    @media (min-width: $screen-md-min) {
+      min-height: 640px;
+    }
+}

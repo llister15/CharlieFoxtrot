@@ -29,7 +29,15 @@ function loop_columns() {
 return 3; // 3 products per row
 }
 add_filter('loop_shop_columns', 'loop_columns', 999);
-   
+
+ // Ajax cart auto updates
+function cart_count_fragments( $fragments ) {
+    $fragments['span.badge.footer-badge'] = '<span class="badge footer-badge">' . WC()->cart->get_cart_contents_count() . '</span>';
+    $fragments['span.badge.sub-menu-badge'] = '<span class="badge sub-menu-badge">' . WC()->cart->get_cart_contents_count() . '</span>';
+    
+    return $fragments;
+}
+add_filter( 'woocommerce_add_to_cart_fragments', 'cart_count_fragments', 10, 1 );
 
 function woocommerce_template_product_description() {
 woocommerce_get_template( 'single-product/review-meta.php' );

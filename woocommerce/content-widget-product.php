@@ -28,8 +28,8 @@ global $product; ?>
 		<?php echo $product->get_image(); ?>
 		<span class="product-title"><?php echo $product->get_name(); ?></span>
 	</a>
-	<?php if ( ! empty( $show_rating ) ) : ?>
-		<?php echo wc_get_rating_html( $product->get_average_rating() ); ?>
-	<?php endif; ?>
+  <?php if ( ! empty( $show_rating ) ) : ?>
+    <?php echo wc_get_rating_html( $product->get_average_rating() ); ?>
+  <?php endif; ?>
 	<?php echo $product->get_price_html(); ?>
 </li>

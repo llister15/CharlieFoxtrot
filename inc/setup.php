@@ -239,6 +239,7 @@ function charlie_foxtrot_setup() {
 	    $form = '<form role="search" method="get" id="searchform" class="searchform" action="' . home_url( '/' ) . '" >
 	    <div class="input-group w-search-form">
 	    <input type="text" class="form-control" placeholder="Search" value="' . get_search_query() . '" name="s" id="s" />
+	<input type="hidden" name="post_type" value="product" />
 	    <span class="input-group-btn">
 	          <button class="btn w-search-button" type="submit"><span class="glyphicon glyphicon-search" aria-hidden="true">
 	          </span></button>

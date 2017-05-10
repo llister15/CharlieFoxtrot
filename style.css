@@ -89,21 +89,21 @@ section {
   background: linear-gradient(-214deg, rgba(255, 176, 74, 0.8) 0%, #e38000 100%);
   font-family: Roboto Regular;
   color: #fff;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8); }
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8); }
   @media (min-width: 992px) {
     .woocommerce ul.products li.product .button {
       font-size: 18pt;
-      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8); } }
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8); } }
 
 .woocommerce #respond input#submit.alt, .woocommerce a.button.alt, .woocommerce button.button.alt, .woocommerce input.button.alt {
   background: linear-gradient(-214deg, rgba(255, 176, 74, 0.8) 0%, #e38000 100%);
   font-family: Roboto Regular;
   color: #fff;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8); }
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8); }
   @media (min-width: 992px) {
     .woocommerce #respond input#submit.alt, .woocommerce a.button.alt, .woocommerce button.button.alt, .woocommerce input.button.alt {
       font-size: 14pt;
-      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8); } }
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8); } }
 
 /*  _header-moblie
 @media (min-width: $iphone-4-min) and ( max-width: $iphone-4-max) and ( -webkit-device-pixel-ratio: 2 )
@@ -191,11 +191,12 @@ Header
 
 .w-sub-menu > li > a {
   color: #fff;
-  display: inline; }
+  display: inline;
+  text-transform: uppercase; }
   @media (min-width: 992px) {
     .w-sub-menu > li > a {
-      font-size: 12pt;
-      line-height: 14pt; } }
+      font-size: 14pt;
+      line-height: 15pt; } }
 
 .w-sub-menu > li > a:hover, .w-sub-menu > li > a:focus {
   opacity: .6;
@@ -204,6 +205,17 @@ Header
 
 .w-sub-menu > li:last-child {
   border: none; }
+
+.badge.sub-menu-badge {
+  position: absolute;
+  padding: 1px 4px;
+  top: -3px;
+  left: -12%;
+  z-index: 50;
+  border: 1px solid #000;
+  color: #000;
+  background-color: #fff;
+  font-family: Roboto Black; }
 
 /* _wonka-navbar-mobile
 Media Queries
@@ -385,26 +397,58 @@ div[role="row"].row {
 div[role="row"] > ul {
   list-style: none; }
 
-div[role="row"] > ul > li.col-xs-6 {
-  width: 46%; }
-
 div[role="row"] > ul > li {
-  box-shadow: 0 2px 4px 2px rgba(0, 0, 0, 0.4);
-  min-height: 135px;
-  border-radius: 20px; }
+  min-height: 140px;
+  padding: 15px; }
   @media (min-width: 992px) {
     div[role="row"] > ul > li {
-      min-height: 150px; } }
+      min-height: 155px; } }
 
 div[role="row"] > ul > li > a {
-  padding: 8% 25%;
-  background: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 2px 4px 2px rgba(0, 0, 0, 0.4);
+  min-height: 135px;
+  border-radius: 20px;
   color: #fff;
-  font-family: Roboto Regular; }
+  font-family: Roboto Regular;
+  min-height: 135px;
+  padding: 39% 0 0;
+  width: 100%;
+  display: block; }
+  @media (min-width: 992px) {
+    div[role="row"] > ul > li > a {
+      min-height: 150px;
+      padding: 18% 0 0; } }
 
 div[role="row"] > ul > li:hover > a:hover, ul[role="row"] > li > a:focus {
   text-decoration: none;
   color: #cdc; }
+
+div[role="row"] > ul > li > a > span {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 5% 20%; }
+
+div[role="row"] > ul > li:last-child {
+  min-height: 50px; }
+
+div[role="row"] > ul > li:last-child > a {
+  background: linear-gradient(-214deg, rgba(255, 176, 74, 0.8) 0%, #e38000 100%);
+  min-height: 135px;
+  border-radius: 20px;
+  color: #fff;
+  font-family: Roboto Regular;
+  min-height: 20px;
+  padding: 0;
+  width: 100%;
+  display: block;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8); }
+  @media (min-width: 992px) {
+    div[role="row"] > ul > li:last-child > a {
+      font-size: 18pt;
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8); } }
+
+div[role="row"] > ul > li:last-child > a > span {
+  background: transparent;
+  padding: 0; }
 
 /*  _theme-slider-mobile
 Media Queries
@@ -599,6 +643,12 @@ Media Queries
 
 .woocommerce .star-rating:before {
   color: transparent; }
+
+.woocommerce ul.products li.product, .woocommerce-page ul.products li.product {
+  min-height: 300px; }
+  @media (min-width: 992px) {
+    .woocommerce ul.products li.product, .woocommerce-page ul.products li.product {
+      min-height: 640px; } }
 
 /* _products-page.scss
 *
