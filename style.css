@@ -607,7 +607,7 @@ Media Queries
 *
 */
 #products {
-  background: url("http://localhost/wordpress/wp-content/uploads/2017/05/AR500-BG-Patterngreat.png") center, linear-gradient(-214deg, rgba(37, 60, 94, 0.8) 0%, #253c5e 100%); }
+  background: url("./assets/images/BG-Pattern.png") center, linear-gradient(-214deg, rgba(37, 60, 94, 0.8) 0%, #253c5e 100%); }
 
 #products > div > div {
   padding-top: 15px;

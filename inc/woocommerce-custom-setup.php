@@ -11,15 +11,27 @@ remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wra
 remove_action( 'woocommerce_review_before_comment_meta', 'woocommerce_review_display_rating', 10, 0 );
 remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 20 );
 remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_rating', 10 );
+remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_product_data_tabs', 10 );
+remove_action( 'woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30);
 add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_sharing', 50 );
 add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_rating', 20 );
 add_action( 'woocommerce_single_product_summary', 'woocommerce_output_product_data_tabs', 51 );
+add_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_product_data_tabs', 21 );
   function rename_tab($tabs) {
        $tabs['description']['title'] = __( 'Details' );
        return $tabs;
      
   }
   add_filter( 'woocommerce_product_tabs', 'rename_tab', 98 );
+
+
+  // Change number or products per row to 3
+add_filter('loop_shop_columns', 'loop_columns');
+if (!function_exists('loop_columns')) {
+  function loop_columns() {
+    return 3; // 3 products per row
+  }
+}
    
 
 function woocommerce_template_product_description() {
