@@ -12,7 +12,7 @@
 <nav class="navbar navbar-default w-nav-color" role="navigation">
 <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header text-center">
+    <div class="col-md-4 navbar-header text-center">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#primary_walker">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>

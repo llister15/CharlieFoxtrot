@@ -127,7 +127,7 @@ Class WS_Walker_Nav_Mega extends Walker_Nav_menu {
 
     $classes[] = ( $args->walker->has_children ) ? 'dropdown' : '';
     $classes[] = ( $item->current  || $item->current_item_anchestor) ? 'active' : '';
-    $classes[] = 'col-xs-12 text-center';
+    $classes[] = 'col-xs-6 col-md-12 text-center';
     $classes[] = 'menu-item-' . $item->ID;
     if ( $depth && $args->walker->has_children ) {
       $classes[] = 'dropdown-submenu';
