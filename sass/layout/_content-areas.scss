@@ -41,6 +41,24 @@
  }
 
 #products > div {
-  padding-top: 20px;
-    
+
+  @media (min-width: $screen-md-min) {
+    padding-top: 20px;
+    }
   }
+
+.woocommerce .products .star-rating {
+  margin: 0 auto .5em;
+  color: #e38000;
+}
+
+.woocommerce .star-rating:before {
+  color: transparent;
+}
+
+.woocommerce ul.products li.product, .woocommerce-page ul.products li.product {
+  min-height: 300px;
+    @media (min-width: $screen-md-min) {
+      min-height: 640px;
+    }
+}

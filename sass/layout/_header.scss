@@ -16,7 +16,6 @@ div.w-search-form input.form-control,
 .w-brand-logo > a > img,
 .w-sub-menu > li > a,
 .w-sub-menu > li {
-    position: relative;
     transition: all .2s ease-in-out;
 }
 
@@ -29,9 +28,6 @@ Header
       height: 50px;
     }
     @media (min-width: $screen-md-min) {
-      height: 50px;
-    }
-    @media (min-width: $screen-md-min) {
       height: 145px;
     }
 }
@@ -40,11 +36,7 @@ Header
   position: absolute;
   z-index: 100;
   width: 115px;
-  left: -25px;
   max-width: 115px;
-    @media (min-width: $screen-lg-min) {
-      left: 50px;
-    }
 }
 
 .w-head-space {
@@ -53,6 +45,14 @@ Header
 
 .w-head-space > div {
   margin-top: 10px;
+  margin-left: -60px;
+}
+
+.w-head-space > div .logo-link {
+  display: inline-block;
+  float: none;
+  min-width: 115px;
+  height: 25px;
 }
 
 #w-header .w-search-form {
@@ -95,11 +95,13 @@ Header
 }
 
 .w-sub-menu > li > a {
+  position: relative;
   color: #fff;
   display: inline;
+  text-transform: uppercase;
   @media (min-width: $screen-md-min) {
-    font-size: 12pt;
-    line-height: 14pt;
+    font-size: 14pt;
+    line-height: 15pt;
    }
 }
 
@@ -111,4 +113,16 @@ Header
 
 .w-sub-menu > li:last-child {
     border: none;
+}
+
+.badge.sub-menu-badge {
+  position: absolute;
+  padding: 1px 4px;
+  top: -3px;
+  left: -12%;
+  z-index: 50;
+  border: 1px solid #000;
+  color: #000;
+  background-color: #fff;
+  font-family: Roboto Black;
 }

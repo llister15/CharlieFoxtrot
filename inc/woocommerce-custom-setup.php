@@ -25,19 +25,14 @@ add_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_prod
   add_filter( 'woocommerce_product_tabs', 'rename_tab', 98 );
 
 
-  // Change number or products per row to 3
-add_filter('loop_shop_columns', 'loop_columns');
-if (!function_exists('loop_columns')) {
-  function loop_columns() {
-    return 3; // 3 products per row
-  }
+ // Ajax cart auto updates
+function cart_count_fragments( $fragments ) {
+    $fragments['span.badge.footer-badge'] = '<span class="badge footer-badge">' . WC()->cart->get_cart_contents_count() . '</span>';
+    $fragments['span.badge.sub-menu-badge'] = '<span class="badge sub-menu-badge">' . WC()->cart->get_cart_contents_count() . '</span>';
+    
+    return $fragments;
 }
-   
-
-function woocommerce_template_product_description() {
-woocommerce_get_template( 'single-product/review-meta.php' );
-}
-// add_action( 'woocommerce_after_single_product_summary', 'woocommerce_template_product_description', 51 );
+add_filter( 'woocommerce_add_to_cart_fragments', 'cart_count_fragments', 10, 1 );
 
 function my_theme_wrapper_start() {
   echo '<section id="products" class="container-fluid"><div class="row-fluid">';

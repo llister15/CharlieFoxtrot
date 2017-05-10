@@ -19,7 +19,7 @@ if ( !is_home() && !is_front_page()) {
   ?>
   <div id="main-content">
 <div class="container-fluid">
-  <div class="row main-content-row">
+  <div class="row-fluid main-content-row">
     <main id="main" class="site-main" role="main">
 
       <?php
