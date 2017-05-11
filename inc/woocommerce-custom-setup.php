@@ -16,7 +16,6 @@ remove_action( 'woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 3
 add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_sharing', 50 );
 add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_rating', 20 );
 add_action( 'woocommerce_single_product_summary', 'woocommerce_output_product_data_tabs', 51 );
-add_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_product_data_tabs', 21 );
   function rename_tab($tabs) {
        $tabs['description']['title'] = __( 'Details' );
        return $tabs;

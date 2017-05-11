@@ -22,4 +22,33 @@ $( document ).ready(function () {
     }
       $('.mobile-search>form>div>input').focus();
   });
+
+  // Add touch for mobile
+  // swipe controls for social
+$(".carousel").swipe({
+
+  swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
+
+    if (direction == 'left') $(this).carousel('next');
+    if (direction == 'right') $(this).carousel('prev');
+
+  },
+  excludedElements:"button, input, select, textarea, .noSwipe",
+  allowPageScroll:"vertical",
+  allowClick:"a"
+
+});
+$("a").swipe({
+
+  swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
+
+    if (direction == 'left') $(this).carousel('next');
+    if (direction == 'right') $(this).carousel('prev');
+
+  },
+  excludedElements:"button, input, select, textarea, .noSwipe",
+  allowPageScroll:"vertical",
+  allowClick:"a"
+
+});
 });
