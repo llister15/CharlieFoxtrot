@@ -37,7 +37,7 @@ get_header( 'shop' ); ?>
     	<div class="container">
     		<div class="row">
     		<?php dynamic_sidebar('top-filters-1'); ?>
-	      <div class="col-xs-12 col-md-4">
+	      <div class="col-xs-12 col-md-4 pull-right">
 	      		<label for="orderby">Sort by:</label><?php woocommerce_catalog_ordering(); ?>
 	      </div>
     		</div>

@@ -63,7 +63,6 @@ $roboto-reg: Roboto Regular;
 $roboto-med: Roboto Medium;
 $roboto-bol: Roboto Bold;
 $roboto-blk: Roboto Black;
-$logo-font: Logo Font;
 
 @font-face {
     font-family:  'Wonka Icons';
@@ -71,10 +70,6 @@ $logo-font: Logo Font;
     src: url('./assets/fonts/wonka-icons.woff') format('woff'),
     url('./assets/fonts/wonka-icons.ttf') format('truetype'),
     url('./assets/fonts/wonka-icons.svg#wonka_icons') format('svg')
-}
-@font-face {
-    font-family:  'Logo Font';
-    src: url('./assets/fonts/AustralianFlyingCorpsStencil.ttf');
 }
 @font-face {
     font-family:  'Roboto Thin';

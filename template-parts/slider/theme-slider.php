@@ -12,6 +12,7 @@
 <div class="col-xs-12 text-center">
 <?php 
 $value = get_theme_mod('theme_slider_check');
+var_dump($value);
   if (($value !== "checked") && ($value !== true)) {
     $value2 = get_theme_mod('static_header');
     if ($value2 !== true) {

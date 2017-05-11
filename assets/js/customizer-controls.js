@@ -11,13 +11,13 @@
   $(document).ready(function() {
     $check = $('[data-customize-setting-link="theme_slider_check"]').val();
     $count = $('[data-customize-setting-link="theme_slide_count"]').val();
-    if ($check == '') {
+    if ($check === '') {
       $('#customize-control-theme_slider_1').slideUp();
       $('#customize-control-theme_slider_2').slideUp();
       $('#customize-control-theme_slider_3').slideUp();
       $('#customize-control-theme_slider_4').slideUp();
       $('#customize-control-theme_slider_5').slideUp();
-    } else if ($check == 1) {
+    } else if ($check == 'checked') {
       $('#customize-control-theme_slider_1').slideUp();
       $('#customize-control-theme_slider_2').slideUp();
       $('#customize-control-theme_slider_3').slideUp();

@@ -28,9 +28,6 @@ Media Queries
   src: url("./assets/fonts/wonka-icons.otf");
   src: url("./assets/fonts/wonka-icons.woff") format("woff"), url("./assets/fonts/wonka-icons.ttf") format("truetype"), url("./assets/fonts/wonka-icons.svg#wonka_icons") format("svg"); }
 @font-face {
-  font-family: 'Logo Font';
-  src: url("./assets/fonts/AustralianFlyingCorpsStencil.ttf"); }
-@font-face {
   font-family: 'Roboto Thin';
   src: url("./assets/fonts/Roboto-Thin.ttf"); }
 @font-face {
@@ -304,8 +301,8 @@ Media Queries
 .navbar-default .w-blog-brand {
   top: 15px;
   float: none;
-  font-family: Logo Font;
-  letter-spacing: 3px; }
+  font-family: Roboto Medium;
+  letter-spacing: 1px; }
 
 .navbar-default .w-back-button {
   font-family: Roboto Light; }

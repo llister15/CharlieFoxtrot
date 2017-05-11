@@ -15,20 +15,13 @@ remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_p
 remove_action( 'woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30);
 add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_sharing', 50 );
 add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_rating', 20 );
-/*add_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_product_data_tabs', 21 );*/
 add_action( 'woocommerce_single_product_summary', 'woocommerce_output_product_data_tabs', 51 );
-  function rename_tab($tabs) {
-       $tabs['description']['title'] = __( 'Details' );
-       return $tabs;
-     
-  }
-  add_filter( 'woocommerce_product_tabs', 'rename_tab', 98 );
-
-// Override theme default specification for product # per row
-function loop_columns() {
-return 3; // 3 products per row
+function rename_tab($tabs) {
+     $tabs['description']['title'] = __( 'Details' );
+     return $tabs;
+   
 }
-add_filter('loop_shop_columns', 'loop_columns', 999);
+add_filter( 'woocommerce_product_tabs', 'rename_tab', 98 );
 
  // Ajax cart auto updates
 function cart_count_fragments( $fragments ) {
