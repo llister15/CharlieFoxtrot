@@ -37,7 +37,7 @@ Media Queries
 
 #page-footer > div > div > aside > h3 {
   color: #fff;
-  font-family: Roboto Black;
+  font-family: $roboto-blk;
   text-transform: uppercase;
   font-size: 14pt;
 }
@@ -51,7 +51,7 @@ Media Queries
   text-transform: uppercase;
   line-height: 3rem;
   font-size: 12pt;
-  font-family: Roboto Light;
+  font-family: $roboto-lit;
 }
 
 #page-footer > div > div > aside > div > div > ul > li > a:hover, #page-footer > div > div > aside > div > div > ul > li > a:focus {
@@ -105,7 +105,7 @@ Media Queries
 
 .sticky > div > div > a {
   color: #fff;
-  font-family: Roboto Light;
+  font-family: $roboto-lit;
   display: block;
 }
 
@@ -156,7 +156,7 @@ div.mobile-search > form#searchform {
 .search-toggle {
   background-color: transparent;
   color: #fff;
-  font-family: Roboto Light;
+  font-family: $roboto-lit;
   border: none;
 }
 

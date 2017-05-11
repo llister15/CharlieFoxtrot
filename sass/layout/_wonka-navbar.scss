@@ -81,10 +81,12 @@ Media Queries
 .navbar-default .w-blog-brand {
   top: 15px;
   float: none;
+  font-family: $logo-font;
+  letter-spacing: 3px;
 }
 
 .navbar-default .w-back-button {
-  font-family: Roboto Light;
+  font-family: $roboto-lit;
 }
 
 .navbar-default .w-back-button .glyphicon {
@@ -127,7 +129,7 @@ Media Queries
   color: $link-color;
   text-transform: uppercase;
   font-size: 12pt;
-  font-family: Roboto medium;
+  font-family: $roboto-med;
     @media (min-width: $iphone-4-min) and ( max-width: $iphone-4-max) and ( -webkit-device-pixel-ratio: 2 ) {
       font-size: $iphone-4-font-size;
     }
@@ -213,11 +215,12 @@ div[role="row"] > ul > li > a {
   min-height: 135px;
   border-radius: 20px;
   color: #fff;
-  font-family: Roboto Regular;
+  font-family: $roboto-reg;
   min-height: 135px;
   padding: 39% 0 0;
   width: 100%;
   display: block;
+  text-transform: uppercase;
   @media (min-width: $screen-md-min) {
     min-height: 150px;
     padding: 18% 0 0;
@@ -243,7 +246,7 @@ div[role="row"] > ul > li:last-child > a {
   min-height: 135px;
   border-radius: 20px;
   color: #fff;
-  font-family: Roboto Regular;
+  font-family: $roboto-reg;
   min-height: 135px;
   width: 100%;
   display: block;

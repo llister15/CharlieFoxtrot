@@ -63,6 +63,7 @@ $roboto-reg: Roboto Regular;
 $roboto-med: Roboto Medium;
 $roboto-bol: Roboto Bold;
 $roboto-blk: Roboto Black;
+$logo-font: Logo Font;
 
 @font-face {
     font-family:  'Wonka Icons';
@@ -70,6 +71,10 @@ $roboto-blk: Roboto Black;
     src: url('./assets/fonts/wonka-icons.woff') format('woff'),
     url('./assets/fonts/wonka-icons.ttf') format('truetype'),
     url('./assets/fonts/wonka-icons.svg#wonka_icons') format('svg')
+}
+@font-face {
+    font-family:  'Logo Font';
+    src: url('./assets/fonts/AustralianFlyingCorpsStencil.ttf');
 }
 @font-face {
     font-family:  'Roboto Thin';
@@ -107,7 +112,7 @@ html, body {
 }
 
 body {
-  font-family: Roboto medium;
+  font-family: $roboto-med;
   display: block;
 }
 
@@ -167,7 +172,7 @@ section {
 
 .woocommerce ul.products li.product .button {
   background: $button-color;
-  font-family: Roboto Regular;
+  font-family: $roboto-reg;
   color: #fff;
   text-shadow: 0 1px 3px rgba(0,0,0,0.8);
     @media (min-width: $screen-md-min) {
@@ -178,7 +183,7 @@ section {
 
 .woocommerce #respond input#submit.alt, .woocommerce a.button.alt, .woocommerce button.button.alt, .woocommerce input.button.alt {
   background: $button-color;
-  font-family: Roboto Regular;
+  font-family: $roboto-reg;
   color: #fff;
   text-shadow: 0 1px 3px rgba(0,0,0,0.8);
   @media (min-width: $screen-md-min) {
