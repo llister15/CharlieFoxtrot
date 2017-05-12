@@ -125,11 +125,7 @@ class Social_Widget extends WP_Widget {
    <?php
    } else {
    ?>
-<<<<<<< HEAD
    <div class="col-xs-12 col-md-2 item">
-=======
-   <div class="col-md-2">
->>>>>>> master
    <?php
      echo $args['before_widget'];
      ?>
