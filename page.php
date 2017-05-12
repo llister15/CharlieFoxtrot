@@ -48,7 +48,7 @@ else { ?>
       // This will remove this section if no widget is active
     } else { ?>
     <div class="row w-social-widgets">
-      <div class="col-xs-12 text-center visible-lg">
+      <div class="col-xs-12 text-center visible-md visible-lg">
           <?php
           if(is_active_sidebar('social')){
             dynamic_sidebar('social');
