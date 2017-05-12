@@ -17,6 +17,7 @@
       wp_enqueue_script( 'charlie-foxtrot-ajaxs-js', 'https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js', '3.2.0', true);
       wp_enqueue_script( 'charlie-foxtrot-boot-js', get_template_directory_uri() .'/assets/js/bootstrap.min.js', array('charlie-foxtrot-ajaxs-js'), '3.3.7', true);
       wp_enqueue_script( 'charlie-foxtrot-js', get_template_directory_uri() .'/assets/js/charlie-foxtrot-js.js', array('charlie-foxtrot-ajaxs-js'), '1.0', true);
+      wp_enqueue_script( 'jquerytouchSwipe', get_template_directory_uri() .'/assets/js/jquery.touchSwipe.min.js', array('jquery'), '1.6.4', true);
 
   if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
     wp_enqueue_script( 'comment-reply' );

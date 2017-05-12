@@ -123,6 +123,10 @@ section {
       font-size: 14pt;
       text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8); } }
 
+@media (min-width: 992px) {
+  .woocommerce section.up-sells ul.products > li > a.button {
+    font-size: inherit; } }
+
 /*  _header-moblie
 @media (min-width: $iphone-4-min) and ( max-width: $iphone-4-max) and ( -webkit-device-pixel-ratio: 2 )
 @media (min-width: $screen-sm-min)
@@ -668,6 +672,10 @@ Media Queries
   padding-top: 15px;
   color: #fff; }
 
+.woocommerce-error, .woocommerce-info, .woocommerce-message {
+  margin-top: 5px;
+  background: rgba(0, 0, 0, 0.5); }
+
 #products > div > div .quantity .input-text {
   padding: 3px;
   background: rgba(0, 0, 0, 0.5); }
@@ -734,12 +742,21 @@ h1.woocommerce-products-header__title.page-title {
     .woocommerce-Price-amount.amount {
       font-size: 26pt; } }
 
+.woocommerce section.up-sells ul.products > li > a.woocommerce-LoopProduct-link .woocommerce-Price-amount.amount {
+  font-size: 12pt; }
+
 .woocommerce ul.products li.product, .woocommerce-page ul.products li.product {
   padding: 15px;
   border-radius: 8px;
   background: rgba(0, 0, 0, 0.5); }
 
-section.related.products {
+.woocommerce section.up-sells ul.products > li {
+  min-height: 100%; }
+
+.woocommerce section.up-sells ul.products > li > a.woocommerce-LoopProduct-link > h2 {
+  font-size: inherit; }
+
+.woocommerce section.related.products {
   clear: both;
   color: #fff;
   background: linear-gradient(-214deg, rgba(218, 187, 131, 0.8) 0%, #dabb83 100%);

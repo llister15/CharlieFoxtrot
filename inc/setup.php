@@ -117,102 +117,11 @@ function charlie_foxtrot_setup() {
 		'flex-width'  => true,
 	) );
 
-	// Add theme support for selective refresh for widgets.
-	add_theme_support( 'customize-selective-refresh-widgets' );
+	
+//Register all custom widgets.
+require get_parent_theme_file_path('/inc/custom-widget-setup.php');
 
-	// Register Top Filters Widgets
-	register_sidebar( array(
-		'name'          => esc_html__( 'Top Filters', 'charlie-foxtrot' ),
-		'id'            => 'top-filters-1',
-		'description'   => esc_html__( 'Add upto 3 filter widgets here.', 'charlie-foxtrot' ),
-		'before_widget' => '<div id="%1$s" class="col-xs-12 col-md-4 widget %2$s">',
-		'after_widget'  => '</div>',
-		'before_title'  => '<label for="product_cat" class="widget-title">',
-		'after_title'   => '</label> ',
-	) );
-
-	// Register Social Widgets
-	register_sidebar( array(
-		'name'          => 'Social 1',
-		'id'            => 'social_1',
-		'description'   => 'Social Proof',
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-	) );
-
-		register_sidebar( array(
-		'name'          => 'Social 2',
-		'id'            => 'social_2',
-		'description'   => 'Social Proof',
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-	) );
-
-	register_sidebar( array(
-		'name'          => 'Social 3',
-		'id'            => 'social_3',
-		'description'   => 'Social Proof',
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-	) );
-
-	register_sidebar( array(
-		'name'          => 'Social 4', 
-		'id'            => 'social_4',
-		'description'   => 'Social Proof',
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-	) );
-
-	register_sidebar( array(
-		'name'          => 'Social 5',
-		'id'            => 'social_5',
-		'description'   => 'Social Proof',
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-	) );
-
-
-	// Register Footer Widgets.
-	register_sidebar( array(
-		'name' => esc_html__( 'Footer Menu 1','charlie-foxtrot' ),
-		'id' => 'footer-menu1',
-		'description' => esc_html__( 'Appears in the footer 1 area','charlie-foxtrot' ),
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget' => '</div></aside>',
-		'before_title' => '<h3 class="text-center">',
-		'after_title' => '</h3><hr /><div class="col-xs-12 col-md-8 col-md-offset-2">',
-	) );
-	register_sidebar( array(
-		'name' => esc_html__( 'Footer Menu 2', 'charlie-foxtrot' ),
-		'id' => 'footer-menu2',
-		'description' => esc_html__( 'Appears in the footer 2 area', 'charlie-foxtrot' ),
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget' => '</div></aside>',
-		'before_title' => '<h3 class="text-center">',
-		'after_title' => '</h3><hr /><div class="col-xs-12 col-md-8 col-md-offset-2">',
-	) );
-	register_sidebar( array(
-		'name' => esc_html__( 'Footer Menu 3', 'charlie-foxtrot' ),
-		'id' => 'footer-menu3',
-		'description' => esc_html__( 'Appears in the footer 3 area', 'charlie-foxtrot' ),
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget' => '</div></aside>',
-		'before_title' => '<h3 class="text-center">',
-		'after_title' => '</h3><hr /><div class="col-xs-12 col-md-8 col-md-offset-2">',
-	) );
-
-	// Define and register starter content to showcase the theme on new sites.
+// Define and register starter content to showcase the theme on new sites.
 	$charlie_foxtrot_start = array(
 		'top' => array(
 			'name' => __('Top Menu','charlie-foxtrot'),
@@ -239,7 +148,7 @@ function charlie_foxtrot_setup() {
 	    $form = '<form role="search" method="get" id="searchform" class="searchform" action="' . home_url( '/' ) . '" >
 	    <div class="input-group w-search-form">
 	    <input type="text" class="form-control" placeholder="Search" value="' . get_search_query() . '" name="s" id="s" />
-	<input type="hidden" name="post_type" value="product" />
+			<input type="hidden" name="post_type" value="product" />
 	    <span class="input-group-btn">
 	          <button class="btn w-search-button" type="submit"><span class="glyphicon glyphicon-search" aria-hidden="true">
 	          </span></button>

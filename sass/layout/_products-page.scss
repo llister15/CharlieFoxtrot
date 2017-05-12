@@ -11,6 +11,11 @@
   color: #fff;
 }
 
+.woocommerce-error, .woocommerce-info, .woocommerce-message {
+  margin-top: 5px;
+  background: $black-opacity;
+}
+
 #products > div > div .quantity .input-text {
   padding: 3px;
   background: $black-opacity;
@@ -82,6 +87,7 @@ h1.woocommerce-products-header__title.page-title {
   }
 }
 
+// product pricing sizes
 .woocommerce-Price-amount.amount {
   color: #fff;
   font-size: 15pt;
@@ -90,13 +96,26 @@ h1.woocommerce-products-header__title.page-title {
   }
 }
 
+
+.woocommerce section.up-sells ul.products > li > a.woocommerce-LoopProduct-link .woocommerce-Price-amount.amount {
+  font-size: 12pt;
+}
+
 .woocommerce ul.products li.product, .woocommerce-page ul.products li.product {
   padding: 15px;
   border-radius: 8px;
   background: $black-opacity;
 }
 
-section.related.products {
+.woocommerce section.up-sells ul.products > li {
+  min-height: 100%;
+}
+
+.woocommerce section.up-sells ul.products > li > a.woocommerce-LoopProduct-link > h2 {
+  font-size: inherit;
+}
+
+.woocommerce section.related.products {
   clear: both;
   color: #fff;
   background: $mega-color;

@@ -187,6 +187,12 @@ section {
     }
 }
 
+.woocommerce section.up-sells ul.products > li > a.button {
+  @media (min-width: $screen-md-min) {
+    font-size: inherit;
+  }
+}
+
 
 // Import Header
 @import './layout/header';
