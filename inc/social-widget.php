@@ -6,7 +6,6 @@
  *
  * @package Charlie_Foxtrot
  */
-
 class social_widget extends WP_Widget {
   
   // Setup widget name description etc...
@@ -16,10 +15,8 @@ class social_widget extends WP_Widget {
       'classname' => 'social-widget',
       'description' => 'Social Widget'  
     );
-
   parent::__construct( 'social_widget','Social Widget', $widget_options );
   }
-
   // back-end
   public function form( $instance ) {
     $instance = wp_parse_args((array) $instance, array(
@@ -32,7 +29,6 @@ class social_widget extends WP_Widget {
     $customer_name = sanitize_text_field($instance['customer_name']);
     $customer_comment = sanitize_text_field($instance['customer_comment']);
     $social_referral = sanitize_text_field($instance['social_referral']);
-
     ?>
 
   <!-- Input -->
@@ -60,7 +56,6 @@ class social_widget extends WP_Widget {
   
     <?php
   }
-
   public function update( $new_instance, $old_instance ) {
     $instance = $old_instance;
     $new_instance = wp_parse_args((array) $new_instance, array(
@@ -73,51 +68,94 @@ class social_widget extends WP_Widget {
     $instance['customer_name'] = sanitize_text_field($new_instance['customer_name']);
     $instance['customer_comment'] = sanitize_text_field($new_instance['customer_comment']);
     $instance['social_referral'] = sanitize_text_field($new_instance['social_referral']);
-
     return $instance;
   }
-
   // front-end
   public function widget( $args, $instance ) {
     $profile_picture = isset($instance['profile_picture']) ? $instance['profile_picture'] : false;
     $customer_name = isset($instance['customer_name']) ? $instance['customer_name'] : false;
     $customer_comment = isset($instance['customer_comment']) ? $instance['customer_comment'] : false;
     $social_referral = isset($instance['social_referral']) ? $instance['social_referral'] : false;
-
-    echo $args['before_widget'];
+  
+    if (wp_get_sidebars_widgets()['social'][0] == $this->id) {
     ?>
-      <!--Card-->
-      <div class="card">
-        <!--Background color-->
-        <div class="card-up <?php echo $social_referral; ?>">
-        </div>
-        <?php 
-          if ($profile_picture == null) {
-            ?>
-            <div class="no-avatar"></div>
-            <?php
-          } else {
-        ?>
-        <!--Avatar-->
-        <div class="avatar"><img src="<?php echo $profile_picture; ?>" class="center-block img-circle img-responsive">
-        </div>
-        <?php
-      } 
-      ?>
-        <div class="card-block">
-          <!--Name-->
-          <h4 class="card-title"><i class="ws ws-<?php echo $social_referral;?>";" aria-hidden="true"></i> <?php echo $customer_name;?></h4>
-          <hr>
-          <!--Quotation-->
-          <p><i class="ws ws-quotes"></i> <?php echo $customer_comment;?></p>
-        </div>
-      </div>
-    <!--/.Card-->
-    <?php
-    echo $args['after_widget'];
+     <div class="col-md-2 col-md-offset-1">
+     <?php
+     echo $args['before_widget'];
+     ?>
+     <!--Card-->
+     <div class="card">
+       <!--Background color-->
+       <div class="card-up <?php echo $social_referral; ?>">
+       </div>
+       <?php 
+         if ($profile_picture == null) {
+           ?>
+           <div class="no-avatar"></div>
+           <?php
+         } else {
+       ?>
+       <!--Avatar-->
+       <div class="avatar"><img src="<?php echo $profile_picture; ?>" class="center-block img-circle img-responsive">
+       </div>
+       <?php
+     } 
+     ?>
+       <div class="card-block">
+         <!--Name-->
+         <h4 class="card-title"><i class="ws ws-<?php echo $social_referral;?>";" aria-hidden="true"></i> <?php echo $customer_name;?></h4>
+         <hr>
+         <!--Quotation-->
+         <p><i class="ws ws-quotes"></i> <?php echo $customer_comment;?></p>
+       </div>
+     </div>
+   <!--/.Card-->
+   <?php
+   echo $args['after_widget'];
+   ?>
+   </div>
+   <?php
+   } else {
+   ?>
+   <div class="col-md-2">
+   <?php
+     echo $args['before_widget'];
+     ?>
+     <!--Card-->
+     <div class="card">
+       <!--Background color-->
+       <div class="card-up <?php echo $social_referral; ?>">
+       </div>
+       <?php 
+         if ($profile_picture == null) {
+           ?>
+           <div class="no-avatar"></div>
+           <?php
+         } else {
+       ?>
+       <!--Avatar-->
+       <div class="avatar"><img src="<?php echo $profile_picture; ?>" class="center-block img-circle img-responsive">
+       </div>
+       <?php
+     } 
+     ?>
+       <div class="card-block">
+         <!--Name-->
+         <h4 class="card-title"><i class="ws ws-<?php echo $social_referral;?>";" aria-hidden="true"></i> <?php echo $customer_name;?></h4>
+         <hr>
+         <!--Quotation-->
+         <p><i class="ws ws-quotes"></i> <?php echo $customer_comment;?></p>
+       </div>
+     </div>
+   <!--/.Card-->
+   <?php
+   echo $args['after_widget'];
+   ?>
+   </div>
+   <?php
+   }
   }
 }
-
 add_action( 'widgets_init', function() {
   register_widget('social_widget');
 } );

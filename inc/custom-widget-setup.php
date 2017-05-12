@@ -22,55 +22,14 @@
 
   // Register Social Widgets
   register_sidebar( array(
-    'name'          =>  esc_html__( 'Social 1', 'charlie-foxtrot' ),
-    'id'            => 'social_1',
+    'name'          =>  esc_html__( 'Social', 'charlie-foxtrot' ),
+    'id'            => 'social',
     'description'   =>  esc_html__( 'Social Proof', 'charlie-foxtrot' ),
     'before_widget' => '<section id="%1$s" class="widget %2$s">',
     'after_widget'  => '</section>',
     'before_title'  => '<h2 class="widget-title">',
     'after_title'   => '</h2>',
   ) );
-
-    register_sidebar( array(
-    'name'          =>  esc_html__( 'Social 2', 'charlie-foxtrot' ),
-    'id'            => 'social_2',
-    'description'   =>  esc_html__( 'Social Proof', 'charlie-foxtrot' ),
-    'before_widget' => '<section id="%1$s" class="widget %2$s">',
-    'after_widget'  => '</section>',
-    'before_title'  => '<h2 class="widget-title">',
-    'after_title'   => '</h2>',
-  ) );
-
-  register_sidebar( array(
-    'name'          =>  esc_html__( 'Social 3', 'charlie-foxtrot' ),
-    'id'            => 'social_3',
-    'description'   =>  esc_html__( 'Social Proof', 'charlie-foxtrot' ),
-    'before_widget' => '<section id="%1$s" class="widget %2$s">',
-    'after_widget'  => '</section>',
-    'before_title'  => '<h2 class="widget-title">',
-    'after_title'   => '</h2>',
-  ) );
-
-  register_sidebar( array(
-    'name'          =>  esc_html__( 'Social 4', 'charlie-foxtrot' ),
-    'id'            => 'social_4',
-    'description'   =>  esc_html__( 'Social Proof', 'charlie-foxtrot' ),
-    'before_widget' => '<section id="%1$s" class="widget %2$s">',
-    'after_widget'  => '</section>',
-    'before_title'  => '<h2 class="widget-title">',
-    'after_title'   => '</h2>',
-  ) );
-
-  register_sidebar( array(
-    'name'          =>  esc_html__( 'Social 5', 'charlie-foxtrot' ),
-    'id'            => 'social_5',
-    'description'   =>  esc_html__( 'Social Proof', 'charlie-foxtrot' ),
-    'before_widget' => '<section id="%1$s" class="widget %2$s">',
-    'after_widget'  => '</section>',
-    'before_title'  => '<h2 class="widget-title">',
-    'after_title'   => '</h2>',
-  ) );
-
 
   // Register Footer Widgets.
   register_sidebar( array(

@@ -33,6 +33,7 @@ $soundcloud: #ff3a00;
     width: 100%;
     height:100%;
     background:#fff;
+    box-shadow: 0px 2px 6px 4px #ccc;
   }
 
   .card-up {
@@ -99,7 +100,7 @@ $soundcloud: #ff3a00;
     color: #cbc;
   }
   
-.w-social-wigets:before {
+.w-social-widgets:before {
   content: "";
   display: block;
   position: relative;
@@ -110,12 +111,12 @@ $soundcloud: #ff3a00;
   z-index: 6;
 }
 
-.w-social-wigets {
+.w-social-widgets {
  background: $dealers-section;
  box-sizing: border-box;
 }
 
-.w-social-wigets:after {
+.w-social-widgets:after {
   content: "";
   display: block;
   position: relative;
@@ -126,5 +127,5 @@ $soundcloud: #ff3a00;
   z-index: 6;
 }
 
-.w-social-wigets > div > div {
+.w-social-widgets > div > div {
 }
