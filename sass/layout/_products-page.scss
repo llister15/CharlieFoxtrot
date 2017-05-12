@@ -3,7 +3,7 @@
 */
 
 #products {
-  background: url('./assets/images/bg-pattern.png')center, $header-color;
+  background: $bgpattern, $header-color;
 }
 
 #products > div > div {

@@ -11,7 +11,6 @@
 *
 * @package Charlie_Foxtrot
 */
-
 get_header(); ?>
 
 <?php
@@ -24,14 +23,11 @@ if ( !is_home() && !is_front_page()) {
 
           <?php
           while ( have_posts() ) : the_post();
-
           get_template_part( 'template-parts/content/content', 'page' );
-
 // If comments are open or we have at least one comment, load up the comment template.
           if ( comments_open() || get_comments_number() ) :
             comments_template();
           endif;
-
 endwhile; // End of the loop.
 ?>
 
@@ -49,10 +45,10 @@ else { ?>
     </div>
 
     <?php if (!is_active_sidebar('social')) {
-      
+      // This will remove this section if no widget is active
     } else { ?>
-    <div class="row w-social-wigets">
-      <div class="col-xs-12 text-center visible-md visible-lg">
+    <div class="row w-social-widgets">
+      <div class="col-xs-12 text-center visible-lg">
           <?php
           if(is_active_sidebar('social')){
             dynamic_sidebar('social');
@@ -110,4 +106,3 @@ else { ?>
 
 <?php
 get_footer();
-

@@ -6,8 +6,7 @@
  *
  * @package Charlie_Foxtrot
  */
-
-class social_widget extends WP_Widget {
+class Social_Widget extends WP_Widget {
   
   // Setup widget name description etc...
   public function __construct() {
@@ -19,7 +18,6 @@ class social_widget extends WP_Widget {
 
   parent::__construct( 'social-widget','Social Widget', $widget_options );
   }
-
   // back-end
   public function form( $instance ) {
     $instance = wp_parse_args((array) $instance, array(
@@ -34,7 +32,6 @@ class social_widget extends WP_Widget {
     $customer_name = sanitize_text_field($instance['customer_name']);
     $customer_comment = sanitize_text_field($instance['customer_comment']);
     $social_referral = sanitize_text_field($instance['social_referral']);
-
     ?>
 
   <!-- Input -->
@@ -63,7 +60,6 @@ class social_widget extends WP_Widget {
   
     <?php
   }
-
   public function update( $new_instance, $old_instance ) {
     $instance = $old_instance;
     $new_instance = wp_parse_args((array) $new_instance, array(
@@ -78,10 +74,8 @@ class social_widget extends WP_Widget {
     $instance['customer_name'] = sanitize_text_field($new_instance['customer_name']);
     $instance['customer_comment'] = sanitize_text_field($new_instance['customer_comment']);
     $instance['social_referral'] = sanitize_text_field($new_instance['social_referral']);
-
     return $instance;
   }
-
   // front-end
   public function widget( $args, $instance ) {
     $instance_id = isset($instance['id']) ? $instance['id'] : false;
@@ -131,7 +125,11 @@ class social_widget extends WP_Widget {
    <?php
    } else {
    ?>
+<<<<<<< HEAD
    <div class="col-xs-12 col-md-2 item">
+=======
+   <div class="col-md-2">
+>>>>>>> master
    <?php
      echo $args['before_widget'];
      ?>
@@ -170,7 +168,6 @@ class social_widget extends WP_Widget {
    }
   }
 }
-
 add_action( 'widgets_init', function() {
   register_widget('social_widget');
 } );

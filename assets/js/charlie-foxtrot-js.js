@@ -33,22 +33,7 @@ $(".carousel").swipe({
     if (direction == 'right') $(this).carousel('prev');
 
   },
-  excludedElements:"button, input, select, textarea, .noSwipe",
-  allowPageScroll:"vertical",
-  allowClick:"a"
-
-});
-$("a").swipe({
-
-  swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
-
-    if (direction == 'left') $(this).carousel('next');
-    if (direction == 'right') $(this).carousel('prev');
-
-  },
-  excludedElements:"button, input, select, textarea, .noSwipe",
-  allowPageScroll:"vertical",
-  allowClick:"a"
+  allowPageScroll:"vertical"
 
 });
 });
