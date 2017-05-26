@@ -22,8 +22,9 @@
       <?php
       $feature2 = get_theme_mod('feature_image_2');
       $feature2_id = attachment_url_to_postid($feature2);
-      $feature2_url = get_post_meta( $feature2_id, '_wp_attachment_image_alt', true );
+      $image2_alt = get_post_meta( $feature2_id, '_wp_attachment_image_alt', true );
+      $feature2_url = get_permalink(get_theme_mod('feature_image_2_link'));
       ?>
-      <a href="<?php echo $feature2_url; ?>"><img class="img-responsive center-block" src="<?php echo $feature2; ?>" alt="<?php ?>"></a>
+      <a href="<?php echo $feature2_url; ?>"><img class="img-responsive center-block" src="<?php echo $feature2; ?>" alt="<?php echo $image2_alt; ?>"></a>
     </div>
   </div>

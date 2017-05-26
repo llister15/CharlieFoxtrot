@@ -110,7 +110,7 @@ Class WS_Walker_Nav_Mega extends Walker_Nav_menu {
     $attributes .= ( $args->walker->has_children ) ? ' class="dropdown-toggle" data-toggle="dropdown"' : '';
 
     $item_output = $args->before;
-    $item_output .= '<a' . $attributes . ' style="background: url(' . get_theme_mod('mega_menu_img_' . esc_attr($item->menu_order)) . '); background-position: center center; background-size: cover;"><span class="link-title">';
+    $item_output .= '<a' . $attributes . ' style="background: url(' . get_theme_mod('mega_menu_img_' . esc_attr($item->menu_order)) . ')no-repeat, linear-gradient(-214deg, rgba(255, 176, 74, 0.8) 0%, #e38000 100%); background-position: center center;"><span class="link-title">';
     $item_output .= $args->link_before . apply_filters( 'the_title' , $item->title, $item->ID ) . $args->link_after;
     $item_output .= '</span></a>';
     $item_output .= $args->after;

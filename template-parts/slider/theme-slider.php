@@ -49,19 +49,20 @@ $value = get_theme_mod('theme_slider_check');
     <?php
     for ($i=0; $i < $slide_count; $i++) { 
       $slider_int = $i + 1;
+      $slider_link = (get_theme_mod('slider_link_'.$slider_int) != '') ? get_theme_mod('slider_link_'.$slider_int) : '#';
       $slider_mod = get_theme_mod('theme_slider_'.$slider_int);
       $slider_mod_id = attachment_url_to_postid($slider_mod);
       $image_alt = get_post_meta( $slider_mod_id, '_wp_attachment_image_alt', true );
       if ($i !== 0) {
         ?>
         <div class="item">
-         <a href="#"><img class="slider-img-<?php echo $slider_int; ?>" src="<?php echo $slider_mod; ?>" alt="<?php echo $image_alt;?>"></a>
+         <a href="<?php echo $slider_link; ?>"><img class="slider-img-<?php echo $slider_int; ?>" src="<?php echo $slider_mod; ?>" alt="<?php echo $image_alt;?>"></a>
         </div>
       <?php
       } else {
       ?>
         <div class="item active">
-          <a href="#"><img class="slider-img-<?php echo $slider_int; ?>" src="<?php echo $slider_mod; ?>" alt="<?php echo $image_alt;?>"></a>
+          <a href="<?php echo $slider_link; ?>"><img class="slider-img-<?php echo $slider_int; ?>" src="<?php echo $slider_mod; ?>" alt="<?php echo $image_alt;?>"></a>
         </div>
       <?php
       }

@@ -8,17 +8,22 @@
 
 #products > div > div {
   padding-top: 15px;
-  color: #fff;
+  color: $white;
 }
 
-.woocommerce-error, .woocommerce-info, .woocommerce-message {
+#products .woocommerce-error, #products .woocommerce-info, #products .woocommerce-message {
   margin-top: 5px;
-  background: $black-opacity;
+  background: $black-opacity5;
+  color: $white;
+}
+
+.woocommerce-product-gallery__image > a:hover {
+
 }
 
 #products > div > div .quantity .input-text {
   padding: 3px;
-  background: $black-opacity;
+  background: $black-opacity5;
     @media (min-width: $screen-md-min) {
       padding: 5px;
       font-size: 14pt;
@@ -40,7 +45,7 @@
 }
 
 .woocommerce-products-header > div > div.row > div > label {
-  color: #fff;
+  color: $white;
   font-size: 12pt;
   font-family: $roboto-reg;
   padding: 4px;
@@ -50,7 +55,7 @@
 .woocommerce-products-header > div > div.row > div > select {
   border-radius: 6px;
   background: transparent;
-  color: #fff;
+  color: $white;
   padding: 4px;
   border-width: 2px;
 }
@@ -67,68 +72,74 @@
 .woocommerce .woocommerce-ordering, .woocommerce-page .woocommerce-ordering .orderby {
   border-radius: 6px;
   background: transparent;
-  color: #fff;
+  color: $white;
   padding: 4px;
   border-width: 2px;
 }
 
 h1.woocommerce-products-header__title.page-title {
-  color: #fff;
+  color: $white;
 }
 
 .woocommerce .woocommerce-result-count, .woocommerce-page .woocommerce-result-count {
-  color: #fff;
-}
-
-.woocommerce ul.products li.product .woocommerce-loop-product__title {
-  color: #fff;
-  @media (min-width: $screen-md-min) {
-    font-size: 22pt;
-  }
+  color: $white;
 }
 
 // product pricing sizes
-.woocommerce-Price-amount.amount {
-  color: #fff;
+.product .woocommerce-Price-amount.amount {
+  color: $white;
   font-size: 15pt;
   @media (min-width: $screen-md-min) {
-    font-size: 26pt;
+    font-size: 16pt;
   }
 }
-
 
 .woocommerce section.up-sells ul.products > li > a.woocommerce-LoopProduct-link .woocommerce-Price-amount.amount {
   font-size: 12pt;
 }
 
+.woocommerce div.product div.images img {
+  width: 75%;
+  margin: 0 auto 1em;
+}
+
+.woocommerce section.up-sells ul.products li.product a img, 
+.woocommerce section.related.products ul.products li.product a img,
+.woocommerce div.cross-sells ul.products li.product a img {
+  width: 60%;
+  margin: 0 auto 1em;
+}
+
 .woocommerce ul.products li.product, .woocommerce-page ul.products li.product {
   padding: 15px;
   border-radius: 8px;
-  background: $black-opacity;
+  background: $black-opacity5;
 }
 
 .woocommerce section.up-sells ul.products > li {
   min-height: 100%;
 }
 
-.woocommerce section.up-sells ul.products > li > a.woocommerce-LoopProduct-link > h2 {
+.woocommerce section.up-sells ul.products > li > a.woocommerce-LoopProduct-link > h2,
+.woocommerce div.cross-sells ul.products > li > a.woocommerce-LoopProduct-link > h2 {
   font-size: inherit;
+  overflow: hidden;
+  height: 38px;
 }
 
 .woocommerce section.related.products {
   clear: both;
-  color: #fff;
+  color: $white;
   background: $mega-color;
   padding: 15px;
-  margin: 15px -15px;
+  margin: 15px -15px 0;
 }
 
 .woocommerce div.product .woocommerce-tabs ul.tabs li {
-  background: $black-opacity;
+  background: $black-opacity5;
   border: none;
   font-family: $roboto-reg;
-  color: #fff;
-  margin: 0 -3px;
+  color: $white;
 }
 
 .woocommerce div.product .woocommerce-tabs ul.tabs li a {
@@ -137,7 +148,7 @@ h1.woocommerce-products-header__title.page-title {
 }
 
 .woocommerce div.product .woocommerce-tabs ul.tabs li.active {
-  background: $black-opacity;
+  background: $black-opacity5;
   border: none;
   font-family: $roboto-reg;
 }
@@ -152,10 +163,11 @@ h1.woocommerce-products-header__title.page-title {
 
 .woocommerce div.product .woocommerce-tabs ul.tabs {
   margin: 0;
+  padding: 0 0 0 5px;
 }
 
 .woocommerce div.product .woocommerce-tabs .panel {
-  background: $black-opacity;
+  background: $black-opacity5;
   padding: 15px;
   font-family: $roboto-reg;
 }

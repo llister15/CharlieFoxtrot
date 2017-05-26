@@ -24,7 +24,6 @@ Media Queries
 }
 
 .w-nav-bar {
-  box-shadow: 0px 2px 6px 2px #000;
   position: relative;
   background: #000;
   z-index: 75;
@@ -95,7 +94,7 @@ Media Queries
 }
 
 .navbar-default .navbar-brand {
-  color: $link-color;
+  color: $white;
   font-size: $brand-font-size-xs;
     @media (min-width: $iphone-4-min) and ( max-width: $iphone-4-max) and ( -webkit-device-pixel-ratio: 2 ) {
       font-size: $iphone-4-font-size;
@@ -126,7 +125,7 @@ Media Queries
 }
 
 .navbar-default .w-primary-menu > li > a {
-  color: $link-color;
+  color: $white;
   text-transform: uppercase;
   font-size: 12pt;
   font-family: $roboto-med;
@@ -176,7 +175,7 @@ Media Queries
 }
 
 .navbar-default .navbar-nav .open .dropdown-menu>li>a {
-  color: $link-color;
+  color: $white;
   text-transform: uppercase;
   font-size: 10pt;
 }
@@ -214,27 +213,36 @@ div[role="row"] > ul > li > a {
   box-shadow: 0 2px 4px 2px rgba(0,0,0,.4);
   min-height: 135px;
   border-radius: 20px;
-  color: #fff;
+  color: $white;
   font-family: $roboto-reg;
   min-height: 135px;
-  padding: 39% 0 0;
   width: 100%;
   display: block;
   text-transform: uppercase;
+  position: relative;
+  top: 0;
   @media (min-width: $screen-md-min) {
     min-height: 150px;
-    padding: 18% 0 0;
   }
 }
 
-div[role="row"] > ul > li:hover >a:hover, ul[role="row"] > li >a:focus {
+div[role="row"] > ul > li >a:hover, ul[role="row"] > li >a:focus {
   text-decoration: none;
-  color: #cdc;
+  color: #000;
+  outline: none;
+  box-shadow: 0 5px 6px 1px rgba(0, 0, 0, 0.3);
+    @media (min-width: $screen-sm-min) {
+      top: -6px;
+    }
 }
 
 div[role="row"] > ul > li > a > span {
-  background: rgba(0, 0, 0, 0.5);
-  padding: 5% 20%;
+  position: relative;
+  top: 100%;
+  text-shadow: 0 1px 2px #000;
+    @media (min-width: $screen-md-min) {
+      font-size: 16pt;
+    }
 }
 
 div[role="row"] > ul > li:last-child {
@@ -243,14 +251,6 @@ div[role="row"] > ul > li:last-child {
 
 div[role="row"] > ul > li:last-child > a {
   background: $button-color;
-  min-height: 135px;
-  border-radius: 20px;
-  color: #fff;
-  font-family: $roboto-reg;
-  min-height: 135px;
-  width: 100%;
-  display: block;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.8);
     @media (min-width: $screen-md-min) {
       font-size: 18pt;
       min-height: 20px;

@@ -24,8 +24,21 @@ $( document ).ready(function () {
   });
 
   // Add touch for mobile
+  // swipe controls for slider
+$("#myCarousel a").swipe({
+
+  swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
+
+    if (direction == 'left') $(this).carousel('next');
+    if (direction == 'right') $(this).carousel('prev');
+
+  },
+  allowPageScroll:"vertical"
+
+});
+// Add touch for mobile
   // swipe controls for social
-$(".carousel").swipe({
+$("#socialCarousel").swipe({
 
   swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
 

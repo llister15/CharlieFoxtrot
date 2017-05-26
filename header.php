@@ -25,7 +25,7 @@
   <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php $get_title = str_replace( ' ', '_', strtolower(get_the_title())); body_class( $class = $get_title); ?>>
 <div id="w-wrapper">
   <header id="w-header" class="container-fluid">
       <div class="row w-head-space">

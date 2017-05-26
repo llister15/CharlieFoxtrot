@@ -155,6 +155,10 @@ function charlie_foxtrot_customize_register( $wp_customize ) {
           $wp_customize->add_setting('theme_slider_'.$g, array(
           'default'        => '',
           ));
+          //Slider Images Links Settings
+          $wp_customize->add_setting('slider_link_'.$g, array(
+          'default'        => '',
+          ));
           //Slider Images Controls
           $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'theme_slider_'.$g, array(
           'label'      => __('Slider Image '. $g, 'charlie-foxtrot'),
@@ -162,6 +166,13 @@ function charlie_foxtrot_customize_register( $wp_customize ) {
           'settings'   => 'theme_slider_'.$g,
           'type' => 'image',
           ) ));
+          //Slider Images Links Controls
+          $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'slider_link_control_'.$g, array(
+            'label'      => __('Slider Link '. $g, 'charlie-foxtrot'),
+            'section'    => 'slider_options',
+            'settings'   => 'slider_link_'.$g,
+            'type' => 'text',
+            ) ));
         } // end loop
 
   //Feature Item Section   

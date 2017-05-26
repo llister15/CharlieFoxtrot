@@ -1,0 +1,118 @@
+/* 
+*
+* _woocommerce.scss 
+*
+*/
+.account div.woocommerce {
+  width: 65%;
+  margin: auto;
+}
+
+.account form.login {
+  box-shadow: 0 1px 6px 1px $black-opacity2;
+}
+
+.woocommerce form .form-row input.input-text {
+  padding: 6px 12px;
+  font-size: $brand-font-size-md;
+  border-radius: 6px;
+}
+
+.account form.login input.button.cf-btn {
+  width: 100%;
+}
+
+.woocommerce ul.products li.product .button,
+.woocommerce input.button.cf-btn {
+  background: $button-color;
+  font-family: $roboto-reg;
+  color: $white;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.8);
+    @media (min-width: $screen-md-min) {
+      font-size: 18pt;
+      text-shadow: 0 1px 3px rgba(0,0,0,0.8);
+    }
+}
+
+.woocommerce input.button.cf-btn:hover, 
+.woocommerce input.button.cf-btn:focus, 
+.woocommerce input.button.cf-btn:active {
+  background: $button-hover;
+  text-decoration: none;
+}
+
+.woocommerce #respond input#submit.alt, 
+.woocommerce a.button.alt, 
+.woocommerce button.button.alt, 
+.woocommerce input.button.alt {
+  background: $button-color;
+  font-family: $roboto-reg;
+  color: $white;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.8);
+  @media (min-width: $screen-md-min) {
+      font-size: 14pt;
+      text-shadow: 0 1px 3px rgba(0,0,0,0.8);
+    }
+}
+
+.woocommerce section.up-sells ul.products > li > a.button,
+.woocommerce div.cross-sells ul.products > li > a.button {
+  @media (min-width: $screen-md-min) {
+    font-size: inherit;
+  }
+}
+
+.woocommerce .woocommerce-MyAccount-navigation ul {
+  list-style: none;
+  padding-right: 15px;
+}
+
+.woocommerce .woocommerce-MyAccount-navigation ul > li {
+  margin: 5px 0;
+}
+
+.woocommerce .woocommerce-MyAccount-navigation .cf-btn {
+  background: $button-color;
+  font-family: $roboto-reg;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.8);
+  width: 100%;
+  padding: 6px;
+    @media (min-width: $screen-md-min) {
+      font-size: $brand-font-size-sm;
+      text-shadow: 0 1px 3px rgba(0,0,0,0.8);
+    }
+}
+
+.woocommerce .woocommerce-MyAccount-navigation .cf-btn {
+  color: $white;
+}
+
+.woocommerce .woocommerce-MyAccount-navigation .cf-btn:hover,
+.woocommerce .woocommerce-MyAccount-navigation .cf-btn:focus,
+.woocommerce .woocommerce-MyAccount-navigation .cf-btn:active {
+  color: $link-light;
+  background: $button-hover;
+  text-decoration: none;
+}
+
+.woocommerce .woocommerce-MyAccount-content {
+  @media (min-width: $screen-md-min) {
+      font-size: $brand-font-size-sm;
+    }
+}
+
+.woocommerce div.product form.cart .variations select,
+.woocommerce div.product form.cart .variations select option {
+  background-color: transparent;
+  background: $black-opacity5;
+  font-size: $brand-font-size-md;
+}
+
+.woocommerce div.product form.cart .variations label {
+  font-weight: 400;
+  font-size: $brand-font-size-md;
+}
+
+.woocommerce div.product form.cart .variations {
+  width: 65%;
+}

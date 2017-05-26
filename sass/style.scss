@@ -39,7 +39,7 @@ $iphone-4-max: 480px;
 $iphone-4-font-size: 10pt;
 $brand-font-size-xs: 11pt;
 $brand-font-size-sm: 12pt;
-$brand-font-size-md: 17pt;
+$brand-font-size-md: 15pt;
 $brand-font-size-lg: 30pt;
 
 // Theme Colors
@@ -47,14 +47,23 @@ $header-color: linear-gradient(-214deg, rgba(37, 60, 94, .8) 0%, rgba(37, 60, 94
 $navbar-color: linear-gradient(-214deg, rgba(#505148, .8) 0%, rgba(#505148, 1) 100%);
 $mega-color: linear-gradient(-214deg, rgba(#dabb83, .8) 0%, rgba(#dabb83, 1) 100%);
 $button-color: linear-gradient(-214deg, rgba(#ffb04a, .8) 0%, rgba(#e38000, 1) 100%);
+$button-hover: linear-gradient(-214deg, rgba(#e38000, .8) 0%, rgba(#ffb04a, 1) 100%);
+$white: #fff;
 $whats-new-section: #5dbeff;
-$dealers-section: #fff;
 $dealer-placeholders: rgba(55,55,55, .7);
-$footer-color: #000;
-$copyright-bar: #f01;
-$copyright-text: #fff;
-$link-color: #fff;
-$black-opacity: rgba(0,0,0,0.5);
+$black: #000;
+$theme-red: #f01;
+$black-opacity1: rgba(0,0,0,0.1);
+$black-opacity2: rgba(0,0,0,0.2);
+$black-opacity3: rgba(0,0,0,0.3);
+$black-opacity4: rgba(0,0,0,0.4);
+$black-opacity5: rgba(0,0,0,0.5);
+$black-opacity6: rgba(0,0,0,0.6);
+$black-opacity7: rgba(0,0,0,0.7);
+$black-opacity8: rgba(0,0,0,0.8);
+$black-opacity9: rgba(0,0,0,0.9);
+$theme-orange: #ff9f23;
+$link-light: #ffc376;
 
 // Theme Fonts
 $roboto-thin: Roboto Thin;
@@ -96,8 +105,9 @@ $roboto-blk: Roboto Black;
     src: url('./assets/fonts/Roboto-Black.ttf');
 }
 
-a, .navbar-default .navbar-nav .open .dropdown-menu {
-    transition:  all .3s ease-in-out;
+a, .navbar-default .navbar-nav .open .dropdown-menu,
+div[role="row"] > ul > li > a {
+    transition:  all .2s ease-in-out;
 }
 
 html, body {
@@ -107,8 +117,10 @@ html, body {
 }
 
 body {
-  font-family: $roboto-med;
+  font-family: $roboto-reg;
   display: block;
+  background: -webkit-radial-gradient(circle, $white 50%, #cdc 80%);
+  background: radial-gradient(circle, $white 50%, #cdc 80%);
 }
 
 article,
@@ -165,34 +177,34 @@ section {
   display: none;
 }
 
-.woocommerce ul.products li.product .button {
-  background: $button-color;
-  font-family: $roboto-reg;
-  color: #fff;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.8);
+.wpcf7-form-control-wrap {
+  height: 90px;
+}
+
+body .zopim:first-child, body .zopim:nth-child(3) {
+  bottom: 75px !important;
+  width: 100% !important;
+  left: 0;
+  background: #ff9f23 !important;
+    @media (min-width: $iphone-4-max) and ( max-width: $screen-xs-max) and ( -webkit-device-pixel-ratio: 1 ) {
+      bottom: 111px !important;
+      width: 100% !important;
+      left: 0;
+      background: #ff9f23 !important;
+    }
+    @media (min-width: $screen-sm-min) {
+      bottom: 111px !important;
+      width: 100% !important;
+      left: 0;
+      background: #ff9f23 !important;
+    }
     @media (min-width: $screen-md-min) {
-      font-size: 18pt;
-      text-shadow: 0 1px 3px rgba(0,0,0,0.8);
+      bottom: 0 !important;
+      width: inherit !important;
+      left: inherit;
+      background: transparent !important;
     }
 }
-
-.woocommerce #respond input#submit.alt, .woocommerce a.button.alt, .woocommerce button.button.alt, .woocommerce input.button.alt {
-  background: $button-color;
-  font-family: $roboto-reg;
-  color: #fff;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.8);
-  @media (min-width: $screen-md-min) {
-      font-size: 14pt;
-      text-shadow: 0 1px 3px rgba(0,0,0,0.8);
-    }
-}
-
-.woocommerce section.up-sells ul.products > li > a.button {
-  @media (min-width: $screen-md-min) {
-    font-size: inherit;
-  }
-}
-
 
 // Import Header
 @import './layout/header';
@@ -217,6 +229,9 @@ section {
 
 // Import Featured Post Modules
 @import './modules/featured-post';
+
+// Import Featured Post Modules
+@import './woocommerce/woocommerce';
 
 // Import Footer
 @import './layout/footer';

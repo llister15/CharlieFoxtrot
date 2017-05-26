@@ -2,6 +2,34 @@
 *
 */
 
+form.woocommerce-cart-form .woocommerce-Price-amount.amount,
+div.woocommerce div.cart-collaterals div.cart_totals .woocommerce-Price-amount.amount {
+  color: #000;
+}
+
+.woocommerce .cart-collaterals .cross-sells ul.products li, 
+.woocommerce-page .cart-collaterals .cross-sells ul.products li {
+  width: 25%;
+}
+
 .woocommerce a.button.alt {
   background-color: $header-color;
+}
+
+.woocommerce form .form-row .input-checkbox {
+  margin: 7px 8px 0 0;
+}
+
+.woocommerce form .form-row label.checkbox > span.terms-label, 
+.woocommerce-page form .form-row label.checkbox > span.terms-label,
+.woocommerce form .form-row label.checkbox > span.account-create-box, 
+.woocommerce-page form .form-row label.checkbox > span.account-create-box {
+  padding-left: 30px;
+}
+
+.woocommerce #content table.cart td.actions .input-text, 
+.woocommerce table.cart td.actions .input-text, 
+.woocommerce-page #content table.cart td.actions .input-text, 
+.woocommerce-page table.cart td.actions .input-text {
+  width: 120px;
 }
