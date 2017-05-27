@@ -118,6 +118,7 @@ $text_lighter_20 = wc_hex_lighter( $text, 20 );
 }
 
 .td {
+padding: 0 5px;
 }
 
 .text {

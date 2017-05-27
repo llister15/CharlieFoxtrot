@@ -72,6 +72,7 @@ $roboto-reg: Roboto Regular;
 $roboto-med: Roboto Medium;
 $roboto-bol: Roboto Bold;
 $roboto-blk: Roboto Black;
+$wonkacons: Wonka Icons;
 
 @font-face {
     font-family:  'Wonka Icons';
@@ -153,24 +154,42 @@ section {
   content: "\001d";
   display: inline-block;
   padding: 0 8px;
+  font-family: $wonkacons;
 }
 
 .ws-twitter:before {
   content: "\001e";
   display: inline-block;
   padding: 0 8px;
+  font-family: $wonkacons;
 }
 
 .ws-instagram:before {
   content: "\001f";
   display: inline-block;
   padding: 0 8px;
+  font-family: $wonkacons;
 }
 
 .ws-quotes:before {
   content: "\0080";
   display: inline-block;
   padding: 0 8px;
+  font-family: $wonkacons;
+}
+
+.ws-youtube:before {
+  content: "\0010";
+  display: inline-block;
+  padding: 0 8px;
+  font-family: $wonkacons;
+}
+
+.ws-google:before {
+  content: "\0011";
+  display: inline-block;
+  padding: 0 8px;
+  font-family: $wonkacons;
 }
 
 .w-sub-menu > li > span {

@@ -29,11 +29,11 @@
 <div id="w-wrapper">
   <header id="w-header" class="container-fluid">
       <div class="row w-head-space">
-        <div class="hidden-xs hidden-sm col-md-4 text-center">
+        <div class="hidden-xs hidden-sm col-md-4">
           <?php 
           if (!has_custom_logo()) {
-            ?><a class="logo-link text-center" href="<?php echo esc_url(home_url('/')); ?>">
-            <img class="img-responsive center-block" src="<?php echo get_template_directory_uri() . '/assets/images/default-logo.png'; ?>" /></a>
+            ?><a class="logo-link" href="<?php echo esc_url(home_url('/')); ?>">
+            <img class="img-responsive center-block default-logo" src="<?php echo get_template_directory_uri() . '/assets/images/charlie-foxtrot-logo.png'; ?>" /></a>
             <?php 
           } else { 
               $custom_logo_id = get_theme_mod( 'custom_logo' );

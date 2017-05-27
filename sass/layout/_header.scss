@@ -32,10 +32,11 @@ Header
     }
 }
 
-.custom-logo {
-  position: absolute;
+.custom-logo,
+.default-logo {
+  position: relative;
   z-index: 100;
-  width: 115px;
+  width: 100%;
   max-width: 115px;
 }
 
@@ -53,6 +54,7 @@ Header
   float: none;
   min-width: 115px;
   height: 25px;
+  width: 100%;
 }
 
 #w-header .w-search-form {

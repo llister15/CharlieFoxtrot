@@ -1,4 +1,10 @@
+( function ($) {
 $( document ).ready(function () {
+  $('.cf-facebook>a').prepend('<span class="ws-facebook"></span>');
+  $('.cf-twitter>a').prepend('<span class="ws-twitter"></span>');
+  $('.cf-instagram>a').prepend('<span class="ws-instagram"></span>');
+  $('.cf-youtube>a').prepend('<span class="ws-youtube"></span>');
+  $('.cf-google>a').prepend('<span class="ws-google"></span>');
   $(".navbar-toggle").on("click", function () {
             $(this).toggleClass("active");
         });
@@ -50,3 +56,4 @@ $("#socialCarousel").swipe({
 
 });
 });
+})(jQuery);
