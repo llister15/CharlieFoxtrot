@@ -183,11 +183,23 @@ function charlie_foxtrot_customize_register( $wp_customize ) {
   'priority' => 103,
   ) );
 
+  //Featured Items Slider Enabled by default.
+  $wp_customize->add_setting('feature_slider_check', array(
+    'default' => 'checked',
+    'transport' => 'postMessage',
+    ));
+
+  $wp_customize->add_control('feature_slider_control', array(
+    'label' => __('Enable Featured Items Slider', 'charlie-foxtrot'),
+    'type' => 'checkbox',
+    'section' => 'feature_items',
+    'settings' => 'feature_slider_check',
+    'transport' => 'postMessage',
+   ));
 
   //Feature Item settings 1
   $wp_customize->add_setting('feature_image_1', array(
     'default' => '',
-    'transport' => 'postMessage',
     ));
 
   // Feature Item controls 1 
@@ -215,7 +227,6 @@ function charlie_foxtrot_customize_register( $wp_customize ) {
     //Feature Item settings 2
   $wp_customize->add_setting('feature_image_2', array(
     'default' => '',
-    'transport' => 'postMessage',
     ));
 
   // Feature Item controls 2

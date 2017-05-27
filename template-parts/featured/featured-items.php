@@ -1,4 +1,4 @@
-  <?php
+<?php
 /**
  * For Displaying the Two Featured Items on the home page.
  *

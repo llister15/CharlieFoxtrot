@@ -31,20 +31,24 @@ $( document ).ready(function () {
 
   // Add touch for mobile
   // swipe controls for slider
-$("#myCarousel a").swipe({
-
+$("#myCarousel").swipe({
+  tap:function(event, target) {
+    msg(target);
+},
   swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
-
     if (direction == 'left') $(this).carousel('next');
     if (direction == 'right') $(this).carousel('prev');
 
   },
-  allowPageScroll:"vertical"
+  allowPageScroll:"vertical",
+  excludedElements: [],
+  threshold: 10
 
 });
+
 // Add touch for mobile
   // swipe controls for social
-$("#socialCarousel").swipe({
+$("#productCarousel").swipe({
 
   swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
 

@@ -7,8 +7,10 @@ $bgpattern:url('./assets/images/bg-pattern.png')center;
 
 
  #home-content,
- .content-area {
-  transition: all .2s ease-in-out;
+ .content-area,
+ #home-content .w-featured-products,
+ #home-content .w-featured-products div {
+  transition: all .3s ease-in-out;
  }
 
 #home-content {
@@ -16,6 +18,14 @@ $bgpattern:url('./assets/images/bg-pattern.png')center;
   display: block;
   min-height: 100%;
   padding-bottom: 10px;
+ }
+
+#home-content .w-featured-products div {
+  padding: 0;
+}
+
+#home-content .w-featured-products div div {
+  padding: 15px;
  }
 
  .about_us #main-content {

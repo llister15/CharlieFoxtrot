@@ -85,8 +85,16 @@ else { ?>
 </div>
 <?php
    } //  End IF for Social section
-   ?>
-   <?php 
+   
+   if (!get_theme_mod('feature_slider_check')) {
+      // This will remove this section if no widget is active
+    } else { ?>
+   <div class="row woocommerce w-featured-products">
+      <div class="col-xs-12 text-center">
+          <?php get_template_part('template-parts/featured/featured', 'products' ); ?>  
+      </div> <!-- End of Featured Products -->
+      </div>
+   <?php }
    $feature1 = get_theme_mod('feature_item_1');
    if (empty('feature_item_1')) {
     

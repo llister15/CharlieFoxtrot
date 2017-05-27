@@ -33,7 +33,9 @@ Header
 }
 
 .custom-logo,
-.default-logo {
+.default-logo, 
+.woocommerce .custom-logo,
+.woocommerce-page .default-logo {
   position: relative;
   z-index: 100;
   width: 100%;

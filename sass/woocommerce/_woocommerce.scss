@@ -22,6 +22,7 @@
   width: 100%;
 }
 
+.woocommerce a.button,
 .woocommerce ul.products li.product .button,
 .woocommerce input.button.cf-btn {
   background: $button-color;
@@ -29,16 +30,20 @@
   color: $white;
   text-shadow: 0 1px 3px rgba(0,0,0,0.8);
     @media (min-width: $screen-md-min) {
-      font-size: 18pt;
+      font-size: $brand-font-size-md;
       text-shadow: 0 1px 3px rgba(0,0,0,0.8);
     }
 }
 
+.woocommerce a.button:hover,
+.woocommerce a.button:focus,
+.woocommerce a.button:active,
 .woocommerce input.button.cf-btn:hover, 
 .woocommerce input.button.cf-btn:focus, 
 .woocommerce input.button.cf-btn:active {
   background: $button-hover;
   text-decoration: none;
+  color: $link-light;
 }
 
 .woocommerce #respond input#submit.alt, 
